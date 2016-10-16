@@ -35,6 +35,31 @@ pre code {
 	background-color: transparent;
 	border-radius: 0;
 }
+.category-cloud a {
+	background-color: #16a085;
+	border-radius: 0;
+	color: #fff;
+	display: inline-block;
+	font-size: 12px;
+	line-height: 1;
+	margin-right: 5px;
+	padding: 5px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.col-md-8 {
+	padding-left: 0;
+	padding-right: 0;
+}
+.container{
+	padding-left: 0;
+	padding-right: 0;
+}
+#searchform {
+	background-color: #fff;
+	margin-bottom: 20px;
+	padding: 20px;
+}
 .l-header{background-attachment:fixed;-webkit-background-size:100% 100%;-moz-background-size:100% 100%;-o-background-size:100% 100%;z-index:10;position:relative;zoom:1;}
 .hdbg,.hdbg2{position:absolute;bottom:0;left:0;width:100%;height:100%;background:-webkit-linear-gradient(top,#000,rgba(0,0,0,0) 85%);}
 .hdbg2{background:#299982;opacity:.8;filter:alpha(opacity=80);}
@@ -77,10 +102,10 @@ pre code {
 .m-nav .nav li:hover a,.m-nav .nav li.current-menu-item a,.m-nav .nav li.current-menu-parent a,.m-nav .nav li.current_page_item a,.m-nav .nav li.current-post-ancestor a{background-color:#404040;}
 .m-nav .nav li ul{background-color:#404040;}
 
-.container{max-width:1100px;min-width:320px;margin:10px auto;position:relative;}
+.container{max-width:1100px;min-width:320px;margin:10px auto;position:relative;width: auto;}
 
-#content{margin-left: 370px;}
-.post-article{background: #fff;margin-bottom: 10px;overflow: hidden;}
+#content{margin-right: 370px;}
+.post-article{background: #fff;margin-bottom: 10px;overflow: hidden;padding: 0 20px 20px;}
 .post-article .title{font-size:20px;line-height:28px;padding:38px 40px 8px;font-weight: normal;}
 .post-article .title a{color:#454545;}
 .post-article .edit {margin-left: 20px;color:#949494;font-size: 14px;}
@@ -108,7 +133,7 @@ pre code {
 .post .single-paging a span{background-color: #fff;color: #666;}
 .post .single-paging a:hover span{border-color: #bbb;}
 
-aside{margin-right:-360px;width:360px;position:relative;float:left;}
+aside{position:relative;}
 aside section{display:block;overflow:hidden;}
 aside section h2{background:#299982;color:#FFF;padding-left:30px;height:30px;line-height:30px;font-size:14px;}
 .cbl-head{ padding:15px 0 15px 0;}

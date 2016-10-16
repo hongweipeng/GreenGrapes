@@ -11,29 +11,37 @@ $this->need('header.php');
 ?>
 
 <div id="m-container" class="container">
-    <?php $this->need('sidebar.php'); ?>
-    <div id="content" class="clearfix">
-        <section id="primary">
-            <div class="main" id="thumbs">
-                <?php while($this->next()): ?>
-                <article class="post post-article type-post status-publish format-standard hentry category-uncategorized">
-                        <h2 class="title"><a class="slow" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
-                        <div class="textfoot">
-                            <span class="textfoot-category"><?php $this->category(','); ?></span>
-                            <span class="post-time"><?php $this->date('Y-m-d'); ?></span>
-                            <span class="post-time"><a class="article-author" itemprop="name" href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></span>
-                        </div>
-                        <div class="text">
+    <div class="col-md-8">
+        <div id="article-list">
+            <?php while($this->next()): ?>
+            <article class="post-article clearfix">
+                <section class="">
+                    <div class="category-cloud"><?php $this->category(''); ?></div>
+                    <h3>
+                        <a href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
+                    </h3>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-12">
                             <?php $this->content(); ?>
                         </div>
-                        <div class="btn-area clearfix">
-                            <a class="btn-read-line" href="<?php $this->permalink() ?>">阅读全文</a>
-                        </div>
-                    </article>
-                <?php endwhile; ?>
-            </div>
-        </section>
+                    </div>
+                    <hr>
+                    <div class="pull-right post-info">
+                        <span><i class="fa fa-calendar"></i> 03月29日, 2015</span>
+                        <span><i class="fa fa-user"></i> <a href="http://www.linuxhot.com/author/admin" title="由admin发布" rel="author">admin</a></span>
+                        <span><i class="fa fa-eye"></i> 652 views次</span>
+                        <span><i class="fa fa-comment"></i> <a href="http://www.linuxhot.com/saltstack-runners.html#comments">0</a></span>
+                    </div>
+                </section>
+            </article>
+            <?php endwhile; ?>
+        </div>
     </div>
+    <div class="col-md-4">
+        <?php $this->need('sidebar.php'); ?>
+    </div>
+
 </div>
 
 
