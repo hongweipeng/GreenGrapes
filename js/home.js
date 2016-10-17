@@ -79,4 +79,10 @@ var closeEnable = false;
 
 $(document).ready(function () {
 	fssilde();
+	$('#mycanvas').tagcanvas({
+		textColour : '#000',
+		outlineThickness : 1,
+		maxSpeed : 0.03,
+		depth : 0.75
+	});
 });

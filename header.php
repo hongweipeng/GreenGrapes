@@ -14,6 +14,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/bootstrap.min.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/font-awesome.min.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/main.css'); ?>">
     <!-- 通过自有函数输出HTML头部信息 -->
     <?php $this->header(); ?>

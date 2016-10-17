@@ -19,13 +19,8 @@
     </div>
 </footer>
 <script src = "<?php $this->options->themeUrl('js/jquery2.14.min.js'); ?>"></script>
-<script src = "<?php $this->options->themeUrl('js/simplePlayer.js'); ?>"></script>
 <script src = "<?php $this->options->themeUrl('js/functionall.js'); ?>"></script>
-<script type="text/javascript">
-    /* <![CDATA[ */
-    var fashao = {"url":"","ajaxurl":"http:\/\/yuooi.com\/","postid":""};
-    /* ]]> */
-</script>
+<script src = "<?php $this->options->themeUrl('js/jquery.tagcanvas.min.js'); ?>"></script>
 <script src = "<?php $this->options->themeUrl('js/home.js'); ?>"></script>
 <?php $this->footer(); ?>
 </body>

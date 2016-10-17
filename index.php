@@ -27,6 +27,9 @@ $this->need('header.php');
                         </div>
                     </div>
                     <hr>
+                    <div class="pull-left">
+                        <button class="btn btn-green">阅读全文</button>
+                    </div>
                     <div class="pull-right post-info">
                         <span><i class="fa fa-calendar"></i> 03月29日, 2015</span>
                         <span><i class="fa fa-user"></i> <a href="http://www.linuxhot.com/author/admin" title="由admin发布" rel="author">admin</a></span>
