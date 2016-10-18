@@ -19,9 +19,23 @@
     </div>
 </footer>
 <script src = "<?php $this->options->themeUrl('js/jquery2.14.min.js'); ?>"></script>
+<script src = "<?php $this->options->themeUrl('js/bootstrap.min.js'); ?>"></script>
 <script src = "<?php $this->options->themeUrl('js/functionall.js'); ?>"></script>
 <script src = "<?php $this->options->themeUrl('js/jquery.tagcanvas.min.js'); ?>"></script>
 <script src = "<?php $this->options->themeUrl('js/home.js'); ?>"></script>
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"hongweipeng"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
 <?php $this->footer(); ?>
 </body>
 </html>

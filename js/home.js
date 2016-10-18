@@ -81,8 +81,10 @@ $(document).ready(function () {
 	fssilde();
 	$('#mycanvas').tagcanvas({
 		textColour : '#000',
+		outlineColour: '#16a085',
 		outlineThickness : 1,
 		maxSpeed : 0.03,
-		depth : 0.75
+		depth : 0.75,
+		wheelZoom : false
 	});
 });
