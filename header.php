@@ -20,7 +20,8 @@
     <?php $this->header(); ?>
 </head>
 <body>
-<header class="l-header" style="background-image:url(<?php $this->options->themeUrl('img/header.jpg'); ?>">
+<header id="l-header" class="l-header" style="background-image:url(<?php $this->options->themeUrl('img/header.jpg'); ?>">
+
     <div class="hdbg"></div>
     <div class="hdbg2"></div>
     <div class="m-about">
@@ -30,6 +31,7 @@
         <h1 class="tit"><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a></h1>
         <div class="about"><?php $this->options->description(); ?></div>
     </div>
+    <canvas id="header-canvas"></canvas>
 </header>
 <div id="m-nav" class="m-nav">
     <div class="m-nav-all">
@@ -50,7 +52,7 @@
         </ul>
     </div>
 </div>
-<form role="search" method="get" id="search-form" action="#">
+<form role="search" method="get" id="search-form" action="./">
     <div class="search-form">
         <span id="search-form-close">×</span>
         <input placeholder="Search for" name="s" id="search-input-s" type="text">

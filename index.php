@@ -17,12 +17,12 @@ $this->need('header.php');
             <article class="post-article clearfix">
                 <section class="">
                     <div class="category-cloud"><?php $this->category(''); ?></div>
-                    <h3>
+                    <h3 class="title">
                         <a href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
                     </h3>
                     <hr>
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 article-content">
                             <?php $this->content(); ?>
                         </div>
                     </div>
@@ -31,14 +31,28 @@ $this->need('header.php');
                         <button class="btn btn-green">阅读全文</button>
                     </div>
                     <div class="pull-right post-info">
-                        <span><i class="fa fa-calendar"></i> 03月29日, 2015</span>
-                        <span><i class="fa fa-user"></i> <a href="http://www.linuxhot.com/author/admin" title="由admin发布" rel="author">admin</a></span>
-                        <span><i class="fa fa-eye"></i> 652 views次</span>
+                        <span class="ds-thread-count" data-thread-key="<?php echo $this->cid;?>"></span>
+                        <span><i class="fa fa-calendar"></i> <?php $this->date('Y-m-d'); ?></span>
+                        <span><i class="fa fa-user"></i> <a href="http://www.linuxhot.com/author/admin" rel="author">admin</a></span>
                         <span><i class="fa fa-comment"></i> <a href="http://www.linuxhot.com/saltstack-runners.html#comments">0</a></span>
                     </div>
                 </section>
             </article>
             <?php endwhile; ?>
+        </div>
+        <!-- 分页按钮 -->
+        <div class="page-nav">
+            <nav>
+                <?php $this->pageNav('&laquo;', '&raquo;', 3, '...', array(
+                    'itemTag'       =>  'li',
+                    'textTag'       =>  'span',
+                    'currentClass'  =>  'disabled',
+                    'prevClass'     =>  'prev',
+                    'nextClass'     =>  'next',
+                    'wrapTag'       =>  'ul',
+                    'wrapClass'     =>  'pagination'
+                )); ?>
+            </nav>
         </div>
     </div>
     <div class="col-md-4">
@@ -46,16 +60,4 @@ $this->need('header.php');
     </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
 <?php $this->need('footer.php');

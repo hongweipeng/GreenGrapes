@@ -2,15 +2,15 @@
 // 滚屏
 $(document).ready(function($) {
     // 利用 data-scroll 属性，滚动到任意 dom 元素
-    $.scrollto = function(scrolldom, scrolltime) {	
-        $(scrolldom).click( function(){ 
+    $.scrollto = function(scrolldom, scrolltime) {
+        $(scrolldom).click( function(){
             var scrolltodom = $(this).attr("data-scroll");
             $(this).addClass("active").siblings().removeClass("active");
             $('html, body').animate({
                 scrollTop: $(scrolltodom).offset().top
             }, scrolltime);
             return false;
-        });		
+        });
     };
     // 判断位置控制 返回顶部的显隐
     $(window).scroll(function() {
@@ -21,7 +21,7 @@ $(document).ready(function($) {
         }
     });
     $.scrollto("#back-to-top", 600);
-	});
+});
 
 
 function fssilde(){
@@ -87,4 +87,23 @@ $(document).ready(function () {
 		depth : 0.75,
 		wheelZoom : false
 	});
+
+	//边栏固定
+	var $sidebar = $("#fixed"),
+		$fixside = $('.fixsidebar'),
+		$window = $(window),
+		offset = $sidebar.offset(),
+		widths=$sidebar.width();
+	if($window.width() > 768){
+		$window.scroll(function() {
+			if ($window.scrollTop() > offset.top) {
+				var widths=$sidebar.width();
+				$fixside.stop().animate({top:'20px'});
+				$fixside.addClass('fix').css("width",widths);
+			} else {
+				$fixside.stop().animate({top:'1px'});
+				$fixside.removeClass('fix');
+			}
+		});
+	}
 });
