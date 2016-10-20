@@ -1,7 +1,7 @@
 @charset "utf-8";
 body{font-family: Hiragino Sans GB,微软雅黑,黑体,Arial,sans-serif;font-size: 14px;color:#666;line-height:1.5;background-color: #eeeded;}
 hr{margin:20px auto;border: 1px dashed #E7E7E7;}
-img{border:0;vertical-align:middle;}
+img{border:0;vertical-align:middle;max-width: 100%;}
 p{display:block;}
 ul{list-style:none;}
 a{color:#666;text-decoration:none;}
