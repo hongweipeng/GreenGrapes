@@ -20,8 +20,8 @@
     <?php $this->header(); ?>
 </head>
 <body>
+<?php if ($this->is('index')): ?>
 <header id="l-header" class="l-header" style="background-image:url(<?php $this->options->themeUrl('img/header.jpg'); ?>">
-
     <div class="hdbg"></div>
     <div class="hdbg2"></div>
     <div class="m-about">
@@ -33,6 +33,7 @@
     </div>
     <canvas id="header-canvas"></canvas>
 </header>
+<?php endif; ?>
 <div id="m-nav" class="m-nav">
     <div class="m-nav-all">
         <div class="m-logo-url">

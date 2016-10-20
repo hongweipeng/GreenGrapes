@@ -16,7 +16,7 @@
                     <?php $this->content(); ?>
                 </div>
                 <?php if($this->allow('ping')): ?>
-                    <div class="copyright">
+                    <div class="article-copyright">
                         <div class="article-license">
                             <img height="24" src="https://sf-static.b0.upaiyun.com/v-57d7cc42/global/img/creativecommons-cc.png" class="mb5"><br>
                             <div class="license-item text-muted">
@@ -31,6 +31,7 @@
                     <?php Reward_Plugin::show_modal(); ?>
                 <?php endif; ?>
             </article>
+
         </div>
         <?php $this->need('comments.php'); ?>
     </div>
