@@ -31,7 +31,6 @@ $this->need('header.php');
                         <a class="btn btn-green" href="<?php $this->permalink() ?>">阅读全文</a>
                     </div>
                     <div class="pull-right post-info">
-                        <span class="ds-thread-count" data-thread-key="<?php echo $this->cid;?>"></span>
                         <span><i class="fa fa-calendar"></i> <?php $this->date('Y-m-d'); ?></span>
                         <span><i class="fa fa-user"></i> <a href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></span>
                         <span><i class="fa fa-comment"></i> <a href="<?php $this->permalink() ?>#comments"><span class="ds-thread-count" data-thread-key="<?php echo $this->cid;?>"></span></a></span>
