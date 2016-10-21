@@ -31,7 +31,7 @@
         <h1 class="tit"><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a></h1>
         <div class="about"><?php $this->options->description(); ?></div>
     </div>
-    <canvas id="header-canvas"></canvas>
+    <div id="header-canvas" style="width: 100%;height: 100%"></div>
 </header>
 <?php endif; ?>
 <div id="m-nav" class="m-nav">

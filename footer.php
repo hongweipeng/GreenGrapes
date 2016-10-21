@@ -34,8 +34,7 @@
 <script src = "<?php $this->options->themeUrl('js/bootstrap.min.js'); ?>"></script>
 <script src = "<?php $this->options->themeUrl('js/functionall.js'); ?>"></script>
 <script src = "<?php $this->options->themeUrl('js/jquery.tagcanvas.min.js'); ?>"></script>
-<script src = "<?php $this->options->themeUrl('js/TweenLite.min.js'); ?>"></script>
-<script src = "<?php $this->options->themeUrl('js/EasePack.min.js'); ?>"></script>
+<script src = "<?php $this->options->themeUrl('js/particles.min.js'); ?>"></script>
 <script src = "<?php $this->options->themeUrl('js/headerCanvas.js'); ?>"></script>
 <script src = "<?php $this->options->themeUrl('js/home.js'); ?>"></script>
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
