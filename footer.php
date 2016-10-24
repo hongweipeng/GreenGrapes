@@ -32,7 +32,6 @@
 </footer>
 <script src = "<?php $this->options->themeUrl('js/jquery2.14.min.js'); ?>"></script>
 <script src = "<?php $this->options->themeUrl('js/bootstrap.min.js'); ?>"></script>
-<script src = "<?php $this->options->themeUrl('js/functionall.js'); ?>"></script>
 <script src = "<?php $this->options->themeUrl('js/jquery.tagcanvas.min.js'); ?>"></script>
 <script src = "<?php $this->options->themeUrl('js/particles.min.js'); ?>"></script>
 <script src = "<?php $this->options->themeUrl('js/headerCanvas.js'); ?>"></script>
