@@ -428,18 +428,13 @@ footer {padding: 20px;margin: 20px 0 0;text-align:center;background-color:#fffff
 .Copyright{color:#666;}
 
 /* 翻屏 */
-#back-to-top{display:none;cursor:pointer;position:fixed;right:10px;bottom:5px;width:48px;height:48px;z-index:999;border-radius:50%;background:rgba(255,255,255,0.6);border: #ccc 1px solid;}
+#back-to-top{display:none;cursor:pointer;position:fixed;right:10px;bottom:20px;width:48px;height:48px;z-index:999;border-radius:50%;background:rgba(255,255,255,0.6);border: #ccc 1px solid;}
 #back-to-top:hover{background:#eee;border: #299982 1px solid;}
 #back-to-top #point-up{margin:8px;}
 #back-to-top #point-up path{transition:.5s;-o-transition:.5s;-moz-transition:.5s;-webkit-transition:.5s;}
 #back-to-top.red:hover #point-up path{fill:#299982;}
 .done {cursor: no-drop;}
 
-/*simplePlayer*/
-.simple-player-container {width:450px;display: inline-block;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
-.simple-player-container > div > ul {margin: 0;padding-left: 0;}
-.simpleplayer-play-control {background:url(../images/icon.png);display: block;width: 16px;height: 16px;bottom: -5px;position: relative;}
-.simpleplayer-stop-control {background:url(../images/icon.png);background-position: -16px 0;display: block;width: 16px;height: 16px;bottom: -5px;position: relative;}
 
 .css-tooltip{position:relative}
 .css-tooltip:after{background-color:rgba(0,0,0,0.8);border-radius:3px;bottom:35px;color:#fff;content:attr(data-tooltip);display:none;font-size:12px;left:50%;line-height:1.3;padding:5px;position:absolute;text-align:center;width:80px;margin-left:-45px}

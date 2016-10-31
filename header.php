@@ -21,12 +21,12 @@
 </head>
 <body>
 <?php if ($this->is('index')): ?>
-<header id="l-header" class="l-header" style="background-image:url(<?php $this->options->themeUrl('img/header.jpg'); ?>">
+<header id="l-header" class="l-header" style="background-image:url(<?php $this->options->bgImg(); ?>">
     <div class="hdbg"></div>
     <div class="hdbg2"></div>
     <div class="m-about">
         <div id="logo">
-            <a href="<?php $this->options->siteUrl(); ?>"><img src="https://www.hongweipeng.com/usr/uploads/2016/08/2357678419.jpg" alt=""></a>
+            <a href="<?php $this->options->siteUrl(); ?>"><img src="<?php $this->options->headerIcon(); ?>" alt=""></a>
         </div>
         <h1 class="tit"><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a></h1>
         <div class="about"><?php $this->options->description(); ?></div>
@@ -37,8 +37,8 @@
 <div id="m-nav" class="m-nav">
     <div class="m-nav-all">
         <div class="m-logo-url">
-            <img src="https://www.hongweipeng.com/usr/uploads/2016/08/2357678419.jpg">
-            <h3>Hong Weapon</h3>
+            <img src="<?php $this->options->headerIcon(); ?>">
+            <h3><?php $this->options->sideName(); ?></h3>
         </div>
         <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
         <ul class="nav">
