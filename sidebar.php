@@ -31,7 +31,7 @@
     <?php if(class_exists('Links_Plugin') && isset($this->options->plugins['activated']['Links'])): ?>
     <aside>
         <div class="panel panel-green hidden-xs">
-            <div class="panel-heading"><i class="fa fa-link fa-fw"></i>友情链接</div>
+            <div class="panel-heading"><i class="fa fa-link fa-fw"></i> 友情链接</div>
             <ul class="list-group">
                 <?php Links_Plugin::output('<li class="list-group-item"><a href="{url}" target="_blank">{name}</a></li>', 10, NULL, true); ?>
             </ul>
