@@ -3,7 +3,6 @@ body{font-family: Hiragino Sans GB,微软雅黑,黑体,Arial,sans-serif;font-siz
 hr{margin:20px auto;border: 1px dashed #E7E7E7;}
 img{border:0;vertical-align:middle;max-width: 100%;}
 p{display:block;}
-ul{list-style:none;}
 a{color:#666;text-decoration:none;}
 sup{color:#299982;}
 blockquote{overflow:hidden;border:0;padding:8px 12px;margin:5px 0 15px;background-color:#F1F1F1;border-left:4px solid #7AD03A;-webkit-box-shadow:0 1px 1px 0 rgba(0,0,0,0.1);box-shadow:0 1px 1px 0 rgba(0,0,0,0.1);font-size:unset;}
