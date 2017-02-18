@@ -79,7 +79,7 @@ var closeEnable = false;
 
 $(document).ready(function () {
 	fssilde();
-	$('#mycanvas').tagcanvas({
+	TagCanvas.Start('mycanvas', '', {
 		textColour : '#000',
 		outlineColour: '#16a085',
 		outlineThickness : 1,
