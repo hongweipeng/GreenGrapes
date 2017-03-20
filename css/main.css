@@ -145,6 +145,51 @@ blockquote{overflow:hidden;border:0;padding:8px 12px;margin:5px 0 15px;backgroun
 	background:#f3f3f3;
 }
 
+/* 评论 */
+.ui.form.fluid {
+	box-sizing: border-box;
+	width: 100%;
+}
+.comments-block {
+	background: #fff none repeat scroll 0 0;
+	border-radius: 5px;
+	box-shadow: 0 5px 20px #bbb;
+	margin-bottom: 20px;
+	padding: 15px;
+	position: relative;
+}
+
+
+.comments-field {
+	margin: 0 0 1em;
+	padding-right: 1%;
+	font-size: 14px;
+}
+.comments-field textarea {
+	height: 12em;
+	line-height: 1.33;
+	max-height: 24em;
+	min-height: 8em;
+	resize: vertical;
+	padding: 0.85em 1.2em;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 0.3125em;
+	background-color: #FFFFFF;
+}
+.ui.form .two.fields > .comments-field {
+	width:50%;
+	float: left;
+}
+.comments-field input {
+	background-color: #FFFFFF;
+	padding: 0.85em 1.2em;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 0.3125em;
+}
+.ui.form textarea, .ui.form input[type="text"], .ui.form input[type="email"], .ui.form input[type="date"], .ui.form input[type="password"], .ui.form input[type="number"], .ui.form input[type="url"], .ui.form input[type="tel"], .ui.form .ui.input {
+	width: 100%;
+}
+
 
 .l-header{background-attachment:fixed;-webkit-background-size:100% 100%;-moz-background-size:100% 100%;-o-background-size:100% 100%;z-index:10;position:relative;zoom:1;}
 .hdbg,.hdbg2{position:absolute;bottom:0;left:0;width:100%;height:100%;background:-webkit-linear-gradient(top,#000,rgba(0,0,0,0) 85%);}
