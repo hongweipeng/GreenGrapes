@@ -190,6 +190,16 @@ blockquote{overflow:hidden;border:0;padding:8px 12px;margin:5px 0 15px;backgroun
 	width: 100%;
 }
 
+.block {
+	position: relative;
+	background: #fff;
+	padding: 15px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	box-shadow: 0 5px 20px #bbb;
+	-moz-box-shadow: 0 5px 20px #bbb;
+}
+
 
 
 .l-header{background-attachment:fixed;-webkit-background-size:100% 100%;-moz-background-size:100% 100%;-o-background-size:100% 100%;z-index:10;position:relative;zoom:1;}
