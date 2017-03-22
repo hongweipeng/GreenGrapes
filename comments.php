@@ -1,9 +1,7 @@
 <div id="comments">
     <?php if($this->allow('comment')): ?>
         <div class="block">
-            <!-- 多说评论框 start -->
-            <div class="ds-thread" data-thread-key="<?php echo $this->cid;?>" data-title="<?php echo $this->title;?>" data-author-key="<?php echo $this->authorId;?>" data-url=""></div>
-            <!-- 多说评论框 end -->
+            <div id="SOHUCS" sid="<?php echo $this->cid;?>" ></div>
         </div>
 
     <?php else: ?>

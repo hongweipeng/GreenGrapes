@@ -37,19 +37,20 @@
 <script src = "<?php $this->options->themeUrl('js/particles.min.js'); ?>"></script>
 <script src = "<?php $this->options->themeUrl('js/headerCanvas.js'); ?>"></script>
 <script src = "<?php $this->options->themeUrl('js/home.js'); ?>"></script>
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+
+<script id="cy_cmt_num" src="http://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cysUkopEY"></script>
+<?php if($this->is('post') or $this->is('single')): ?>
+<!-- 畅言 start-->
+<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
-    var duoshuoQuery = {short_name:"hongweipeng"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-        || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
+    window.changyan.api.config({
+        appid: 'cysUkopEY',
+        conf: 'prod_8f6d81c51c4b8363fb45c8879c0d9ca5'
+    });
 </script>
-<!-- 多说公共JS代码 end -->
+<!-- 畅言 end-->
+<?php endif; ?>
+
 <?php $this->footer(); ?>
 </body>
 </html>
