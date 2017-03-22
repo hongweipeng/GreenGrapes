@@ -38,7 +38,7 @@
 <script src = "<?php $this->options->themeUrl('js/headerCanvas.js'); ?>"></script>
 <script src = "<?php $this->options->themeUrl('js/home.js'); ?>"></script>
 
-<script id="cy_cmt_num" src="http://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cysUkopEY"></script>
+<script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cysUkopEY"></script>
 <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
 <script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cysUkopEY"></script>
 <?php if($this->is('post') or $this->is('single')): ?>
