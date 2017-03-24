@@ -270,7 +270,7 @@ img.avatar:hover {
 
 /* 评论列表样式 */
 .comment-list {
-	padding-left: 10px;
+	padding-left: 0;
 }
 .comment-list, .comment-children {
 	list-style: none;
@@ -303,18 +303,11 @@ img.avatar:hover {
 	-webkit-transition: opacity 0.1s ease-out;
 }
 
-.comment-list .comment-children {
-	margin-left: 20px;
+.comment-parent>.comment-children {
+	margin-left: 30px;
+	padding-left: 30px;
+	border-left: 1px dotted rgba(0, 0, 0, 0.35);
 
-	box-shadow: -1px 0 0 rgba(0, 0, 0, 0.15);
-	-moz-box-shadow: -1px 0 0 rgba(0, 0, 0, 0.15);
-}
-
-.comment-list .comment-children .comment-list {
-	padding-left: 20px;
-}
-.comment-children .comment-list .comment-children{
-	padding-left: -40px;
 }
 
 
