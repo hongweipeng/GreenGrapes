@@ -47,5 +47,6 @@ function themeConfig($form) {
     $showBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('ShowBlock', array(
         'ShowPostBottomBar' => _t('文章页显示上一篇和下一篇')),
         array('ShowPostBottomBar'), _t('显示设置'));
-    $form->addInput($showBlock);
+    $form->addInput($showBlock->multiMode());
+
 }
