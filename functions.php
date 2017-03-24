@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2016/10/8
- * Time: 16:10
- */
 
 /**
  * 随机文章
@@ -48,4 +42,62 @@ function themeConfig($form) {
         'ShowPostBottomBar' => _t('文章页显示上一篇和下一篇')),
         array('ShowPostBottomBar'), _t('显示设置'));
     $form->addInput($showBlock->multiMode());
+}
+
+/**
+ * 重写评论显示函数
+ */
+function threadedComments($comments, $options){
+    $singleCommentOptions = $options;
+    $commentClass = '';
+    if ($comments->authorId) {
+        if ($comments->authorId == $comments->ownerId) {
+            $commentClass .= ' comment-by-author';
+        } else {
+            $commentClass .= ' comment-by-user';
+        }
+    }
+
+    $commentLevelClass = $comments->levels > 0 ? ' comment-child' : ' comment-parent';
+
+    ?>
+<li itemscope itemtype="http://schema.org/UserComments" id="<?php $comments->theId(); ?>" class="comment-li<?php
+if ($comments->levels > 0) {
+    echo ' comment-child';
+    $comments->levelsAlt(' comment-level-odd', ' comment-level-even');
+} else {
+    echo ' comment-parent';
+}
+$comments->alt(' comment-odd', ' comment-even');
+echo $commentClass;
+?>">
+
+    <div class="comment-author" itemprop="creator" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="image"><?php $comments->gravatar($singleCommentOptions->avatarSize, $singleCommentOptions->defaultAvatar); ?></span>
+
+    </div>
+    <div class="comment-body">
+        <cite class="fn" itemprop="name"><?php $singleCommentOptions->beforeAuthor();
+            $comments->author();
+            $singleCommentOptions->afterAuthor(); ?></cite>
+        <div class="comment-content" itemprop="commentText">
+            <?php $comments->content(); ?>
+        </div>
+        <div class="comment-footer">
+            <time itemprop="commentTime" datetime="<?php $comments->date('c'); ?>"><?php $singleCommentOptions->beforeDate();
+                $comments->date($singleCommentOptions->dateFormat);
+                    $singleCommentOptions->afterDate(); ?></time>
+            <?php $comments->reply($singleCommentOptions->replyWord); ?>
+        </div>
+    </div>
+    <?php if ($comments->children) { ?>
+        <div class="comment-children" itemprop="discusses">
+            <?php $comments->threadedComments(); ?>
+        </div>
+    <?php } ?>
+    
+    
+</li>
+<?php
+
 }
