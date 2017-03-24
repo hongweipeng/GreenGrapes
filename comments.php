@@ -1,5 +1,5 @@
-<div id="comments">
-    <?php if($this->allow('comment')): ?>
+<?php if($this->allow('comment')): ?>
+    <div id="comments">
         <div class="block">
             <div id="SOHUCS" sid="<?php echo $this->cid;?>" ></div>
         </div>
