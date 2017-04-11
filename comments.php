@@ -1,11 +1,12 @@
 <?php $this->comments()->to($comments); ?>
-    <div id="comments">
+
 
 <?php if(!$this->allow('comment')): ?>
     <div class="comments-block">
         <p class="ui ribbon label <?php $this->options->singleColor() ?>"><?php _e('楼主残忍的关闭了评论'); ?></p>
     </div>
 <?php else: ?>
+<div id="comments">
     <div class="comments-block">
         <p class="ui <?php $this->options->singleColor() ?> ribbon label comments"><?php $this->commentsNum(_t('还不快抢沙发'), _t('只有地板了'), _t('<span class="comment-highlight">%d</span> 条评论')); ?></p>
         <?php $comments->listComments(); ?>
@@ -40,5 +41,6 @@
             <button type="submit" id="comment-submit" class="btn btn-success"><?php _e('提交评论'); ?></button>
         </form>
     </div>
-<?php endif; ?>
 </div>
+<?php endif; ?>
+
