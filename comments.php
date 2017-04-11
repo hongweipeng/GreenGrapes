@@ -43,5 +43,5 @@
     <div class="comments-block">
         <p class="ui ribbon label <?php $this->options->singleColor() ?>"><?php _e('楼主残忍的关闭了评论'); ?></p>
     </div>
-
+    </div>
 <?php endif; ?>
