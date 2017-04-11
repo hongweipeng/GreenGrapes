@@ -24,7 +24,7 @@
             <?php else: ?>
                 <div class="two fields">
                     <div class="comments-field">
-                        <input type="text" name="author" placeholder="<?php _e('称呼'); ?><?php _e(' (必填)') ?>"value="<?php $this->remember('author'); ?>" />
+                        <input type="text" name="author" placeholder="<?php _e('称呼'); ?><?php _e(' (必填)') ?>" value="<?php $this->remember('author'); ?>" />
                     </div>
                     <div class="comments-field">
                         <input type="email" name="mail" placeholder="<?php _e('电子邮件'); ?><?php if ($this->options->commentsRequireMail): ?><?php _e(' (必填)') ?><?php endif; ?>" value="<?php $this->remember('mail'); ?>" />
