@@ -16,7 +16,7 @@ function theme_random_posts(){
     $sql = $db->select()->from('table.contents')
         ->where('status = ?','publish')
         ->where('type = ?', 'post')
-        ->where('created <= unix_timestamp(now())', 'post') //添加这一句避免未达到时间的文章提前曝光
+        ->where('created <= ' . Helper::options()->gmtTime, 'post') //添加这一句避免未达到时间的文章提前曝光
         ->limit($defaults['number'])
         ->order('RAND()');
     $result = $db->fetchAll($sql);
