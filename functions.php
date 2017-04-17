@@ -13,12 +13,17 @@ function theme_random_posts(){
         'xformat' => '<li class="list-group-item clearfix"><a href="{permalink}" title="{title}">{title}</a></li>'
     );
     $db = Typecho_Db::get();
+    $rand = "RAND()";
+    if (stripos($db->getAdapterName(), 'sqlite')) {
+        $rand = "RANDOM()";
+    }
+
     $sql = $db->select()->from('table.contents')
         ->where('status = ?','publish')
         ->where('type = ?', 'post')
         ->where('created <= ' . Helper::options()->gmtTime, 'post') //添加这一句避免未达到时间的文章提前曝光
         ->limit($defaults['number'])
-        ->order('RAND()');
+        ->order($rand);
     $result = $db->fetchAll($sql);
     echo $defaults['before'];
     foreach($result as $val){
