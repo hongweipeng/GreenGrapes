@@ -14,7 +14,7 @@ function theme_random_posts(){
     );
     $db = Typecho_Db::get();
     $rand = "RAND()";
-    if (stripos($db->getAdapterName(), 'sqlite') >= 0) {
+    if (stripos($db->getAdapterName(), 'sqlite') !== false) {
         $rand = "RANDOM()";
     }
 
