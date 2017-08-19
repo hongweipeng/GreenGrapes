@@ -22,7 +22,7 @@
 <footer id="m-footer">
     <div class="Copyright">
         <p>&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
-        <?php _e('All Rights Reserved. 版权所有.'); ?>
+        <?php _e('All Rights Reserved. 版权所有.<br /><a href="https://github.com/hongweipeng">Theme by HongWeipeng</a>'); ?>
         </p>
     </div>
 </footer>
