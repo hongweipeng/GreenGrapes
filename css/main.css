@@ -453,12 +453,12 @@ footer {padding: 20px;margin: 20px 0 0;text-align:center;background-color:#fffff
 }
 @media screen and (min-width:750px) and (max-width:1100px){
 	.m-header-open,.m-container-open,.m-footer-open{left:30% !important;}
-	#m-nav{left:-30%;width:30%;}
+	#m-nav{left:-30%;width:25%;}
 	.post-article .text .tags-list{width:25%}
 }
 @media screen and (max-width:750px){
 	.m-header-open,.m-container-open,.m-footer-open{left:50% !important;}
-	#m-nav{left:-50%;width:50%;}
+	#m-nav{left:-50%;width:33.33%;}
 	.post-article .text .tags-list{width:50%}
 	#smilies-box{width: 280px;}
 }
