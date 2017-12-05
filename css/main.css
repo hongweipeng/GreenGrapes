@@ -139,7 +139,7 @@ blockquote{overflow:hidden;border:0;padding:8px 12px;margin:5px 0 15px;backgroun
 .article-content table td,.article-content table th {
 	border:1px solid #e6e6e6;
 	padding:5px 8px;
-	word-break:normal;
+	word-break: break-all;
 }
 .article-content table th {
 	background:#f3f3f3;
