@@ -329,6 +329,8 @@ img.avatar {
 #pic img{width:180px;height:180px;border-radius:50%;}
 #logo{width:180px;height:180px;margin:0 auto 15px;}
 #logo img{border-radius:100px;width:180px;height:180px;}
+
+
 #logo #jp_container{width:0px!important;position: absolute;left: 41.5px;top: 41.5px;padding: 0!important;}
 #logo  #jp_container .jp-pause{background: url(../images/logoplayer2.png) no-repeat;margin: 25px;top: 50%;left: 50%;width:45px;height:45px;cursor:pointer;position:absolute;}
 #logo  #jp_container .jp-play{background:none;margin: 25px;top: 50%;left: 50%;width:45px;height:45px;cursor:pointer;position:absolute;}
