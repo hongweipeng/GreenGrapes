@@ -33,6 +33,9 @@
             </article>
 
         </div>
+        <div style="margin: 10px 0 10px 0">
+        <script type="text/javascript">var jd_union_unid="1000075724",jd_ad_ids="507:6",jd_union_pid="CIC98LeJLBDM4+/cAxoAIMOSg5kEKgA=";var jd_width=728;var jd_height=90;var jd_union_euid="";var p="BxACURpcFQcRNwpfBkgyTUMIRmtKRk9aZV8ETVxNNwpfBkgyQlUNel1qWXBnKFsiVXJMZR5ZEGNCcgtZK14XBxsEVxpfFTISBlQaWhMGFARQK2tKRk9aZVA1FDJNQwhGaxUGEgJXHFsRChACUx5rFDIiNw%3D%3D";</script><script type="text/javascript" charset="utf-8" src="//u-x.jd.com/static/js/auto.js"></script>
+        </div>
     <?php if (!empty($this->options->ShowBlock) && in_array('ShowPostBottomBar', $this->options->ShowBlock)): ?>
         <div class="block">
             <ul class="post-near">
