@@ -48,6 +48,11 @@
         </div>
     </aside>
     <?php endif; ?>
+    <aside>
+        <div style="margin-bottom: 20px;">
+        <script type="text/javascript">var jd_union_unid="1000075724",jd_ad_ids="512:6",jd_union_pid="CKf7mNeJLBDM4+/cAxoAIL2QhJkEKgA=";var jd_width=336;var jd_height=280;var jd_union_euid="";var p="BxsFURpZFwIVNwpfBkgyTUMIRmtKRk9aZV8ETVxNNwpfBkgySl0XeFpIalViVWEfYEtiUAxEOEABRAtZK14XBxsEVxpfFTISBlQaWhMGFARQK2tKRk9aZVA1FDJNQwhGaxUGEgJQGF0WBRsDVhtrFDIiNw%3D%3D";</script><script type="text/javascript" charset="utf-8" src="//u-x.jd.com/static/js/auto.js"></script>
+        </div>
+    </aside>
     <div id="fixed"></div>
     <aside class="fixsidebar">
         <div class="panel panel-green hidden-xs">
