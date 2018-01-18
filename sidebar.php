@@ -57,7 +57,7 @@
                 tanx_s.charset = "gbk";
                 tanx_s.id = "tanx-s-mm_117570917_17204454_198762180";
                 tanx_s.async = true;
-                tanx_s.src = "http://p.tanx.com/ex?i=mm_117570917_17204454_198762180";
+                tanx_s.src = "https://p.tanx.com/ex?i=mm_117570917_17204454_198762180";
                 tanx_h = document.getElementsByTagName("head")[0];
                 if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
             </script>
