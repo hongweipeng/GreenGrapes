@@ -50,7 +50,17 @@
     <?php endif; ?>
     <aside>
         <div style="margin-bottom: 20px;">
-        <script type="text/javascript">var jd_union_unid="1000075724",jd_ad_ids="512:6",jd_union_pid="CKf7mNeJLBDM4+/cAxoAIL2QhJkEKgA=";var jd_width=336;var jd_height=280;var jd_union_euid="";var p="BxsFURpZFwIVNwpfBkgyTUMIRmtKRk9aZV8ETVxNNwpfBkgySl0XeFpIalViVWEfYEtiUAxEOEABRAtZK14XBxsEVxpfFTISBlQaWhMGFARQK2tKRk9aZVA1FDJNQwhGaxUGEgJQGF0WBRsDVhtrFDIiNw%3D%3D";</script><script type="text/javascript" charset="utf-8" src="//u-x.jd.com/static/js/auto.js"></script>
+            <script type="text/javascript">
+                document.write('<a style="display:none!important" id="tanx-a-mm_117570917_17204454_198762180"></a>');
+                tanx_s = document.createElement("script");
+                tanx_s.type = "text/javascript";
+                tanx_s.charset = "gbk";
+                tanx_s.id = "tanx-s-mm_117570917_17204454_198762180";
+                tanx_s.async = true;
+                tanx_s.src = "http://p.tanx.com/ex?i=mm_117570917_17204454_198762180";
+                tanx_h = document.getElementsByTagName("head")[0];
+                if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
+            </script>
         </div>
     </aside>
     <div id="fixed"></div>

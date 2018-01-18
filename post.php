@@ -34,7 +34,17 @@
 
         </div>
         <div style="margin: 10px 0 10px 0">
-        <script type="text/javascript">var jd_union_unid="1000075724",jd_ad_ids="507:6",jd_union_pid="CIC98LeJLBDM4+/cAxoAIMOSg5kEKgA=";var jd_width=728;var jd_height=90;var jd_union_euid="";var p="BxACURpcFQcRNwpfBkgyTUMIRmtKRk9aZV8ETVxNNwpfBkgyQlUNel1qWXBnKFsiVXJMZR5ZEGNCcgtZK14XBxsEVxpfFTISBlQaWhMGFARQK2tKRk9aZVA1FDJNQwhGaxUGEgJXHFsRChACUx5rFDIiNw%3D%3D";</script><script type="text/javascript" charset="utf-8" src="//u-x.jd.com/static/js/auto.js"></script>
+            <script type="text/javascript">
+                document.write('<a style="display:none!important" id="tanx-a-mm_117570917_17204454_198760034"></a>');
+                tanx_s = document.createElement("script");
+                tanx_s.type = "text/javascript";
+                tanx_s.charset = "gbk";
+                tanx_s.id = "tanx-s-mm_117570917_17204454_198760034";
+                tanx_s.async = true;
+                tanx_s.src = "https://p.tanx.com/ex?i=mm_117570917_17204454_198760034";
+                tanx_h = document.getElementsByTagName("head")[0];
+                if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
+            </script>
         </div>
     <?php if (!empty($this->options->ShowBlock) && in_array('ShowPostBottomBar', $this->options->ShowBlock)): ?>
         <div class="block">
