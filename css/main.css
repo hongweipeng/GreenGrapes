@@ -436,6 +436,11 @@ footer {padding: 20px;margin: 20px 0 0;text-align:center;background-color:#fffff
 #search-form-close.hover{color:#3dabda;}
 #search-form input[type="button"]{position:absolute;top:9999px;right:9999px;z-index:-9999;width:0;height:0;text-indent:-9999px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout:none;}
 
+.series-a {
+	text-decoration: none;
+	color: #36C;
+}
+
 @media screen and (max-width:1100px){
 	body{background:#fff;overflow-x: hidden;}
 	header,aside{display:none;}
