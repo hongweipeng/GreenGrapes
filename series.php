@@ -18,7 +18,7 @@ $meta_series->to($series);
                 <?php $series_posts = $meta_series->midSeriesPosts($series->mid);?>
                 <?php if ($series_posts): ?>
             <article class="post-article clearfix">
-                    <h3 class="title"><?php _e($series->name);?></h3>
+                    <h3 class="title series-title"><?php _e($series->name);?></h3>
                     <ul>
                     <?php foreach ($series_posts as $post): ?>
                         <?php

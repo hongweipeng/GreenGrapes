@@ -440,6 +440,9 @@ footer {padding: 20px;margin: 20px 0 0;text-align:center;background-color:#fffff
 	text-decoration: none;
 	color: #36C;
 }
+.series-title {
+	padding-left: 20px;
+}
 
 @media screen and (max-width:1100px){
 	body{background:#fff;overflow-x: hidden;}
