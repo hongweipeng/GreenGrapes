@@ -21,10 +21,11 @@
                 </div>
                 <div class="tab-pane fade" id="sidebar-comment">
                     <?php $this->widget('Widget_Comments_Recent')->to($comments); ?>
+                    <ul class="list-group">
                     <?php while($comments->next()): ?>
                         <li class="list-group-item clearfix"><?php $comments->author(false); ?>：<a href="<?php $comments->permalink(); ?>" target="_blank"><?php $comments->excerpt(35, '...'); ?></a></li>
                     <?php endwhile; ?>
-                        </ul>
+                    </ul>
                 </div>
                 <div class="tab-pane nav bs-sidenav fade" id="sidebar-rand">
                     <?php theme_random_posts();?>
