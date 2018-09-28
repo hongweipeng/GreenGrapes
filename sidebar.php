@@ -33,7 +33,7 @@
         <div class="panel panel-green hidden-xs">
             <div class="panel-heading"><i class="fa fa-link fa-fw"></i> 友情链接</div>
             <ul class="list-group">
-                <?php Links_Plugin::output('<li class="list-group-item"><a href="{url}" target="_blank">{name}</a></li>', 10, NULL, true); ?>
+                <?php Links_Plugin::output('<li class="list-group-item"><a href="{url}" target="_blank" rel="noopener noreferrer">{name}</a></li>', 10, NULL, true); ?>
             </ul>
         </div>
     </aside>
