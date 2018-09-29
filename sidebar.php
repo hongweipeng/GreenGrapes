@@ -48,6 +48,8 @@
         </div>
     </aside>
     <?php endif; ?>
+    <?php
+    /*
     <aside>
         <div style="margin-bottom: 20px;">
             <script type="text/javascript">
@@ -62,7 +64,8 @@
                 if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
             </script>
         </div>
-    </aside>
+    </aside>*/
+    ?>
     <div id="fixed"></div>
     <aside class="fixsidebar">
         <div class="panel panel-green hidden-xs">

@@ -33,6 +33,8 @@
             </article>
 
         </div>
+        <?php
+        /*
         <div style="margin: 10px 0 10px 0">
             <script type="text/javascript">
                 document.write('<a style="display:none!important" id="tanx-a-mm_117570917_17204454_198760034"></a>');
@@ -45,7 +47,8 @@
                 tanx_h = document.getElementsByTagName("head")[0];
                 if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
             </script>
-        </div>
+        </div>*/
+        ?>
     <?php if (!empty($this->options->ShowBlock) && in_array('ShowPostBottomBar', $this->options->ShowBlock)): ?>
         <div class="block">
             <ul class="post-near">
