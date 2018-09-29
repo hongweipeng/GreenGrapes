@@ -475,3 +475,10 @@ footer {padding: 20px;margin: 20px 0 0;text-align:center;background-color:#fffff
 	.post-article .text .tags-list{width:50%}
 	#smilies-box{width: 280px;}
 }
+
+/* 移除畅言广告 */
+#feedAv{
+    margin-top: -200px!important;
+    transform: scale(0);
+}
+/* 移除畅言广告 end */
