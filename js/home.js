@@ -78,17 +78,21 @@ var closeEnable = false;
 }
 
 $(document).ready(function () {
-	fssilde();
-    if(document.getElementById("mycanvas")) {
-        TagCanvas.Start('mycanvas', '', {
-            textColour: '#000',
-            outlineColour: '#16a085',
-            outlineThickness: 1,
-            maxSpeed: 0.03,
-            depth: 0.75,
-            wheelZoom: false
-        });
+
+    if(!document.getElementById("sidebar")) {
+    	return;
     }
+
+	fssilde();
+
+	TagCanvas.Start('mycanvas', '', {
+		textColour: '#000',
+		outlineColour: '#16a085',
+		outlineThickness: 1,
+		maxSpeed: 0.03,
+		depth: 0.75,
+		wheelZoom: false
+	});
 
 	//边栏固定
 	var $sidebar = $("#fixed"),
