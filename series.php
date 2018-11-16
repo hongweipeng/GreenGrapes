@@ -10,7 +10,7 @@ $meta_series = Typecho_Widget::widget('MetasSeries');
 $meta_series->to($series);
 ?>
     <div id="m-container" class="container">
-        <div class="col-md-8">
+        <div class="no-lr-padding col-md-8">
             <div class="alert alert-info">
                 <p>这是本博客系列文章的导航</p>
             </div>
