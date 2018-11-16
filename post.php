@@ -3,7 +3,7 @@
 $hidden_sidebar =  !empty($this->options->ShowBlock) && in_array('SidebarHiddenInDetail', $this->options->ShowBlock);
 ?>
 <div id="m-container" class="container">
-    <div class="col-md-<?php echo $hidden_sidebar? '12' : '8' ?>">
+    <div class="no-lr-padding col-md-<?php echo $hidden_sidebar? '12' : '8' ?>">
         <div id="article-list">
             <article class="post-article clearfix">
                 <div>
