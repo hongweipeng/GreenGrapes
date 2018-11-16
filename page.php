@@ -1,6 +1,6 @@
 <?php $this->need('header.php'); ?>
 <div id="m-container" class="container">
-    <div class="col-md-8">
+    <div class="no-lr-padding col-md-8">
         <div id="article-list">
             <article class="post-article clearfix">
                 <div>
