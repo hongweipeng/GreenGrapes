@@ -34,6 +34,7 @@ $this->need('header.php');
                         <span><i class="fa fa-calendar"></i> <?php $this->date('Y-m-d'); ?></span>
                         <span><i class="fa fa-user"></i> <a href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></span>
                         <span><i class="fa fa-comment"></i> <a href="<?php $this->permalink() ?>#comments"><span id="sourceId::<?php echo $this->cid;?>" class="cy_cmt_count" ></span></a></span>
+                        <span><i class="fa fa-eye"></i> <?php $this->viewsNum(); ?> 次浏览</span>
                     </div>
                 </section>
             </article>

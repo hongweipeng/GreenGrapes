@@ -12,6 +12,7 @@ $hidden_sidebar =  !empty($this->options->ShowBlock) && in_array('SidebarHiddenI
                         <span class="label label-green"><i class="fa fa-user"></i> <a href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></span>
                         <span class="label label-green"><i class="fa fa-tags"></i> <?php $this->category(','); ?></span>
                         <span class="label label-green"><i class="fa fa-calendar"></i> <?php $this->date('Y-m-d'); ?></span>
+                        <span class="label label-green"><i class="fa fa-eye"></i> <?php $this->viewsNum(); ?> 次浏览</span>
 
                     </p>
                 </div>
