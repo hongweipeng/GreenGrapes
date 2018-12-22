@@ -6,10 +6,10 @@
                 <div>
                     <h2 class="title"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
                     <p class="post-big-info">
-                        <span class="label label-green"><i class="fa fa-user"></i> <a href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></span>
-                        <span class="label label-green"><i class="fa fa-tags"></i> <?php $this->category(','); ?></span>
-                        <span class="label label-green"><i class="fa fa-calendar"></i> <?php $this->date('Y-m-d'); ?></span>
-
+                        <span class="label label-green"><i class="fa fa-fw fa-user"></i> <a href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></span>
+                        <span class="label label-green"><i class="fa fa-fw fa-tags"></i> <?php $this->category(','); ?></span>
+                        <span class="label label-green"><i class="fa fa-fw fa-calendar"></i> <?php $this->date('Y-m-d'); ?></span>
+                        <span class="label label-green"><i class="fa fa-fw fa-eye"></i> <?php $this->viewsNum(); ?> 次浏览</span>
                     </p>
                 </div>
                 <div class="article-content clearfix">
