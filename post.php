@@ -44,7 +44,7 @@ $hidden_sidebar =  !empty($this->options->ShowBlock) && in_array('SidebarHiddenI
                 <?php if(class_exists('Reward_Plugin') && isset($this->options->plugins['activated']['Reward'])): ?>
                     <?php
                     $extra_str = '';
-                    if (class_exists('TeStat_Plugin')) {
+                    if (class_exists('TeStat_Plugin') && isset($this->options->plugins['activated']['TeStat'])) {
                         $extra_str = '<button class="btn btn-info btn-like" type="button" data-cid="' . $this->cid . '"><i class="fa fa-fw fa-thumbs-o-up"></i> 仅点赞 <span class="like-num-show">' . $this->likesNum . '</span></button>';
                     }
                     ?>
