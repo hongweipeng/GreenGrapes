@@ -2,7 +2,7 @@
     <aside>
         <form method="get" id="searchform" class="form-inline clearfix" action="./">
             <input class="form-control" name="s" id="s" placeholder="搜索关键词..." type="text">
-            <button class="btn btn-green btn-small"><i class="fa fa-search"></i> 查找</button>
+            <button class="btn btn-skin btn-small"><i class="fa fa-search"></i> 查找</button>
         </form>
     </aside>
     <aside>
@@ -44,7 +44,7 @@
     </aside>
     <?php if(class_exists('Links_Plugin') && isset($this->options->plugins['activated']['Links'])): ?>
     <aside>
-        <div class="panel panel-green hidden-xs">
+        <div class="panel panel-skin hidden-xs">
             <div class="panel-heading"><i class="fa fa-link fa-fw"></i> 友情链接</div>
             <ul class="list-group">
                 <?php Links_Plugin::output('<li class="list-group-item"><a href="{url}" target="_blank" rel="noopener noreferrer">{name}</a></li>', 10, NULL, true); ?>
@@ -54,7 +54,7 @@
     <?php endif; ?>
     <?php if(false): ?>
     <aside>
-        <div class="panel panel-green hidden-xs">
+        <div class="panel panel-skin hidden-xs">
             <div class="panel-heading"><i class="fa fa-book fa-fw"></i> 文章分类</div>
             <div class="list-group category">
                 <?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=widget-list'); ?>
@@ -82,7 +82,7 @@
     ?>
     <div id="fixed"></div>
     <aside class="fixsidebar">
-        <div class="panel panel-green hidden-xs">
+        <div class="panel panel-skin hidden-xs">
             <div class="panel-heading"><i class="fa fa-tags fa-fw"></i> 标签云</div>
             <div id="meta-cloud">
             <canvas height="300" id="mycanvas" style="width: 100%">

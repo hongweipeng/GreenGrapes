@@ -27,6 +27,33 @@ function theme_random_posts(){
     }
     echo $defaults['after'];
 }
+
+/*
+ * 返回主题颜色配置
+ * return string
+ */
+function get_theme_color() {
+
+    $options = Typecho_Widget::widget('Widget_Options');
+    $color = $options->themeColor;
+
+    return $color;
+}
+
+function get_theme_color_array() {
+    $arr = array(
+        'green' => _t('绿色'),
+        'blue' => _t('蓝色'),
+        'red' => _t('红色'),
+        'purple' => _t('紫色'),
+        'orange' => _t('橙色'),
+        'cyan' => _t('青色'),
+        'grey' => _t('灰色')
+    );
+    return $arr;
+}
+
+
 function themeConfig($form) {
     $options = Typecho_Widget::widget('Widget_Options');
     $bgImg = new Typecho_Widget_Helper_Form_Element_Text('bgImg', null, $options->themeUrl('img/bg.jpg', 'GreenGrapes'), _t('首页背景图片地址'), _t('在这里填入一个图片URL地址, 作为首页背景图片, 默认使用img下的header.png'));
@@ -37,6 +64,9 @@ function themeConfig($form) {
 
     $siteIcon = new Typecho_Widget_Helper_Form_Element_Text('sideName', null, null, _t('侧栏用户名'), _t('在这里填入一个左侧显示的用户名, 默认不显示'));
     $form->addInput($siteIcon);
+
+    $themeColor = new Typecho_Widget_Helper_Form_Element_Select('themeColor', get_theme_color_array(), 'green', _t('主题颜色'), _t('包括标签的颜色和每篇文章中的颜色'));
+    $form->addInput($themeColor);
 
     $showBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('ShowBlock', array(
         'ShowPostBottomBar' => _t('文章页显示上一篇和下一篇'),

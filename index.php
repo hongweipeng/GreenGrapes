@@ -4,7 +4,7 @@
 
  * @package GreenGrapes
  * @author hongweipeng
- * @version 1.1.5
+ * @version 2.0.0
  * @link https://github.com/hongweipeng/GreenGrapes
  */
 $this->need('header.php');
@@ -28,7 +28,7 @@ $this->need('header.php');
                     </div>
                     <hr>
                     <div class="pull-left">
-                        <a class="btn btn-green" href="<?php $this->permalink() ?>">阅读全文</a>
+                        <a class="btn btn-skin" href="<?php $this->permalink() ?>">阅读全文</a>
                     </div>
                     <div class="pull-right post-info">
                         <span><i class="fa fa-fw fa-calendar"></i> <?php $this->date('Y-m-d'); ?></span>
