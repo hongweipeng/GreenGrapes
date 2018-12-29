@@ -28,7 +28,7 @@ $this->need('header.php');
                     </div>
                     <hr>
                     <div class="pull-left">
-                        <a class="btn btn-green" href="<?php $this->permalink() ?>">阅读全文</a>
+                        <a class="btn btn-skin" href="<?php $this->permalink() ?>">阅读全文</a>
                     </div>
                     <div class="pull-right post-info">
                         <span><i class="fa fa-fw fa-calendar"></i> <?php $this->date('Y-m-d'); ?></span>

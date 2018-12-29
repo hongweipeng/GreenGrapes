@@ -87,7 +87,8 @@ $(document).ready(function () {
 
 	TagCanvas.Start('mycanvas', '', {
 		textColour: '#000',
-		outlineColour: '#16a085',
+		//outlineColour: '#16a085',
+		outlineColour: $('.skin-bg').css('background-color'),
 		outlineThickness: 1,
 		maxSpeed: 0.03,
 		depth: 0.75,
