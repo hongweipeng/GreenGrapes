@@ -1,0 +1,58 @@
+blockquote {
+    border-left:4px solid #FF7F24;
+}
+
+.skin-bg {
+    background-color: #FF8C00;
+}
+
+.m-header {
+    background-color: #FF7F24;
+}
+
+.category-cloud a {
+    background-color: #FF7F24;
+}
+
+.post-article .title a:hover{
+    color: #FF7F24;
+}
+
+.article-copyright a, .article-content a,
+.article-copyright a:hover, .article-content a:hover {
+    color: #FF7F24;
+}
+
+.btn-skin {
+    border: 1px solid #FF7F24 !important;
+    color: #FF7F24;
+}
+.btn-skin:hover {
+    color: #fff !important;
+    background-color:#FF7F24;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+    background-color: #FF7F24;
+    color: #fff;
+}
+
+.widget-sets .nav-pills {
+    border-bottom: 2px solid #FF7F24;
+}
+
+.panel.panel-skin .panel-heading {
+    background-color: #FF7F24;
+}
+
+.label-skin {
+    background-color: #FF7F24;
+}
+
+#back-to-top:hover{
+    border: #FF7F24 1px solid;
+}
+
+#back-to-top.red:hover #point-up path{
+    fill:#FF7F24;
+}
