@@ -32,7 +32,7 @@ blockquote {
     background-color:#7D26CD;
 }
 
-.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     background-color: #7D26CD;
     color: #fff;
 }
@@ -41,11 +41,11 @@ blockquote {
     border-bottom: 2px solid #7D26CD;
 }
 
-.panel.panel-skin .panel-heading {
+.card.card-skin .card-header {
     background-color: #7D26CD;
 }
 
-.label-skin {
+.badge-skin {
     background-color: #7D26CD;
 }
 

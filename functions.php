@@ -33,30 +33,36 @@ function theme_random_posts(){
     echo $defaults['after'];
 }
 
+function get_theme_color_array() {
+    $arr = array(
+        'red' => _t('红色'),
+        'orange' => _t('橙色'),
+        'green' => _t('绿色'),
+        'cyan' => _t('青色'),
+        'blue' => _t('蓝色'),
+        'purple' => _t('紫色'),
+        'gray' => _t('灰色')
+    );
+    return $arr;
+}
+
 /*
  * 返回主题颜色配置
  * return string
  */
 function get_theme_color() {
-
+    $key = 'greengrapes_color';
     $options = Typecho_Widget::widget('Widget_Options');
-    $color = $options->themeColor;
 
+    if ($options->allow_user_change_color && isset($_COOKIE[$key])
+        && array_key_exists($_COOKIE[$key], get_theme_color_array())) {
+        return $_COOKIE[$key];
+    }
+    $color = $options->themeColor;
     return $color;
 }
 
-function get_theme_color_array() {
-    $arr = array(
-        'green' => _t('绿色'),
-        'blue' => _t('蓝色'),
-        'red' => _t('红色'),
-        'purple' => _t('紫色'),
-        'orange' => _t('橙色'),
-        'cyan' => _t('青色'),
-        'grey' => _t('灰色')
-    );
-    return $arr;
-}
+
 
 
 function themeConfig($form) {
@@ -72,6 +78,10 @@ function themeConfig($form) {
 
     $themeColor = new Typecho_Widget_Helper_Form_Element_Select('themeColor', get_theme_color_array(), 'green', _t('主题颜色'), _t('包括标签的颜色和每篇文章中的颜色'));
     $form->addInput($themeColor);
+
+    $allow_user_change_color = new Typecho_Widget_Helper_Form_Element_Radio('allow_user_change_color',
+        array(0=>_t('拒绝'),1=>_t('允许'),), '1', _t('是否允许用户切换主题色'),_t('浏览者可在右侧切换主题颜色'));
+    $form->addInput($allow_user_change_color);
 
     $showBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('ShowBlock', array(
         'ShowPostBottomBar' => _t('文章页显示上一篇和下一篇'),
