@@ -35,13 +35,14 @@ function theme_random_posts(){
 
 function get_theme_color_array() {
     $arr = array(
-        'red' => _t('红色'),
-        'orange' => _t('橙色'),
-        'green' => _t('绿色'),
-        'cyan' => _t('青色'),
-        'blue' => _t('蓝色'),
-        'purple' => _t('紫色'),
-        'gray' => _t('灰色')
+        'red' => _t('赤'),
+        'orange' => _t('橙'),
+        'yellow' => _t('黄'),
+        'green' => _t('绿'),
+        'cyan' => _t('青'),
+        'blue' => _t('蓝'),
+        'purple' => _t('紫'),
+        'gray' => _t('灰')
     );
     return $arr;
 }
