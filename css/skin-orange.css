@@ -1,5 +1,5 @@
 blockquote {
-    border-left:4px solid #FF7F24;
+    border-left:4px solid #FF8C00;
 }
 
 .skin-bg {
@@ -7,52 +7,52 @@ blockquote {
 }
 
 .m-header {
-    background-color: #FF7F24;
+    background-color: #FF8C00;
 }
 
 .category-cloud a {
-    background-color: #FF7F24;
+    background-color: #FF8C00;
 }
 
 .post-article .title a:hover{
-    color: #FF7F24;
+    color: #FF8C00;
 }
 
 .article-copyright a, .article-content a,
 .article-copyright a:hover, .article-content a:hover {
-    color: #FF7F24;
+    color: #FF8C00;
 }
 
 .btn-skin {
-    border: 1px solid #FF7F24 !important;
-    color: #FF7F24;
+    border: 1px solid #FF8C00 !important;
+    color: #FF8C00;
 }
 .btn-skin:hover {
     color: #fff !important;
-    background-color:#FF7F24;
+    background-color:#FF8C00;
 }
 
-.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
-    background-color: #FF7F24;
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #FF8C00;
     color: #fff;
 }
 
 .widget-sets .nav-pills {
-    border-bottom: 2px solid #FF7F24;
+    border-bottom: 2px solid #FF8C00;
 }
 
-.panel.panel-skin .panel-heading {
-    background-color: #FF7F24;
+.card.card-skin .card-header {
+    background-color: #FF8C00;
 }
 
-.label-skin {
-    background-color: #FF7F24;
+.badge-skin {
+    background-color: #FF8C00;
 }
 
 #back-to-top:hover{
-    border: #FF7F24 1px solid;
+    border: #FF8C00 1px solid;
 }
 
 #back-to-top.red:hover #point-up path{
-    fill:#FF7F24;
+    fill:#FF8C00;
 }

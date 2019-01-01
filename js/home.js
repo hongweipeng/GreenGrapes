@@ -78,6 +78,8 @@ var closeEnable = false;
 }
 
 $(document).ready(function () {
+	// 分页
+	$('.pagination a, .pagination span').addClass('page-link');
 
     if(!document.getElementById("sidebar")) {
     	return;
@@ -113,4 +115,11 @@ $(document).ready(function () {
 			}
 		});
 	}
+	
+	// 切换主题
+	$('#switch_color .flex-fill').click(function(e) {
+	    var obj = $(this);
+	    $.cookie('greengrapes_color', obj.data('color'));
+	    location.reload();
+    });
 });

@@ -11,7 +11,8 @@ $this->need('header.php');
 ?>
 
 <div id="m-container" class="container">
-    <div class="no-lr-padding col-md-8">
+    <div class="row ml-0 mr-0">
+    <div class="col-md-8 pl-0 pr-0">
         <div id="article-list">
             <?php while($this->next()): ?>
             <article class="post-article clearfix">
@@ -48,7 +49,7 @@ $this->need('header.php');
                 <?php $this->pageNav('&laquo;', '&raquo;', 3, '...', array(
                     'itemTag'       =>  'li',
                     'textTag'       =>  'span',
-                    'currentClass'  =>  'disabled',
+                    'currentClass'  =>  'page-item disabled',
                     'prevClass'     =>  'prev',
                     'nextClass'     =>  'next',
                     'wrapTag'       =>  'ul',
@@ -60,6 +61,6 @@ $this->need('header.php');
     <div class="col-md-4">
         <?php $this->need('sidebar.php'); ?>
     </div>
-
+    </div>
 </div>
 <?php $this->need('footer.php');

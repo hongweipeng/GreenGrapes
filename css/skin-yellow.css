@@ -1,58 +1,58 @@
 blockquote {
-    border-left:4px solid #7D26CD;
+    border-left:4px solid #CDCD00;
 }
 
 .skin-bg {
-    background-color: #7D26CD;
+    background-color: #FFFF00;
 }
 
 .m-header {
-    background-color: #7D26CD;
+    background-color: #CDCD00;
 }
 
 .category-cloud a {
-    background-color: #7D26CD;
+    background-color: #CDCD00;
 }
 
 .post-article .title a:hover{
-    color: #7D26CD;
+    color: #CDCD00;
 }
 
 .article-copyright a, .article-content a,
 .article-copyright a:hover, .article-content a:hover {
-    color: #7D26CD;
+    color: #CDCD00;
 }
 
 .btn-skin {
-    border: 1px solid #7D26CD !important;
-    color: #7D26CD;
+    border: 1px solid #CDCD00 !important;
+    color: #CDCD00;
 }
 .btn-skin:hover {
     color: #fff !important;
-    background-color:#7D26CD;
+    background-color:#CDCD00;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    background-color: #7D26CD;
+    background-color: #CDCD00;
     color: #fff;
 }
 
 .widget-sets .nav-pills {
-    border-bottom: 2px solid #7D26CD;
+    border-bottom: 2px solid #CDCD00;
 }
 
 .card.card-skin .card-header {
-    background-color: #7D26CD;
+    background-color: #CDCD00;
 }
 
 .badge-skin {
-    background-color: #7D26CD;
+    background-color: #CDCD00;
 }
 
 #back-to-top:hover{
-    border: #7D26CD 1px solid;
+    border: #CDCD00 1px solid;
 }
 
 #back-to-top.red:hover #point-up path{
-    fill:#7D26CD;
+    fill:#CDCD00;
 }
