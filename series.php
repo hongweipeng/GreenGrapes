@@ -10,6 +10,7 @@ $meta_series = Typecho_Widget::widget('MetasSeries');
 $meta_series->to($series);
 ?>
     <div id="m-container" class="container">
+    <div class="row ml-0 mr-0">
         <div class="no-lr-padding col-md-8">
             <div class="alert alert-info">
                 <p>这是本博客系列文章的导航</p>
@@ -51,6 +52,7 @@ $meta_series->to($series);
         <div class="col-md-4">
             <?php $this->need('sidebar.php'); ?>
         </div>
+    </div>
 
     </div>
 <?php $this->need('footer.php');
