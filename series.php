@@ -11,9 +11,9 @@ $meta_series->to($series);
 ?>
     <div id="m-container" class="container">
     <div class="row ml-0 mr-0">
-        <div class="no-lr-padding col-md-8">
+        <div class="col-md-8 pl-0 pr-0">
             <div class="alert alert-info">
-                <p>这是本博客系列文章的导航</p>
+                这是本博客系列文章的导航
             </div>
             <?php $series_step = 1; ?>
             <?php while ($series->next()): ?>
