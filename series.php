@@ -9,7 +9,7 @@ $this->need('header.php');
 $meta_series = Typecho_Widget::widget('MetasSeries');
 $meta_series->to($series);
 ?>
-    <div id="m-container" class="container">
+<div id="m-container" class="container">
     <div class="row ml-0 mr-0">
         <div class="col-md-8 pl-0 pr-0">
             <div class="alert alert-info">
@@ -54,5 +54,5 @@ $meta_series->to($series);
         </div>
     </div>
 
-    </div>
+</div>
 <?php $this->need('footer.php');
