@@ -20,13 +20,15 @@ blockquote{overflow:hidden;border:0;padding:8px 12px;margin:5px 0 15px;backgroun
 	padding: 5px;
 	text-align: center;
 }
-.no-lr-padding {
+
+#m-container{
 	padding-left: 0;
 	padding-right: 0;
-}
-.container{
-	padding-left: 0;
-	padding-right: 0;
+	max-width:1170px;
+	min-width:320px;
+	margin:10px auto;
+	position:relative;
+	width:auto;
 }
 #searchform {
 	background-color: #fff;
@@ -48,6 +50,7 @@ blockquote{overflow:hidden;border:0;padding:8px 12px;margin:5px 0 15px;backgroun
 .widget-sets .list-group {
 	margin-bottom: 0;
 }
+/* 右侧栏卡片样式 */
 aside .card {
 	margin-bottom: 20px;
 }
@@ -109,12 +112,7 @@ aside .card {
 	font-size: 0.937rem;
 	line-height: 1.8;
 }
-/*.article-copyright a, .article-content a {
-	color: #009a61;
-}
-.article-copyright a:hover, .article-content a:hover{
-	color: #009a61;
-}*/
+
 .article-content pre {
 	max-height: 400px;
 }
@@ -311,23 +309,14 @@ img.avatar {
 .hdbg,.hdbg2{position:absolute;bottom:0;left:0;width:100%;height:100%;background:-webkit-linear-gradient(top,#000,rgba(0,0,0,0) 85%);}
 .hdbg2{opacity:.8;filter:alpha(opacity=80);}
 .m-about{width:365px;margin:0 auto;padding:70px 0 0;text-align:center;position:relative;zoom:1;z-index: 1;}
-.playerd{width:180px;height:180px;border-radius:100px;position: relative;}
-.rotate{animation:pic 15s linear infinite;-webkit-animation:pic 15s linear infinite;-moz-animation:pic 15s linear infinite;-ms-animation:pic 15s linear infinite;-o-animation:pic 15s linear infinite;}@-webkit-keyframes pic{from{-webkit-transform:rotate(0deg);}to{-webkit-transform:rotate(360deg);}}@-moz-keyframes pic{from{-moz-transform:rotate(0deg);}to{-moz-transform:rotate(360deg);}}@-ms-keyframes pic{from{-ms-transform:rotate(0deg);}to{-ms-transform:rotate(360deg);}}@-o-keyframes pic{from{-o-transform:rotate(0deg);}to{-o-transform:rotate(360deg);}}@keyframes pic{from{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg);}to{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg);transform:rotate(360deg);}}
-#pic{position: absolute;width:180px;height:180px;border-radius:50%;}
-#pic img{width:180px;height:180px;border-radius:50%;}
+
 #logo{width:180px;height:180px;margin:0 auto 15px;}
 #logo img{border-radius:100px;width:180px;height:180px;}
 
-
-#logo #jp_container{width:0px!important;position: absolute;left: 41.5px;top: 41.5px;padding: 0!important;}
-#logo  #jp_container .jp-pause{background: url(../images/logoplayer2.png) no-repeat;margin: 25px;top: 50%;left: 50%;width:45px;height:45px;cursor:pointer;position:absolute;}
-#logo  #jp_container .jp-play{background:none;margin: 25px;top: 50%;left: 50%;width:45px;height:45px;cursor:pointer;position:absolute;}
-#logo  #jp_container .jp-play:hover{background:url(../images/logoplayer.png) no-repeat;}
 .tit{padding:0 0 10px;font-weight:normal;}
 .tit a{color:#fff;font-size:2.812rem;letter-spacing:2px;opacity:.8;filter:alpha(opacity=80);font-family:微软雅黑;}
 .about{color:#fff;padding:0 0 15px;font-size:0.875rem;opacity:.8;filter:alpha(opacity=80);zoom:1;}
-.lrc_content{ width:100%; height:75px;margin:20px auto;overflow:hidden; padding:10px;text-align:center;}
-.lrc_hover {color:#EA93A3;font-size:1.125rem;}
+
 .nav{margin-left:0;list-style:none}
 .nav > li > a{display:block}
 .nav > li > a:hover,.nav > li > a:focus{text-decoration:none;background-color:#eeeeee}
@@ -351,9 +340,6 @@ img.avatar {
 .m-nav .nav li:hover a,.m-nav .nav li.current-menu-item a,.m-nav .nav li.current-menu-parent a,.m-nav .nav li.current_page_item a,.m-nav .nav li.current-post-ancestor a{background-color:#404040;}
 .m-nav .nav li ul{background-color:#404040;}
 
-.container{max-width:1170px;min-width:320px;margin:10px auto;position:relative;width:auto;}
-
-#content{margin-right: 370px;}
 .post-article{background: #fff;margin-bottom: 10px;overflow: hidden;padding: 0 20px 20px;}
 .post-article .title{font-weight: bold;margin-top:1rem;}
 .post-article .title a{color:#666;text-decoration: none;}
@@ -455,6 +441,7 @@ footer {padding: 20px;margin: 20px 0 0;text-align:center;background-color:#fffff
 .color-purple{background-color: #7D26CD}
 .color-yellow{background-color: #FFFF00}
 
+/* 移动端左侧导航栏 */
 .m-sidebar {margin-bottom: 20px;}
 .m-header{position:relative;left:0;z-index:4;display:none;margin:0;padding:0;width:100%;height:48px;color:#fff;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;transition:all .3s ease;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout:none;}
 .m-header-button{position:absolute;top:15px;left:15px;width:20px;height:20px;background-image:url(../img/content-header.png);background-size:40px;background-repeat:no-repeat;cursor:pointer;}
