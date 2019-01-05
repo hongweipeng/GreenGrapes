@@ -6,6 +6,9 @@ p{display:block;}
 a{color:#666;text-decoration:none;}
 sup{color:#299982;}
 blockquote{overflow:hidden;border:0;padding:8px 12px;margin:5px 0 15px;background-color:#F1F1F1;-webkit-box-shadow:0 1px 1px 0 rgba(0,0,0,0.1);box-shadow:0 1px 1px 0 rgba(0,0,0,0.1);font-size:unset;}
+pre code {
+    white-space: pre-wrap;
+}
 #header-canvas {
 	position: absolute;
 	top:0;
