@@ -63,7 +63,7 @@
                 rel: 'noopener'
             });
         }
-    }
+    });
 </script>
 <?php $this->footer(); ?>
 </body>
