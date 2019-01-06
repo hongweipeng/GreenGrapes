@@ -54,6 +54,17 @@
 </script>
 <!-- 畅言 end-->
 <?php endif; ?>
+<script>
+    // 外链新窗口打开以及添加noopener
+    $('.article-content a').each(function() {
+        if (this.hostname !== window.location.hostname) {
+            $(this).attr({
+                target: '_blank',
+                rel: 'noopener'
+            });
+        }
+    }
+</script>
 <?php $this->footer(); ?>
 </body>
 </html>
