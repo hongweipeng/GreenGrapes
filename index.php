@@ -4,7 +4,7 @@
  *
  * @package GreenGrapes
  * @author hongweipeng
- * @version 2.0.1
+ * @version 2.0.2
  * @link https://github.com/hongweipeng/GreenGrapes
  */
 $this->need('header.php');
