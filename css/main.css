@@ -519,6 +519,10 @@ footer {padding: 20px;margin: 20px 0 0;text-align:center;background-color:#fffff
     margin-top: -200px!important;
     transform: scale(0);
 }
+#feedAv .msg-wrap-gw {
+    transform: scale(0);
+    display: none !important;
+}
 #pop_ad {
 	display: none !important;
 }
