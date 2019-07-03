@@ -98,13 +98,16 @@ $(document).ready(function () {
 	});
 
 	//边栏固定
-	var $sidebar = $("#fixed"),
+	var $sidebar = $("#sidebar"),
+		$containner = $('#m-container'),
 		$fixside = $('.fixsidebar'),
 		$window = $(window),
-		offset = $sidebar.offset(),
-		widths=$sidebar.width();
+		offset = $("#fixed").offset();
 	if($window.width() > 768){
 		$window.scroll(function() {
+			if ($containner.height() - $sidebar.height() <= 40) {
+				return;
+			}
 			if ($window.scrollTop() > offset.top) {
 				var widths=$sidebar.width();
 				$fixside.stop().animate({top:'20px'});
