@@ -69,6 +69,9 @@
                     <a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
                 </li>
             <?php endwhile; ?>
+            <li class="mall">
+                <a href="http://www.hongweipeng.com/mall/index.php" title="商城" target="_blank">商城</a>
+            </li>
         </ul>
     </div>
 </div>
