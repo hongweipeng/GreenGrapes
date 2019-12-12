@@ -85,13 +85,15 @@ function themeConfig($form) {
     $form->addInput($themeColor);
 
     $allow_user_change_color = new Typecho_Widget_Helper_Form_Element_Radio('allow_user_change_color',
-        array(0=>_t('拒绝'),1=>_t('允许'),), '1', _t('是否允许用户切换主题色'),_t('浏览者可在右侧切换主题颜色'));
+        array(0=>_t('拒绝'),1=>_t('允许'),), '1', _t('是否允许用户切换主题色'),_t('浏览者可在右侧切换主题色（仅在该访者上生效）'));
     $form->addInput($allow_user_change_color);
 
     $showBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('ShowBlock', array(
         'ShowPostBottomBar' => _t('文章页显示上一篇和下一篇'),
         'SidebarHiddenInDetail' => _t('文章页隐藏侧边栏'),
         'HeaderHiddenInDetail' => _t('文章页隐藏顶部头像'),
+        'ShowCategory' => _t('侧边栏显示分类'),
+        'ShowArchive' => _t('侧边栏显示文档'),
         ),
         array('ShowPostBottomBar'), _t('显示设置'));
     $form->addInput($showBlock->multiMode());

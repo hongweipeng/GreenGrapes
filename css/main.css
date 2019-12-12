@@ -66,14 +66,22 @@ aside .card {
 .category a {
 	border-bottom: 1px solid #eee;
 	display: inline-block;
-	padding: 10px 20px;
+	padding: 0.75em 1.25em;
 	width: 100%;
+	transition: .2s color ease,.2s padding-left ease,.2s background-color ease;
+	-o-transition: .2s color ease,.2s padding-left ease,.2s background-color ease;
+	-moz-transition: .2s color ease,.2s padding-left ease,.2s background-color ease;
+	-webkit-transition: .2s color ease,.2s padding-left ease,.2s background-color ease;
 }
 .category a:hover {
-	background-color: #0b445b;
-	color: #fff;
+	padding-left: 15px;
+	background-color: rgba(0, 0, 0, 0.02);
+	color: rgba(0, 0, 0, 0.7);
 }
+
 .category ol, .category ul {
+	list-style: none;
+	padding-left: 0;
 	margin-bottom: 0;
 }
 
