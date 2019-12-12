@@ -89,6 +89,7 @@ function themeConfig($form) {
         'SidebarHiddenInDetail' => _t('文章页隐藏侧边栏'),
         'HeaderHiddenInDetail' => _t('文章页隐藏顶部头像'),
         'ShowCategory' => _t('侧边栏显示分类'),
+        'ShowArchive' => _t('侧边栏显示文档'),
         ),
         array('ShowPostBottomBar'), _t('显示设置'));
     $form->addInput($showBlock->multiMode());
