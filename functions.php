@@ -81,7 +81,7 @@ function themeConfig($form) {
     $form->addInput($themeColor);
 
     $allow_user_change_color = new Typecho_Widget_Helper_Form_Element_Radio('allow_user_change_color',
-        array(0=>_t('拒绝'),1=>_t('允许'),), '1', _t('是否允许用户切换主题色'),_t('浏览者可在右侧切换主题颜色'));
+        array(0=>_t('拒绝'),1=>_t('允许'),), '1', _t('是否允许用户切换主题色'),_t('浏览者可在右侧切换主题色（仅在该访者上生效）'));
     $form->addInput($allow_user_change_color);
 
     $showBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('ShowBlock', array(
