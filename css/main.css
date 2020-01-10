@@ -384,6 +384,13 @@ img.avatar {
 .post .single-paging a span{background-color: #fff;color: #666;}
 .post .single-paging a:hover span{border-color: #bbb;}
 
+/*密码保护的表单*/
+form.protected .text {
+	padding: 0;
+	display: inline-block;
+	width: auto;
+}
+
 aside{position:relative;}
 aside section{display:block;overflow:hidden;}
 aside section h2{background:#299982;color:#FFF;padding-left:30px;height:30px;line-height:30px;font-size:0.875rem;}
