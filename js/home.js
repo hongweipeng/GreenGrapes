@@ -80,6 +80,7 @@ var closeEnable = false;
 $(document).ready(function () {
 	// 分页
 	$('.pagination a, .pagination span').addClass('page-link');
+	$('form.protected').find('.text').addClass('form-control').end().find('.submit').addClass('btn btn-skin');
 
     if(!document.getElementById("sidebar")) {
     	return;
