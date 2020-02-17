@@ -40,6 +40,18 @@
 <script src="<?php $this->options->themeUrl('js/headerCanvas.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/home.js'); ?>"></script>
 
+<script>
+    // 外链新窗口打开以及添加noopener
+    jQuery('.article-content a').each(function() {
+        if (this.hostname !== window.location.hostname) {
+            jQuery(this).attr({
+                target: '_blank',
+                rel: 'noopener'
+            });
+        }
+    });
+</script>
+
 <script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cysUkopEY"></script>
 <!--<script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>-->
 <script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cysUkopEY"></script>
@@ -54,17 +66,6 @@
 </script>
 <!-- 畅言 end-->
 <?php endif; ?>
-<script>
-    // 外链新窗口打开以及添加noopener
-    jQuery('.article-content a').each(function() {
-        if (this.hostname !== window.location.hostname) {
-            jQuery(this).attr({
-                target: '_blank',
-                rel: 'noopener'
-            });
-        }
-    });
-</script>
 <?php $this->footer(); ?>
 </body>
 </html>
