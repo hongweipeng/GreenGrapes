@@ -42,7 +42,7 @@
 
 <script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cysUkopEY"></script>
 <!--<script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>-->
-<!--<script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cysUkopEY"></script>-->
+<script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cysUkopEY"></script>
 <?php if($this->is('post') or $this->is('single')): ?>
 <!-- 畅言 start-->
 <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
@@ -56,9 +56,9 @@
 <?php endif; ?>
 <script>
     // 外链新窗口打开以及添加noopener
-    $('.article-content a').each(function() {
+    jQuery('.article-content a').each(function() {
         if (this.hostname !== window.location.hostname) {
-            $(this).attr({
+            jQuery(this).attr({
                 target: '_blank',
                 rel: 'noopener'
             });
