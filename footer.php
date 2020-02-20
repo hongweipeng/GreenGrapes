@@ -52,20 +52,22 @@
     });
 </script>
 
+<?php $this->footer(); ?>
+
 <script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cysUkopEY"></script>
 <!--<script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>-->
 <script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cysUkopEY"></script>
 <?php if($this->is('post') or $this->is('single')): ?>
-<!-- 畅言 start-->
-<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
-<script type="text/javascript">
-    window.changyan.api.config({
-        appid: 'cysUkopEY',
-        conf: 'prod_8f6d81c51c4b8363fb45c8879c0d9ca5'
-    });
-</script>
-<!-- 畅言 end-->
+    <!-- 畅言 start-->
+    <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
+    <script type="text/javascript">
+        window.changyan.api.config({
+            appid: 'cysUkopEY',
+            conf: 'prod_8f6d81c51c4b8363fb45c8879c0d9ca5'
+        });
+    </script>
+    <!-- 畅言 end-->
 <?php endif; ?>
-<?php $this->footer(); ?>
+
 </body>
 </html>
