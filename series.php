@@ -19,9 +19,9 @@ $meta_series->to($series);
             <?php while ($series->next()): ?>
                 <?php $series_posts = $meta_series->midSeriesPosts($series->mid);?>
                 <?php if ($series_posts): ?>
-            <article class="clearfix mb-4">
-                    <h3 class="title"><?php _e($series_step . '. ' . $series->name); $series_step++;?></h3>
-                    <div class="list-group">
+            <article class="post-article clearfix">
+                    <h3 class="title series-title"><?php _e($series_step . '. ' . $series->name); $series_step++;?></h3>
+                    <ul>
                     <?php foreach ($series_posts as $post): ?>
                         <?php
                         /**
@@ -41,9 +41,10 @@ $meta_series->to($series);
                         /** 生成静态链接 */
                         $post['permalink'] = Typecho_Common::url($post['pathinfo'], $this->options->index);
                         ?>
-                        <a href="<?php _e($post['permalink']); ?>" class="list-group-item list-group-item-action" target="_blank"><span class="series-a"><?php _e($post['title']); ?></span><span class="float-right"><?php _e(date('Y-m-d', $post['created'])); ?></span></a>
+                        <li><a href="<?php _e($post['permalink']); ?>" class="series-a" target="_blank"><?php _e($post['title']); ?></a></li>
+
                         <?php endforeach;?>
-                    </div>
+                    </ul>
             </article>
                 <?php endif;?>
             <?php endwhile;?>
