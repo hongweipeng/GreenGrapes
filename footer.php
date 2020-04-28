@@ -20,13 +20,14 @@
 </div>
 <footer id="m-footer">
     <div class="Copyright">
-        <p>&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
+        <div>&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
         <?php _e('All Rights Reserved. 版权所有.<br>'); auto_increase_index_show_count(); ?>
             <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257015934'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1257015934%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
-        </p>
-        <p>
-            <a href="http://www.beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">闽ICP备15027255号-1</a>
-        </p>
+        </div>
+        <div class="beian">
+            <a href="http://www.beian.miit.gov.cn/" target="_blank" rel="noopener">闽ICP备15027255号-1</a>
+            <img src="http://www.beian.gov.cn/img/ghs.png" style="display: inline-block;" alt="" />
+        </div>
     </div>
 </footer>
 
