@@ -13,7 +13,7 @@
                             <span class="badge badge-skin"><i class="fa fa-fw fa-eye"></i> <?php $this->viewsNum(); ?> 次浏览</span>
                         </p>
                     </div>
-                    <div class="article-content clearfix">
+                    <div class="article-content clearfix <?php if(isset($this->options->plugins['activated']['AntiSpider'])) { echo 'd-none';} ?>">
                         <?php $this->content(); ?>
                     </div>
                     <!-- 文章页下方自适应 -->
