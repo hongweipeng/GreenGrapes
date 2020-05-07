@@ -26,7 +26,7 @@
         </div>
         <div class="beian">
             <a href="http://www.beian.miit.gov.cn/" target="_blank" rel="noopener">闽ICP备15027255号-1</a>
-            <img src="http://www.beian.gov.cn/img/ghs.png" style="display: inline-block;vertical-align: top;" alt="" />
+            <img src="<?php $this->options->themeUrl('img/ghs.png'); ?>" style="display: inline-block;vertical-align: top;" alt="" />
         </div>
     </div>
 </footer>
