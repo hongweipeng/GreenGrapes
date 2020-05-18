@@ -19,7 +19,7 @@ $hidden_sidebar =  !empty($this->options->ShowBlock) && in_array('SidebarHiddenI
                             <?php endif; ?>
                         </p>
                     </div>
-                    <div class="article-content clearfix <?php if(isset($this->options->plugins['activated']['AntiSpider'])) { echo 'd-none';} ?>">
+                    <div class="article-content clearfix">
                         <?php $this->content(); ?>
                     </div>
                     <!-- 文章页下方自适应 -->
