@@ -57,12 +57,12 @@
 
 <?php $this->footer(); ?>
 
-<script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cysUkopEY"></script>
+<script id="cy_cmt_num" src="https://cy-cdn.kuaizhan.com/upload/plugins/plugins.list.count.js?clientId=cysUkopEY"></script>
 <!--<script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>-->
-<script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cysUkopEY"></script>
+<script type="text/javascript" charset="utf-8" src="https://cy-cdn.kuaizhan.com/js/changyan.labs.https.js?appid=cysUkopEY"></script>
 <?php if($this->is('post') or $this->is('single')): ?>
     <!-- 畅言 start-->
-    <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
+    <script charset="utf-8" type="text/javascript" src="https://cy-cdn.kuaizhan.com/upload/changyan.js" ></script>
     <script type="text/javascript">
         window.changyan.api.config({
             appid: 'cysUkopEY',
