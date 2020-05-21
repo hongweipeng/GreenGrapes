@@ -43,16 +43,18 @@
 
 <script>
     // 外链新窗口打开以及添加noopener
-    jQuery(function() {
-        jQuery('.article-content a').each(function() {
-            if (this.hostname !== window.location.hostname) {
-                jQuery(this).attr({
-                    target: '_blank',
-                    rel: 'noopener'
-                });
-            }
+    (function($) {
+        $(function() {
+            $('.article-content a').each(function() {
+                if (this.hostname !== window.location.hostname) {
+                    $(this).attr({
+                        target: '_blank',
+                        rel: 'noopener'
+                    });
+                }
+            });
         });
-    });
+    })(jQuery);
 </script>
 
 <?php $this->footer(); ?>
