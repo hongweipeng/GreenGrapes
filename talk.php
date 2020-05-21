@@ -20,6 +20,10 @@ $options = Typecho_Widget::widget('Widget_Options');
             min-height: 80px
         }
 
+        .tmtimeline .author-gravatar {
+            border-radius: 50%;
+        }
+
         .tmtimeline .line:last-child {
             min-height: 0
         }
@@ -64,7 +68,7 @@ $options = Typecho_Widget::widget('Widget_Options');
         .tmtimeline > .line .tmlabel {
             position: relative;
             margin: 0 0 15px 20%;
-            padding: 2em;
+            padding: 1em 2em 2em;
             border-radius: 4px;
             background: #3594cb;
             color: #fff;
@@ -127,14 +131,16 @@ $options = Typecho_Widget::widget('Widget_Options');
             speak: none;
             -webkit-font-smoothing: antialiased
         }
+        .tmtimeline .page-nav {
+            margin: 5px 0 15px 20%;
+        }
     </style>
     <div id="m-container" class="container">
         <div class="row ml-0 mr-0">
             <div class="col-md-8 pl-0 pr-0">
                 <?php
-                var_dump($this->request);
                     $page = 1;
-                    $page_size = 20;
+                    $page_size = 2;
                     $total = MicroTalk_Plugin::totalCount();
                     $talks = MicroTalk_Plugin::talkPosts($page, $page_size);
                 ?>
@@ -144,7 +150,10 @@ $options = Typecho_Widget::widget('Widget_Options');
                         <time class="tmtime" datetime=""><span><?php _e($talk['created']); ?></span> <span title="">'H:i'</span></time>
                         <div class="tmicon fa fa-comment-o"></div>
                         <div class="tmlabel">
-                            <h2><?php _e($talk['author']); ?></h2>
+                            <h2>
+                                <img class="author-gravatar" src="<?php _e(Typecho_Common::gravatarUrl($talk['mail'], 40, 'X', 'mm', $this->request->isSecure())); ?>" alt="<?php _e($talk['author']); ?>" />
+                                <?php _e($talk['author']); ?>
+                            </h2>
                             <div class="index-text post-content">
                                 <p><?php _e($talk['content']); ?></p>
                             </div>
@@ -157,7 +166,7 @@ $options = Typecho_Widget::widget('Widget_Options');
                             <nav>
                             <?php
                                 //分页
-                                $currUrl = $this->request->getRequestUri();
+                                $currUrl = ($this->request->isSecure() ? 'https://' : 'http://').$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
                                 parse_str($_SERVER['QUERY_STRING'], $parseUrl);
                                 unset($parseUrl['page']);
                                 $query = $currUrl.'?'.http_build_query($parseUrl);
