@@ -9,14 +9,14 @@ $this->need('header.php');
     <style>
         .tk-timeline {
             position: relative;
-            margin: 30px 0 0;
+            margin: 2.5em 0 0;
             padding: 0;
             list-style: none
         }
 
         .tk-timeline .line {
             position: relative;
-            min-height: 80px
+            min-height: 5em;
         }
 
         .tk-timeline .author-gravatar {
@@ -32,28 +32,26 @@ $this->need('header.php');
             top: 0;
             bottom: 0;
             left: 15%;
-            margin-left: -10px;
-            width: 10px;
-            background: #afdcf8;
+            margin-left: -0.625em;
+            width: 0.625em;
+            background: #DDDDDD;
             content: ''
         }
 
         .tk-timeline > .line .tk-time {
             position: absolute;
             display: block;
-            padding-right: 100px;
+            padding-right: 6.25em;
             width: 20%
         }
 
         .tk-timeline > .line .tk-time {
             display: block;
             text-align: right;
-            color: #6cbfee;
             font-size: 1.1em;
         }
 
         .tk-timeline > .line .tk-time-lg {
-            color: #3594cb;
             font-size: 2em
         }
 
@@ -62,8 +60,7 @@ $this->need('header.php');
             margin: 0 0 15px 20%;
             padding: 1em 1em 2em;
             border-radius: 4px;
-            background: #3594cb;
-            color: #fff;
+            background: #fff;
             font-weight: 300;
             font-size: 16px;
             line-height: 1.4
@@ -73,26 +70,18 @@ $this->need('header.php');
             margin: 5px 0 15px 20%
         }
 
-        /*.tk-timeline > .line:nth-child(odd) .tk-label {
-            background: #6cbfee
-        }*/
-
         .tk-timeline > .line .tk-label:after {
             position: absolute;
-            top: 10px;
+            top: 0.625em;
             right: 100%;
             width: 0;
             height: 0;
             border: solid transparent;
-            border-width: 10px;
+            border-width: 0.625em;
             content: " ";
             pointer-events: none;
-            border-right-color: #3594cb
+            border-right-color: #fff;
         }
-
-        /*.tk-timeline > .line:nth-child(odd) .tk-label:after {
-            border-right-color: #6cbfee
-        }*/
 
         .tk-timeline > .line .tk-icon {
             position: absolute;
@@ -102,8 +91,8 @@ $this->need('header.php');
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: #46a4da;
-            box-shadow: 0 0 0 8px #afdcf8;
+            background: #BBBBBB;
+            box-shadow: 0 0 0 8px #DDDDDD;
             color: #fff;
             text-align: center;
             text-transform: none;
