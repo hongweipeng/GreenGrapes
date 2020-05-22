@@ -9,14 +9,14 @@ $this->need('header.php');
     <style>
         .tk-timeline {
             position: relative;
-            margin: 2.5em 0 0;
+            margin: 2.5rem 0 0;
             padding: 0;
             list-style: none
         }
 
         .tk-timeline .line {
             position: relative;
-            min-height: 5em;
+            min-height: 5rem;
         }
 
         .tk-timeline .author-gravatar {
@@ -32,8 +32,8 @@ $this->need('header.php');
             top: 0;
             bottom: 0;
             left: 15%;
-            margin-left: -0.625em;
-            width: 0.625em;
+            margin-left: -0.625rem;
+            width: 0.625rem;
             background: #DDDDDD;
             content: ''
         }
@@ -41,29 +41,30 @@ $this->need('header.php');
         .tk-timeline > .line .tk-time {
             position: absolute;
             display: block;
-            padding-right: 6.25em;
+            padding-right: 6.25rem;
             width: 20%
         }
 
         .tk-timeline > .line .tk-time {
             display: block;
             text-align: right;
-            font-size: 1.1em;
+            font-size: 1.1rem;
         }
 
         .tk-timeline > .line .tk-time-lg {
-            font-size: 2em
+            font-size: 1.8rem
         }
 
         .tk-timeline > .line .tk-label {
             position: relative;
             margin: 0 0 15px 20%;
-            padding: 1em 1em 2em;
+            padding: 1rem 1rem 2rem;
             border-radius: 4px;
             background: #fff;
             font-weight: 300;
             font-size: 16px;
-            line-height: 1.4
+            line-height: 1.4;
+            border: 1px solid #e9ecef;
         }
 
         .tk-timeline .box {
@@ -72,12 +73,13 @@ $this->need('header.php');
 
         .tk-timeline > .line .tk-label:after {
             position: absolute;
-            top: 0.625em;
+            top: 0.625rem;
             right: 100%;
             width: 0;
             height: 0;
-            border: solid transparent;
-            border-width: 0.625em;
+            border-style: solid;
+            border-color: transparent;
+            border-width: 0.625rem;
             content: " ";
             pointer-events: none;
             border-right-color: #fff;
@@ -99,7 +101,7 @@ $this->need('header.php');
             font-weight: 400;
             font-style: normal;
             font-variant: normal;
-            font-size: 1.4em;
+            font-size: 1.4rem;
             speak: none;
             -webkit-font-smoothing: antialiased
         }
