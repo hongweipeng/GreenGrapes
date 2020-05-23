@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/font-awesome.min.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/main.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/skin-'. get_theme_color() .'.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/load-gif.css'); ?>">
     <!-- 通过自有函数输出HTML头部信息 -->
     <?php if(class_exists('Snow_Plugin') && isset($this->options->plugins['activated']['Snow'])): ?>
     <style>

@@ -1,0 +1,20 @@
+ins.play-gif{
+    position: absolute;
+    font-family: Arial, sans serif;
+    width: 50px;
+    height: 50px;
+    line-height: 52px;
+    text-align: center;
+    background: #222;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 50%;
+    opacity: .9;
+    border: 4px solid #fff;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+ins.play-gif:hover{
+    opacity:.5;
+}

@@ -40,6 +40,7 @@
 <script src="<?php $this->options->themeUrl('js/particles.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/headerCanvas.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/home.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('js/load-gif.js'); ?>"></script>
 
 <script>
     // 外链新窗口打开以及添加noopener
@@ -52,6 +53,14 @@
                         rel: 'noopener'
                     });
                 }
+            });
+            $('.container img').each(function(_, obj) {
+                let $obj = $(obj);
+                let src = $obj.attr('src');
+                if (!src || src.indexOf('.gif') < 0) {
+                    return;
+                }
+                $obj.gif();
             });
         });
     })(jQuery);
