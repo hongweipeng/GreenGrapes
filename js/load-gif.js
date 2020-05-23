@@ -26,15 +26,19 @@
             canvas.height = height;
             var ctx = canvas.getContext('2d');
             ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+            // 设置 gif 所需要的数据源
             gif.blob_src = canvas.toDataURL("image/gif");
             gif.gif_src = src;
             obj.attr('src', gif.blob_src);
-            gif.tip.css('top', height/2 - gif.tip.height()/2);
-            gif.tip.css('left', width/2 - gif.tip.width()/2);
-            gif.tip.insertAfter(obj);
+            gif.tip.css({
+                'top' : height / 2 - gif.tip.height() / 2,
+                'left' : width / 2 - gif.tip.width() / 2,
+            });
             gif.tip.click(function() {
                 obj.trigger('click');
             });
+            gif.tip.insertAfter(obj);
 
             canvas = null;  // 回收
             img = null;
