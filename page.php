@@ -8,9 +8,10 @@
                         <h2 class="title"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
                         <p class="post-big-info">
                             <span class="badge badge-skin"><i class="fa fa-fw fa-user"></i> <a href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></span>
-                            <span class="badge badge-skin"><i class="fa fa-fw fa-tags"></i> <?php $this->category(','); ?></span>
                             <span class="badge badge-skin"><i class="fa fa-fw fa-calendar"></i> <?php $this->date('Y-m-d'); ?></span>
+                            <?php if (class_exists('TeStat_Plugin') && isset($this->options->plugins['activated']['TeStat'])): ?>
                             <span class="badge badge-skin"><i class="fa fa-fw fa-eye"></i> <?php $this->viewsNum(); ?> 次浏览</span>
+                            <?php endif; ?>
                         </p>
                     </div>
                     <div class="article-content clearfix">
