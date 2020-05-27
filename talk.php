@@ -58,7 +58,7 @@ $this->need('header.php');
         .tk-timeline > .line .tk-label {
             position: relative;
             margin: 0 0 15px 20%;
-            padding: 1rem 1rem 2rem;
+            padding: 1rem;
             border-radius: 4px;
             background: #fff;
             font-weight: 300;
@@ -110,6 +110,10 @@ $this->need('header.php');
         }
         .tk-timeline .page-nav {
             margin: 5px 0 15px 20%;
+        }
+        @media screen and (max-width:1100px){
+            .tk-timeline .line .tk-time{display: none}
+            .tk-timeline > .line .tk-icon, .tk-timeline:before{left: 10%;}
         }
     </style>
     <div id="m-container" class="container">
