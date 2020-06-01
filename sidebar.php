@@ -1,4 +1,4 @@
-<aside id="sidebar">
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit(0); ?><aside id="sidebar">
     <aside>
         <form method="get" id="searchform" class="form-inline clearfix" action="./">
             <input class="form-control" name="s" id="s" placeholder="搜索关键词..." type="text">

@@ -1,4 +1,7 @@
-<?php $this->need('header.php'); ?>
+<?php
+if (!defined('__TYPECHO_ROOT_DIR__')) exit(0);
+$this->need('header.php');
+?>
 <div id="m-container" class="container">
     <div class="row ml-0 mr-0">
         <div class="col-md-8 pl-0 pr-0">

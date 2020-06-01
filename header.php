@@ -1,4 +1,4 @@
-<!doctype html>
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit(0); ?><!doctype html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
