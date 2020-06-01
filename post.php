@@ -1,4 +1,7 @@
-<?php $this->need('header.php'); ?>
+<?php
+if (!defined('__TYPECHO_ROOT_DIR__')) exit(0);
+$this->need('header.php');
+?>
 <?php
 $hidden_sidebar =  !empty($this->options->ShowBlock) && in_array('SidebarHiddenInDetail', $this->options->ShowBlock, true);
 ?>
