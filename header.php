@@ -17,8 +17,11 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/font-awesome.min.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/main.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/skin-'. get_theme_color() .'.css'); ?>">
+<?php if ($this->is('page', 'talk')) : ?>
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/micro-talk.css'); ?>">
+<?php endif; ?>
     <!-- 通过自有函数输出HTML头部信息 -->
-    <?php if(class_exists('Snow_Plugin') && isset($this->options->plugins['activated']['Snow'])): ?>
+<?php if(class_exists('Snow_Plugin') && isset($this->options->plugins['activated']['Snow'])): ?>
     <style>
     #logo:after{
         content:url(<?php $this->options->themeUrl('img/hat.png'); ?>);
@@ -28,7 +31,7 @@
         left:180px;/* 根据实际情况修改定位*/
     }
     </style>
-    <?php endif; ?>
+<?php endif; ?>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({
