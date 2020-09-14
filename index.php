@@ -35,7 +35,7 @@ $this->need('header.php');
                         <div class="pull-right post-info">
                             <span><i class="fa fa-fw fa-calendar"></i> <?php $this->date('Y-m-d'); ?></span>
                             <span><i class="fa fa-fw fa-user"></i> <a href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></span>
-                            <span><i class="fa fa-fw fa-comment"></i> <a href="<?php $this->permalink() ?>#comments"><span id="sourceId::<?php echo $this->cid;?>" class="cy_cmt_count" ></span></a></span>
+                            <span><i class="fa fa-fw fa-comment"></i> <a href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('%d 条评论'); ?></a></span>
                             <?php if (class_exists('TeStat_Plugin') && isset($this->options->plugins['activated']['TeStat'])): ?>
                             <span><i class="fa fa-fw fa-eye"></i> <?php $this->viewsNum(); ?> 次浏览</span>
                             <?php endif; ?>
