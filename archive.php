@@ -50,7 +50,7 @@ $this->need('header.php');
                     <?php $this->pageNav('&laquo;', '&raquo;', 3, '...', array(
                         'itemTag'       =>  'li',
                         'textTag'       =>  'span',
-                        'currentClass'  =>  'disabled',
+                        'currentClass'  =>  'page-item disabled',
                         'prevClass'     =>  'prev',
                         'nextClass'     =>  'next',
                         'wrapTag'       =>  'ul',
