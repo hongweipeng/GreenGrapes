@@ -46,7 +46,7 @@
     // 外链新窗口打开以及添加noopener
     (function($) {
         $(function() {
-            $('.article-content a').each(function() {
+            $('.article-content a, .post-content a').each(function() {
                 if (this.hostname !== window.location.hostname) {
                     $(this).attr({
                         target: '_blank',
