@@ -542,3 +542,23 @@ footer {padding: 20px;margin: 20px 0 0;text-align:center;background-color:#fffff
 	display: none !important;
 }
 /* 移除畅言广告 end */
+
+/* 提示吐司 */
+.toast-dialog{
+	position:fixed;
+	padding:10px;
+	min-width: 150px;
+	display:none;
+	width: 60%;
+	opacity: 0.7;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	bottom: 5%;
+	left: 20%;
+	z-index: 1024;
+	background: rgb(0, 0, 0);
+	font-size: 12px;
+}

@@ -55,6 +55,18 @@
                 }
             });
         });
+        <?php
+        if (Typecho_Widget::widget('Widget_Archive')->is('post')) {
+            // 技术文章可能因时间久远，内容与现阶段有出路，给予提醒
+            if ($this->category !== 'default') {
+                $now = time();
+                if ($now - $this->modified > 3600 * 24 * 365) {
+                    $date = date("Y年m月d日", $this->modified);
+                    echo "toast_dialog('此文章最后修订于 {$date}，其中的信息可能已经有所发展或是发生改变。');";
+                }
+            }
+        }
+        ?>
     })(jQuery);
 </script>
 

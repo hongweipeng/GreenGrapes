@@ -77,6 +77,17 @@ var closeEnable = false;
 	});
 }
 
+// 简单的吐司弹窗
+window.toast_dialog = function (msg, time){
+	time = (time === undefined ? 1500 : time);
+	var toast = $('<div class="toast-dialog">'+msg+'</div>');
+	toast.appendTo($('body')).fadeIn(300, function(){
+		setTimeout(function(){
+			toast.remove();
+		}, time);
+	});
+}
+
 $(document).ready(function () {
 	// 分页
 	$('.pagination a, .pagination span').addClass('page-link');
