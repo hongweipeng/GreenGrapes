@@ -22,29 +22,15 @@
                 <div class="tab-pane fade" id="sidebar-comment">
                     <?php $this->widget('Widget_Comments_Recent')->to($comments); ?>
                     <ul class="list-group">
-                        <?php while($comments->next()): ?>
-                            <li class="list-group-item clearfix"><?php $comments->author(false); ?>：<a href="<?php $comments->permalink(); ?>" target="_blank"><?php $comments->excerpt(35, '...'); ?></a></li>
-                        <?php endwhile; ?>
+                    <?php while($comments->next()): ?>
+                        <li class="list-group-item clearfix"><?php $comments->author(false); ?>：<a href="<?php $comments->permalink(); ?>" target="_blank"><?php $comments->excerpt(35, '...'); ?></a></li>
+                    <?php endwhile; ?>
                     </ul>
                 </div>
                 <div class="tab-pane nav bs-sidenav fade" id="sidebar-rand">
                     <?php theme_random_posts();?>
                 </div>
             </div>
-        </div>
-    </aside>
-    <aside>
-        <div style="margin-bottom: 20px;">
-            <!-- 侧边栏 -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-7489805328585400"
-                 data-ad-slot="8357527080"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
         </div>
     </aside>
     <?php if(class_exists('Links_Plugin') && isset($this->options->plugins['activated']['Links'])): ?>
@@ -81,24 +67,6 @@
         </div>
     </aside>
     <?php endif; ?>
-    <?php
-    /*
-    <aside>
-        <div style="margin-bottom: 20px;">
-            <script type="text/javascript">
-                document.write('<a style="display:none!important" id="tanx-a-mm_117570917_17204454_198762180"></a>');
-                tanx_s = document.createElement("script");
-                tanx_s.type = "text/javascript";
-                tanx_s.charset = "gbk";
-                tanx_s.id = "tanx-s-mm_117570917_17204454_198762180";
-                tanx_s.async = true;
-                tanx_s.src = "//p.tanx.com/ex?i=mm_117570917_17204454_198762180";
-                tanx_h = document.getElementsByTagName("head")[0];
-                if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
-            </script>
-        </div>
-    </aside>*/
-    ?>
     <div id="fixed"></div>
     <aside class="fixsidebar">
         <div class="card card-skin hidden-xs">

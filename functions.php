@@ -1,14 +1,5 @@
 <?php
 
-function auto_increase_index_show_count() {
-    $options = Typecho_Widget::widget('Widget_Options');
-    if (Typecho_Widget::widget('Widget_Archive')->is('index')) {
-        $widge_options = Typecho_Widget::widget('Widget_Options_General');
-        $widge_options->update(array('value' => (int)$options->indexShowCount + 1), Typecho_Db::get()->sql()->where('name = ?', 'indexShowCount'));
-        echo '首页已展示 ' . $options->indexShowCount . '次';
-    }
-}
-
 /**
  * 随机文章
  * @throws Typecho_Db_Exception
@@ -22,12 +13,17 @@ function theme_random_posts(){
         'xformat' => '<li class="list-group-item clearfix"><a href="{permalink}" title="{title}">{title}</a></li>'
     );
     $db = Typecho_Db::get();
+    $rand = "RAND()";
+    if (stripos($db->getAdapterName(), 'sqlite') !== false) {
+        $rand = "RANDOM()";
+    }
+
     $sql = $db->select()->from('table.contents')
         ->where('status = ?','publish')
         ->where('type = ?', 'post')
-        ->where('created <= unix_timestamp(now())', 'post') //添加这一句避免未达到时间的文章提前曝光
+        ->where('created <= ' . Helper::options()->gmtTime, 'post') //添加这一句避免未达到时间的文章提前曝光
         ->limit($defaults['number'])
-        ->order('RAND()');
+        ->order($rand);
     $result = $db->fetchAll($sql);
     echo $defaults['before'];
     foreach($result as $val){

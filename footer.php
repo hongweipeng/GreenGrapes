@@ -21,17 +21,11 @@
 </div>
 <footer id="m-footer">
     <div class="Copyright">
-        <div>&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
-        <?php _e('All Rights Reserved. 版权所有.<br>'); auto_increase_index_show_count(); ?>
-            <script type="text/javascript">var cnzz_protocol = (("https:" === document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257015934'%3E%3C/span%3E%3Cscript async src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1257015934%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
-        </div>
-        <div class="beian">
-            <a href="http://www.beian.miit.gov.cn/" target="_blank" rel="noopener">闽ICP备15027255号-1</a>
-            <img src="<?php $this->options->themeUrl('img/ghs.png'); ?>" style="display: inline-block;vertical-align: top;" alt="" />
-        </div>
+        <p>&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
+        <?php _e('All Rights Reserved. 版权所有.'); ?>
+        </p>
     </div>
 </footer>
-
 <script src="<?php $this->options->themeUrl('js/jquery.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/popper.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/bootstrap.min.js'); ?>"></script>
@@ -41,36 +35,6 @@
 <script src="<?php $this->options->themeUrl('js/particles.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/headerCanvas.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/home.js'); ?>"></script>
-
-<script>
-    // 外链新窗口打开以及添加noopener
-    (function($) {
-        $(function() {
-            $('.article-content a, .post-content a').each(function() {
-                if (this.hostname !== window.location.hostname) {
-                    $(this).attr({
-                        target: '_blank',
-                        rel: 'noopener'
-                    });
-                }
-            });
-        });
-        <?php
-        if (Typecho_Widget::widget('Widget_Archive')->is('post')) {
-            // 技术文章可能因时间久远，内容与现阶段有出路，给予提醒
-            if ($this->category !== 'default') {
-                $now = time();
-                if ($now - $this->modified > 3600 * 24 * 365) {
-                    $date = date("Y年m月d日", $this->modified);
-                    echo "toast_dialog('此文章最后修订于 {$date}，其中的信息可能已经有所发展或是发生改变。');";
-                }
-            }
-        }
-        ?>
-    })(jQuery);
-</script>
-
 <?php $this->footer(); ?>
-
 </body>
 </html>
