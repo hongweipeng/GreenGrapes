@@ -9,7 +9,6 @@
         <div class="card widget-sets hidden-xs">
             <ul class="nav nav-pills">
                 <li class=""><a class="nav-link active" href="#sidebar-new" data-toggle="tab">最新文章</a></li>
-                <li class="ml-1"><a class="nav-link" href="#sidebar-comment" data-toggle="tab">最新评论</a></li>
                 <li class="ml-1"><a class="nav-link" href="#sidebar-rand" data-toggle="tab">随机文章</a></li>
             </ul>
             <div class="tab-content">
@@ -17,14 +16,6 @@
                     <ul class="list-group">
                         <?php $this->widget('Widget_Contents_Post_Recent')
                             ->parse('<li class="list-group-item clearfix"><a href="{permalink}">{title}</a></li>'); ?>
-                    </ul>
-                </div>
-                <div class="tab-pane fade" id="sidebar-comment">
-                    <?php $this->widget('Widget_Comments_Recent')->to($comments); ?>
-                    <ul class="list-group">
-                    <?php while($comments->next()): ?>
-                        <li class="list-group-item clearfix"><?php $comments->author(false); ?>：<a href="<?php $comments->permalink(); ?>" target="_blank"><?php $comments->excerpt(35, '...'); ?></a></li>
-                    <?php endwhile; ?>
                     </ul>
                 </div>
                 <div class="tab-pane nav bs-sidenav fade" id="sidebar-rand">
