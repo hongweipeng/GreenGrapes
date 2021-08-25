@@ -20,16 +20,6 @@ $this->need('header.php');
                     <div class="article-content clearfix">
                         <?php $this->content(); ?>
                     </div>
-                    <!-- 文章页下方自适应 -->
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-7489805328585400"
-                         data-ad-slot="8761847611"
-                         data-ad-format="auto"
-                         data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
                 </article>
             </div>
             <?php $this->need('comments.php'); ?>
