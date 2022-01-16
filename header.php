@@ -68,7 +68,7 @@
 <form role="search" method="get" id="search-form" action="./">
     <div class="search-form">
         <span id="search-form-close">×</span>
-        <input placeholder="Search for" name="s" id="search-input-s" type="text">
+        <label for="search-input-s"></label><input placeholder="Search for" name="s" id="search-input-s" type="text">
         <input class="webFont" id="searchsubmit" value="L" type="submit">
     </div>
 </form>
