@@ -137,5 +137,12 @@ $(document).ready(function () {
 	    $.cookie('greengrapes_color', obj.data('color'));
 	    location.reload();
     });
+
+	// 非当前网站的超链接新窗口打开
+	var cur_hostname = location.hostname;
+	$("a[href*='http://']:not([href*='"+cur_hostname+"']),[href*='https://']:not([href*='"+cur_hostname+"'])")
+		.addClass("external")
+		.attr({"target":"_blank", "rel": "noopener noreferrer"});
+
 });
 })(jQuery);
