@@ -14,13 +14,17 @@
             </ul>
             <div class="tab-content">
                 <div class="tab-pane nav bs-sidenav active in" id="sidebar-new">
+                    <?php $recent_posts = $this->widget('Widget_Contents_Post_Recent')->on(true); ?>
                     <ul class="list-group">
-                        <?php $this->widget('Widget_Contents_Post_Recent')
-                            ->parse('<li class="list-group-item clearfix"><a href="{permalink}">{title}</a></li>'); ?>
+                        <?php while ($recent_posts->next()): ?>
+                            <li class="list-group-item clearfix">
+                                <a href="<?php $recent_posts->permalink(); ?>"><?php echo $recent_posts->title; ?></a>
+                            </li>
+                        <?php endwhile; ?>
                     </ul>
                 </div>
                 <div class="tab-pane fade" id="sidebar-comment">
-                    <?php $this->widget('Widget_Comments_Recent')->to($comments); ?>
+                    <?php $comments = $this->widget('Widget_Comments_Recent')->on(true); ?>
                     <ul class="list-group">
                     <?php while($comments->next()): ?>
                         <li class="list-group-item clearfix"><?php $comments->author(false); ?>：<a href="<?php $comments->permalink(); ?>" target="_blank"><?php $comments->excerpt(35, '...'); ?></a></li>
