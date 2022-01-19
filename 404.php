@@ -13,7 +13,7 @@ $this->need('header.php');
                         <input type="text" name="s" class="text" autofocus />
                     </label>
                 </p>
-                <p><button type="submit" class="submit"><?php _e('搜索'); ?></button></p>
+                <p><button type="submit" class="submit btn btn-skin"><?php _e('搜索'); ?></button></p>
             </form>
         </div>
 

@@ -27,18 +27,18 @@ $comments = $this->comments()->on(true);
             <?php else: ?>
                 <div class="two fields">
                     <div class="comments-field">
-                        <label>
+                        <label class="w-100">
                             <input type="text" name="author" placeholder="<?php _e('称呼'); ?><?php _e(' (必填)') ?>" value="<?php $this->remember('author'); ?>" />
                         </label>
                     </div>
                     <div class="comments-field">
-                        <label>
+                        <label class="w-100">
                             <input type="email" name="mail" placeholder="<?php _e('电子邮件'); ?><?php if ($this->options->commentsRequireMail): ?><?php _e(' (必填)') ?><?php endif; ?>" value="<?php $this->remember('mail'); ?>" />
                         </label>
                     </div>
                 </div>
                 <div class="comments-field">
-                    <label>
+                    <label class="w-100">
                         <input type="url" name="url" placeholder="<?php _e('个人主页'); ?><?php if ($this->options->commentsRequireURL): ?><?php _e(' (必填)') ?><?php endif; ?>" value="<?php $this->remember('url'); ?>" />
                     </label>
                 </div>
