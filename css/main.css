@@ -1,5 +1,11 @@
 @charset "utf-8";
-body{font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;font-size: 0.875rem;color:#515151;line-height:1.5;background-color: #e9ecef;}
+body{
+	font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+	font-size: 0.875rem;
+	color: #666666;
+	line-height:1.5;
+	background-color: #e9ecef;
+}
 hr{margin:0.875rem auto;border: 1px dashed #E7E7E7;}
 img{border:0;vertical-align:middle;max-width: 100%;}
 p{display:block;margin-top: 0.5rem;margin-bottom: 0.5rem;}
