@@ -418,10 +418,9 @@ img.avatar {
 .m-nav .nav li:hover a,.m-nav .nav li.current-menu-item a,.m-nav .nav li.current-menu-parent a,.m-nav .nav li.current_page_item a,.m-nav .nav li.current-post-ancestor a{background-color:#404040;}
 .m-nav .nav li ul{background-color:#404040;}
 
-.post-article{background: #fff;margin-bottom: 10px;overflow: hidden;padding: 0 20px 20px;}
-.post-article h3.title{font-size: 1.9rem}
-.post-article .title{font-weight: bold;font-size: 2rem;}
-.post-article .title a{color:#515151;text-decoration: none;}
+.post-article{background: #fff;margin-bottom: 10px;overflow: hidden;padding: 0.5rem 1rem 1rem;}
+.post-article .title h2{font-size: 2rem}
+.post-article .title a{text-decoration: none;}
 .post-article .title a:hover{transition: all 0.3s ease 0s;}
 .post-article .edit {margin-left: 20px;color:#949494;font-size: 0.875rem;}
 .post-article .edit a{color:#949494;}
