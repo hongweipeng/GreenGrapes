@@ -175,6 +175,7 @@ aside .card {
 	border-radius: 0 !important;
 	display: inline-block;
 	font-size: 0.75rem;
+	font-weight: 800;;
 	padding: 5px;
 	color: #fff;
 }
