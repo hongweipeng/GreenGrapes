@@ -79,7 +79,8 @@ h6 tt, h6 code {
 	border-radius: 0;
 	color: #fff;
 	display: inline-block;
-	font-size: 0.75rem;
+	font-size: 0.8rem;
+	font-weight: bold;
 	line-height: 1;
 	margin-right: 5px;
 	padding: 5px;
