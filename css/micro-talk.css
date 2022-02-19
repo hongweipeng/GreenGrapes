@@ -12,6 +12,18 @@
 
 .tk-timeline .author-gravatar {
     border-radius: 50%;
+    transition: 500ms;
+    -o-transition: 500ms;
+    -moz-transition: 500ms;
+    -webkit-transition: 500ms;
+}
+
+.tk-timeline .author-gravatar:hover {
+    transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
 }
 
 .tk-timeline .line:last-child {
