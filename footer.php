@@ -32,8 +32,10 @@
 <script src="<?php $this->options->themeUrl('js/jquery.cookie.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/functionall.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/tagcanvas.min.js'); ?>"></script>
+<?php if (!empty($this->options->ShowBlock) && in_array('EnableParticle', $this->options->ShowBlock)): ?>
 <script src="<?php $this->options->themeUrl('js/particles.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/headerCanvas.js'); ?>"></script>
+<?php endif; ?>
 <script src="<?php $this->options->themeUrl('js/home.js'); ?>"></script>
 <?php $this->footer(); ?>
 </body>
