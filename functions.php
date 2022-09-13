@@ -91,8 +91,9 @@ function themeConfig($form) {
         'ShowCategory' => _t('侧边栏显示分类'),
         'ShowArchive' => _t('侧边栏显示归档'),
         'ShowTagCloud' => _t('侧边栏显示标签云'),
+        'EnableParticle' => _t('粒子背景动画效果'),
         ),
-        array('ShowPostBottomBar', 'ShowTagCloud'), _t('显示设置'));
+        array('ShowPostBottomBar', 'ShowTagCloud', 'EnableParticle'), _t('显示设置'));
     $form->addInput($showBlock->multiMode());
 }
 
