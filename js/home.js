@@ -88,20 +88,25 @@ $(document).ready(function () {
 
 	fssilde();
 
-	TagCanvas.Start('mycanvas', '', {
-		textColour: '#000',
-		//outlineColour: '#16a085',
-		outlineColour: $('.skin-bg').css('background-color'),
-		outlineThickness: 1,
-		maxSpeed: 0.03,
-		depth: 0.75,
-		wheelZoom: false
-	});
+    // 若有显示标签云，设置动画
+	if ( $("#mycanvas").length>0 ) {
+		TagCanvas.Start('mycanvas', '', {
+			textColour: '#000',
+			//outlineColour: '#16a085',
+			outlineColour: $('.skin-bg').css('background-color'),
+			outlineThickness: 1,
+			maxSpeed: 0.03,
+			depth: 0.75,
+			wheelZoom: false
+		});
+	}
 
 	//边栏固定
-	var $sidebar = $("#sidebar"),
-		$containner = $('#m-container'),
-		$fixside = $('.fixsidebar'),
+	var $sidebar = $("#sidebar");
+	// 最后一个 <aside> 添加固定，及前面添加 <div id="fixed"></div> 用于确定偏移
+	var $fixside = $sidebar.find('aside').eq(-1);
+	$fixside.addClass('fixsidebar').before('<div id="fixed"></div>');;
+	var	$containner = $('#m-container'),
 		$window = $(window),
 		offset = $("#fixed").offset();
 	if($window.width() > 768){

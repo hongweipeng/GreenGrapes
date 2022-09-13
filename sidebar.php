@@ -71,8 +71,8 @@
         </div>
     </aside>
     <?php endif; ?>
-    <div id="fixed"></div>
-    <aside class="fixsidebar">
+    <?php if (!empty($this->options->ShowBlock) && in_array('ShowTagCloud', $this->options->ShowBlock)): ?>
+    <aside>
         <div class="card card-skin hidden-xs">
             <div class="card-header"><i class="fa fa-tags fa-fw"></i> 标签云</div>
             <div id="meta-cloud">
@@ -84,5 +84,6 @@
             </div>
         </div>
     </aside>
+    <?php endif; ?>
 
 </aside>
