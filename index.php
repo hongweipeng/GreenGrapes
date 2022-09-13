@@ -4,7 +4,7 @@
  *
  * @package GreenGrapes
  * @author hongweipeng
- * @version 2.0.3
+ * @version 2.1.0
  * @link https://github.com/hongweipeng/GreenGrapes
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit(0);
