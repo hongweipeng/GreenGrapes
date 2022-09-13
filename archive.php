@@ -19,9 +19,9 @@ $this->need('header.php');
                     <article class="post-article clearfix">
                         <section class="">
                             <div class="category-cloud"><?php $this->category(''); ?></div>
-                            <h3 class="title">
-                                <a href="<?php $this->permalink() ?>"><?php $this->title() ?></a>
-                            </h3>
+                            <div class="title">
+                                <h2><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
+                            </div>
                             <hr>
                             <div class="row">
                                 <div class="col-md-12 article-content">

@@ -55,7 +55,7 @@
             <img src="<?php $this->options->headerIcon(); ?>">
             <h3><?php $this->options->sideName(); ?></h3>
         </div>
-        <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+        <?php $pages = $this->widget('Widget_Contents_Page_List')->on(true); ?>
         <ul class="nav">
             <li <?php if($this->is('index')): ?> class="active"<?php endif; ?>>
                 <a href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>

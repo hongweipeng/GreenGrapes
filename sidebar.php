@@ -13,9 +13,13 @@
             </ul>
             <div class="tab-content">
                 <div class="tab-pane nav bs-sidenav active in" id="sidebar-new">
+                    <?php $recent_posts = $this->widget('Widget_Contents_Post_Recent')->on(true); ?>
                     <ul class="list-group">
-                        <?php $this->widget('Widget_Contents_Post_Recent')
-                            ->parse('<li class="list-group-item clearfix"><a href="{permalink}">{title}</a></li>'); ?>
+                        <?php while ($recent_posts->next()): ?>
+                            <li class="list-group-item clearfix">
+                                <a href="<?php $recent_posts->permalink(); ?>"><?php echo $recent_posts->title; ?></a>
+                            </li>
+                        <?php endwhile; ?>
                     </ul>
                 </div>
                 <div class="tab-pane nav bs-sidenav fade" id="sidebar-rand">
@@ -58,8 +62,8 @@
         </div>
     </aside>
     <?php endif; ?>
-    <div id="fixed"></div>
-    <aside class="fixsidebar">
+    <?php if (!empty($this->options->ShowBlock) && in_array('ShowTagCloud', $this->options->ShowBlock)): ?>
+    <aside>
         <div class="card card-skin hidden-xs">
             <div class="card-header"><i class="fa fa-tags fa-fw"></i> 标签云</div>
             <div id="meta-cloud">
@@ -71,5 +75,6 @@
             </div>
         </div>
     </aside>
+    <?php endif; ?>
 
 </aside>
