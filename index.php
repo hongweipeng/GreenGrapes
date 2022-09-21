@@ -4,7 +4,7 @@
 
  * @package GreenGrapes
  * @author hongweipeng
- * @version 2.1.0
+ * @version 2.1.1
  * @link https://github.com/hongweipeng/GreenGrapes
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit(0);
@@ -19,8 +19,8 @@ $this->need('header.php');
                 <article class="post-article clearfix">
                     <section class="">
                         <div class="category-cloud"><?php $this->category(''); ?></div>
-                        <div class="title">
-                            <h2><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
+                        <div class="article-header">
+                            <h2 class="title"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
                         </div>
                         <hr>
                         <div class="row">

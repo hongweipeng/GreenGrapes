@@ -10,8 +10,8 @@ $hidden_sidebar =  !empty($this->options->ShowBlock) && in_array('SidebarHiddenI
         <div class="pl-0 pr-0 col-md-<?php echo $hidden_sidebar? '12' : '8' ?>">
             <div id="article-list">
                 <article class="post-article clearfix">
-                    <div class="title">
-                        <h2><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
+                    <div class="article-header">
+                        <h2 class="title"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
                         <p class="post-big-info">
                             <span class="badge badge-skin"><i class="fa fa-fw fa-user"></i> <a href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></span>
                             <span class="badge badge-skin"><i class="fa fa-fw fa-tags"></i> <?php $this->category(','); ?></span>
