@@ -420,7 +420,7 @@ img.avatar {
 .m-nav .nav li ul{background-color:#404040;}
 
 .post-article{background: #fff;margin-bottom: 10px;overflow: hidden;padding: 0.5rem 1rem 1rem;}
-.post-article .title h2{font-size: 2rem}
+.post-article h2.title{font-size: 2rem}
 .post-article .title a{text-decoration: none;}
 .post-article .title a:hover{transition: all 0.3s ease 0s;}
 .post-article .edit {margin-left: 20px;color:#949494;font-size: 0.875rem;}
