@@ -1,6 +1,6 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit(0); ?><aside id="sidebar">
     <aside>
-        <form method="get" id="searchform" class="form-inline clearfix" action="./">
+        <form id="searchform" class="form-inline clearfix" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
             <label for="s"></label><input class="form-control" name="s" id="s" placeholder="搜索关键词..." type="text">
             <button class="btn btn-skin ml-1"><i class="fa fa-search"></i> 查找</button>
         </form>
