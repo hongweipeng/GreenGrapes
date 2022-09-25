@@ -2,17 +2,25 @@
 <aside id="sidebar">
     <aside>
         <form id="searchform" class="form-inline clearfix" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
-            <label for="s"></label><input class="form-control" name="s" id="s" placeholder="搜索关键词..." type="text">
-            <button class="btn btn-skin ml-1"><i class="fa fa-search"></i> 查找</button>
+            <div class="row">
+                <div class="col-8">
+                    <label for="s" class="w-100">
+                        <input class="form-control" name="s" id="s" placeholder="搜索关键词..." type="text" />
+                    </label>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-skin"><i class="fa fa-search"></i> 查找</button>
+                </div>
+            </div>
         </form>
     </aside>
     <aside>
         <div class="card widget-sets hidden-xs">
             <ul class="nav nav-pills">
-                <li class=""><a class="nav-link active" href="#sidebar-new" data-toggle="tab">最新文章</a></li>
-                <li class="ml-1"><a class="nav-link" href="#sidebar-comment" data-toggle="tab">最新评论</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#sidebar-new" data-bs-toggle="tab">最新文章</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sidebar-comment" data-bs-toggle="tab">最新评论</a></li>
                 <?php if (empty($this->options->ShowBlock) || !in_array('HiddenSidebarRandomArticle', $this->options->ShowBlock)): ?>
-                <li class="ml-1"><a class="nav-link" href="#sidebar-rand" data-toggle="tab">随机文章</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sidebar-rand" data-bs-toggle="tab">随机文章</a></li>
                 <?php endif; ?>
             </ul>
             <div class="tab-content">
