@@ -52,7 +52,7 @@
             <img src="<?php $this->options->headerIcon(); ?>" alt="头像">
             <h3><?php $this->options->sideName(); ?></h3>
         </div>
-        <?php $pages = $this->widget('Widget_Contents_Page_List')->on(true); ?>
+        <?php $pages = $this->widget('\Widget\Contents\Page\Rows')->on(true); ?>
         <ul class="nav">
             <li <?php if($this->is('index')): ?> class="active"<?php endif; ?>>
                 <a href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>

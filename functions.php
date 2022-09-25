@@ -28,7 +28,7 @@ function theme_random_posts(){
     $result = $db->fetchAll($sql);
     echo $defaults['before'];
     foreach($result as $val){
-        $val = \Typecho\Widget::widget('Widget_Abstract_Contents')->filter($val);
+        $val = \Typecho\Widget::widget('\Widget\Base\Contents')->filter($val);
         echo str_replace(array('{permalink}', '{title}'),array($val['permalink'], $val['title']), $defaults['xformat']);
     }
     echo $defaults['after'];
@@ -54,8 +54,7 @@ function get_theme_color_array() {
  */
 function get_theme_color() {
     $key = 'green_grapes_color';
-    $options = \Typecho\Widget::widget('Widget_Options');
-
+    $options = Helper::options();
     if ($options->allow_user_change_color && isset($_COOKIE[$key])
         && array_key_exists($_COOKIE[$key], get_theme_color_array())) {
         return $_COOKIE[$key];
@@ -68,7 +67,7 @@ function get_theme_color() {
 
 
 function themeConfig($form) {
-    $options = \Typecho\Widget::widget('Widget_Options');
+    $options = Helper::options();
     $bgImg = new \Typecho\Widget\Helper\Form\Element\Text('bgImg', null, $options->themeUrl('img/bg.jpg', 'GreenGrapes'), _t('首页背景图片地址'), _t('在这里填入一个图片URL地址, 作为首页背景图片, 默认使用img下的header.png'));
     $form->addInput($bgImg);
 
