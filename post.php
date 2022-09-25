@@ -28,9 +28,9 @@ $hidden_sidebar =  !empty($this->options->ShowBlock) && in_array('HiddenSidebarI
                     <?php if($this->allow('ping')): ?>
                         <div class="article-copyright">
                             <div class="article-license">
-                                <img height="24" src="<?php $this->options->themeUrl('img/creativecommons-cc.png'); ?>" class="mb5"><br>
+                                <img height="24" src="<?php $this->options->themeUrl('img/creative-commons-cc.png'); ?>" class="mb5" alt="知识共享署名声明"><br>
                                 <div class="license-item text-muted">
-                                    本文由 <a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a> 创作，采用 <a class="alert-link" target="_blank" href="http://creativecommons.org/licenses/by/3.0/cn">知识共享署名 3.0</a>，可自由转载、引用，但需署名作者且注明文章出处。
+                                    本文由 <a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a> 创作，采用 <a class="alert-link" target="_blank" href="https://creativecommons.org/licenses/by/3.0/cn">知识共享署名 3.0</a>，可自由转载、引用，但需署名作者且注明文章出处。
                                 </div>
 
                             </div>
