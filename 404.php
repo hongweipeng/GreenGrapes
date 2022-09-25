@@ -5,9 +5,9 @@ $this->need('header.php');
 
     <div id="m-container" class="container pl-0 pr-0">
         <div class="error-page">
-            <h2 class="post-title">404 - <?php _e('页面没找到'); ?></h2>
-            <p><?php _e('你想查看的页面已被转移或删除了, 要不要搜索看看: '); ?></p>
-            <form method="post">
+            <h2 class="post-title"> 404 - <?php _e('页面没找到'); ?></h2>
+            <p><?php _e('访问的页面已被转移或删除了, 要不要搜索看看: '); ?></p>
+            <form method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
                 <p>
                     <label>
                         <input type="text" name="s" class="text" autofocus />

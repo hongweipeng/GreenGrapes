@@ -35,7 +35,7 @@
     <?php $this->header(); ?>
 </head>
 <body>
-<?php if(!($this->is('post') || $this->is('page')) || empty($this->options->ShowBlock) || !in_array('HeaderHiddenInDetail', $this->options->ShowBlock)): ?>
+<?php if(!($this->is('post') || $this->is('page')) || empty($this->options->ShowBlock) || !in_array('HiddenHeaderInDetail', $this->options->ShowBlock)): ?>
 <header id="l-header" class="l-header" style="background-image:url(<?php $this->options->bgImg(); ?>)">
     <div class="hdbg"></div>
     <div class="hdbg2 skin-bg"></div>
@@ -52,7 +52,7 @@
 <div id="m-nav" class="m-nav">
     <div class="m-nav-all">
         <div class="m-logo-url">
-            <img src="<?php $this->options->headerIcon(); ?>">
+            <img src="<?php $this->options->headerIcon(); ?>" alt="头像">
             <h3><?php $this->options->sideName(); ?></h3>
         </div>
         <?php $pages = $this->widget('Widget_Contents_Page_List')->on(true); ?>
@@ -68,11 +68,10 @@
         </ul>
     </div>
 </div>
-<form role="search" method="get" id="search-form" action="./">
+<form id="search-form" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
     <div class="search-form">
         <span id="search-form-close">×</span>
         <label for="search-input-s"></label><input placeholder="Search for" name="s" id="search-input-s" type="text">
-        <input class="webFont" id="searchsubmit" value="L" type="submit">
     </div>
 </form>
 <div id="m-header" class="m-header">

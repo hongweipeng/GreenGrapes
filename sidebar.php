@@ -1,6 +1,7 @@
-<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit(0); ?><aside id="sidebar">
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit(0); ?>
+<aside id="sidebar">
     <aside>
-        <form method="get" id="searchform" class="form-inline clearfix" action="./">
+        <form id="searchform" class="form-inline clearfix" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
             <label for="s"></label><input class="form-control" name="s" id="s" placeholder="搜索关键词..." type="text">
             <button class="btn btn-skin ml-1"><i class="fa fa-search"></i> 查找</button>
         </form>
@@ -9,7 +10,9 @@
         <div class="card widget-sets hidden-xs">
             <ul class="nav nav-pills">
                 <li class=""><a class="nav-link active" href="#sidebar-new" data-toggle="tab">最新文章</a></li>
+                <?php if (empty($this->options->ShowBlock) || !in_array('HiddenSidebarRandomArticle', $this->options->ShowBlock)): ?>
                 <li class="ml-1"><a class="nav-link" href="#sidebar-rand" data-toggle="tab">随机文章</a></li>
+                <?php endif; ?>
             </ul>
             <div class="tab-content">
                 <div class="tab-pane nav bs-sidenav active in" id="sidebar-new">
@@ -22,9 +25,11 @@
                         <?php endwhile; ?>
                     </ul>
                 </div>
+                <?php if (empty($this->options->ShowBlock) || !in_array('HiddenSidebarRandomArticle', $this->options->ShowBlock)): ?>
                 <div class="tab-pane nav bs-sidenav fade" id="sidebar-rand">
                     <?php theme_random_posts();?>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
     </aside>
@@ -38,7 +43,7 @@
         </div>
     </aside>
     <?php endif; ?>
-    <?php if(!empty($this->options->ShowBlock) && in_array('ShowCategory', $this->options->ShowBlock)): ?>
+    <?php if(empty($this->options->ShowBlock) || !in_array('HiddenCategory', $this->options->ShowBlock)): ?>
     <aside>
         <div class="card card-skin hidden-xs">
             <div class="card-header"><i class="fa fa-book fa-fw"></i> 文章分类</div>
@@ -50,7 +55,7 @@
         </div>
     </aside>
     <?php endif; ?>
-    <?php if (!empty($this->options->ShowBlock) && in_array('ShowArchive', $this->options->ShowBlock)): ?>
+    <?php if (empty($this->options->ShowBlock) || !in_array('HiddenArchive', $this->options->ShowBlock)): ?>
     <aside>
         <div class="card card-skin hidden-xs">
             <div class="card-header"><i class="fa fa-book fa-fw"></i> <?php _e('归档'); ?></div>
@@ -62,7 +67,7 @@
         </div>
     </aside>
     <?php endif; ?>
-    <?php if (!empty($this->options->ShowBlock) && in_array('ShowTagCloud', $this->options->ShowBlock)): ?>
+    <?php if (empty($this->options->ShowBlock) || !in_array('HiddenTagCloud', $this->options->ShowBlock)): ?>
     <aside>
         <div class="card card-skin hidden-xs">
             <div class="card-header"><i class="fa fa-tags fa-fw"></i> 标签云</div>
