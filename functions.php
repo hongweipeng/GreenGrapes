@@ -53,7 +53,7 @@ function get_theme_color_array() {
  * return string
  */
 function get_theme_color() {
-    $key = 'greengrapes_color';
+    $key = 'green_grapes_color';
     $options = \Typecho\Widget::widget('Widget_Options');
 
     if ($options->allow_user_change_color && isset($_COOKIE[$key])

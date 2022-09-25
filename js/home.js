@@ -128,7 +128,7 @@ $(document).ready(function () {
 	// 切换主题
 	$('#switch_color .flex-fill').click(function(e) {
 	    var obj = $(this);
-	    $.cookie('greengrapes_color', obj.data('color'));
+	    $.cookie('green_grapes_color', obj.data('color'));
 	    location.reload();
     });
 });
