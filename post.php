@@ -3,7 +3,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit(0);
 $this->need('header.php');
 ?>
 <?php
-$hidden_sidebar =  !empty($this->options->ShowBlock) && in_array('SidebarHiddenInDetail', $this->options->ShowBlock, true);
+$hidden_sidebar =  !empty($this->options->ShowBlock) && in_array('HiddenSidebarInDetail', $this->options->ShowBlock, true);
 ?>
 <div id="m-container" class="container">
     <div class="row ml-0 mr-0">
@@ -54,7 +54,7 @@ $hidden_sidebar =  !empty($this->options->ShowBlock) && in_array('SidebarHiddenI
                 </article>
 
             </div>
-        <?php if (!empty($this->options->ShowBlock) && in_array('ShowPostBottomBar', $this->options->ShowBlock, true)): ?>
+        <?php if (empty($this->options->ShowBlock) || !in_array('HiddenPostBottomBar', $this->options->ShowBlock, true)): ?>
             <div class="block">
                 <ul class="post-near">
                     <li>上一篇: <?php $this->thePrev('%s','没有了'); ?></li>

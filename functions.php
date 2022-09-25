@@ -1,9 +1,10 @@
 <?php
 
+use Utils\Helper;
 /**
  * 随机文章
- * @throws Typecho_Db_Exception
- * @throws Typecho_Widget_Exception
+ * @throws \Typecho\Db\Exception
+ * @throws \Typecho\Widget\Exception
  */
 function theme_random_posts(){
     $defaults = array(
@@ -12,7 +13,7 @@ function theme_random_posts(){
         'after' => '</ul>',
         'xformat' => '<li class="list-group-item clearfix"><a href="{permalink}" title="{title}">{title}</a></li>'
     );
-    $db = Typecho_Db::get();
+    $db = \Typecho\Db::get();
     $rand = "RAND()";
     if (stripos($db->getAdapterName(), 'sqlite') !== false) {
         $rand = "RANDOM()";
@@ -27,7 +28,7 @@ function theme_random_posts(){
     $result = $db->fetchAll($sql);
     echo $defaults['before'];
     foreach($result as $val){
-        $val = Typecho_Widget::widget('Widget_Abstract_Contents')->filter($val);
+        $val = \Typecho\Widget::widget('Widget_Abstract_Contents')->filter($val);
         echo str_replace(array('{permalink}', '{title}'),array($val['permalink'], $val['title']), $defaults['xformat']);
     }
     echo $defaults['after'];
@@ -53,7 +54,7 @@ function get_theme_color_array() {
  */
 function get_theme_color() {
     $key = 'greengrapes_color';
-    $options = Typecho_Widget::widget('Widget_Options');
+    $options = \Typecho\Widget::widget('Widget_Options');
 
     if ($options->allow_user_change_color && isset($_COOKIE[$key])
         && array_key_exists($_COOKIE[$key], get_theme_color_array())) {
@@ -67,33 +68,36 @@ function get_theme_color() {
 
 
 function themeConfig($form) {
-    $options = Typecho_Widget::widget('Widget_Options');
-    $bgImg = new Typecho_Widget_Helper_Form_Element_Text('bgImg', null, $options->themeUrl('img/bg.jpg', 'GreenGrapes'), _t('首页背景图片地址'), _t('在这里填入一个图片URL地址, 作为首页背景图片, 默认使用img下的header.png'));
+    $options = \Typecho\Widget::widget('Widget_Options');
+    $bgImg = new \Typecho\Widget\Helper\Form\Element\Text('bgImg', null, $options->themeUrl('img/bg.jpg', 'GreenGrapes'), _t('首页背景图片地址'), _t('在这里填入一个图片URL地址, 作为首页背景图片, 默认使用img下的header.png'));
     $form->addInput($bgImg);
 
-    $headIcon = new Typecho_Widget_Helper_Form_Element_Text('headerIcon', null, $options->themeUrl('img/head.jpg', 'GreenGrapes'), _t('首页头像地址'), _t('在这里填入一个图片URL地址, 作为首页头像, 默认使用images下的head.png'));
+    $headIcon = new \Typecho\Widget\Helper\Form\Element\Text('headerIcon', null, $options->themeUrl('img/head.jpg', 'GreenGrapes'), _t('首页头像地址'), _t('在这里填入一个图片URL地址, 作为首页头像, 默认使用images下的head.png'));
     $form->addInput($headIcon);
 
-    $siteIcon = new Typecho_Widget_Helper_Form_Element_Text('sideName', null, null, _t('侧栏用户名'), _t('在这里填入一个左侧显示的用户名, 默认不显示'));
+    $siteIcon = new \Typecho\Widget\Helper\Form\Element\Text('sideName', null, null, _t('侧栏用户名'), _t('在这里填入一个左侧显示的用户名, 默认不显示'));
     $form->addInput($siteIcon);
 
-    $themeColor = new Typecho_Widget_Helper_Form_Element_Select('themeColor', get_theme_color_array(), 'green', _t('主题颜色'), _t('包括标签的颜色和每篇文章中的颜色'));
+    $themeColor = new \Typecho\Widget\Helper\Form\Element\Select('themeColor', get_theme_color_array(), 'green', _t('主题颜色'), _t('包括标签的颜色和每篇文章中的颜色'));
     $form->addInput($themeColor);
 
-    $allow_user_change_color = new Typecho_Widget_Helper_Form_Element_Radio('allow_user_change_color',
+    $allow_user_change_color = new \Typecho\Widget\Helper\Form\Element\Radio('allow_user_change_color',
         array(0=>_t('拒绝'),1=>_t('允许'),), '1', _t('是否允许用户切换主题色'),_t('浏览者可在右侧切换主题色（仅在该访者上生效）'));
     $form->addInput($allow_user_change_color);
 
-    $showBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('ShowBlock', array(
-        'ShowPostBottomBar' => _t('文章页显示上一篇和下一篇'),
-        'SidebarHiddenInDetail' => _t('文章页隐藏侧边栏'),
-        'HeaderHiddenInDetail' => _t('文章页隐藏顶部头像'),
-        'ShowCategory' => _t('侧边栏显示分类'),
-        'ShowArchive' => _t('侧边栏显示归档'),
-        'ShowTagCloud' => _t('侧边栏显示标签云'),
-        'EnableParticle' => _t('粒子背景动画效果'),
+    $showBlock = new \Typecho\Widget\Helper\Form\Element\Checkbox('ShowBlock', array(
+        'HiddenPostBottomBar' => _t('隐藏文章页上一篇和下一篇'),
+        'HiddenSidebarRandomArticle' => _t('隐藏侧边栏随机文章'),
+        'HiddenSidebarInDetail' => _t('隐藏文章页侧边栏'),
+        'HiddenHeaderInDetail' => _t('隐藏文章页顶部头像'),
+        'HiddenCategory' => _t('隐藏侧边栏分类'),
+        'HiddenArchive' => _t('隐藏侧边栏归档'),
+        'HiddenTagCloud' => _t('隐藏侧边栏标签云'),
+        'HiddenParticle' => _t('隐藏粒子背景动画'),
         ),
-        array('ShowPostBottomBar', 'ShowTagCloud', 'EnableParticle'), _t('显示设置'));
+        array('HiddenCategory', 'HiddenArchive'),
+        _t('显示设置')
+    );
     $form->addInput($showBlock->multiMode());
 }
 

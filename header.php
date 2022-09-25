@@ -32,7 +32,7 @@
     <?php $this->header(); ?>
 </head>
 <body>
-<?php if(!($this->is('post') || $this->is('page')) || empty($this->options->ShowBlock) || !in_array('HeaderHiddenInDetail', $this->options->ShowBlock)): ?>
+<?php if(!($this->is('post') || $this->is('page')) || empty($this->options->ShowBlock) || !in_array('HiddenHeaderInDetail', $this->options->ShowBlock)): ?>
 <header id="l-header" class="l-header" style="background-image:url(<?php $this->options->bgImg(); ?>)">
     <div class="hdbg"></div>
     <div class="hdbg2 skin-bg"></div>
