@@ -28,7 +28,7 @@ $hidden_sidebar =  !empty($this->options->ShowBlock) && in_array('HiddenSidebarI
                     <?php if($this->allow('ping')): ?>
                         <div class="article-copyright">
                             <div class="article-license">
-                                <img height="24" src="<?php $this->options->themeUrl('img/creativecommons-cc.svg'); ?>" class="mb5"><br>
+                                <img height="24" src="<?php $this->options->themeUrl('img/creative-commons-cc.svg'); ?>" class="mb5" alt="知识共享署名声明"><br>
                                 <div class="license-item text-muted">
                                     本文由 <a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a> 创作，采用 <a class="alert-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh">署名-非商业性使用-相同方式共享 3.0</a>，可自由转载、引用，但需署名作者且注明文章出处。
                                 </div>
@@ -39,7 +39,7 @@ $hidden_sidebar =  !empty($this->options->ShowBlock) && in_array('HiddenSidebarI
                         <?php
                         $extra_str = '';
                         if (class_exists('TeStat_Plugin') && isset($this->options->plugins['activated']['TeStat'])) {
-                            $extra_str = '<button class="btn btn-info btn-like" type="button" data-cid="' . $this->cid . '"><i class="fa fa-fw fa-thumbs-o-up"></i> 仅点赞 <span class="like-num-show">' . $this->likesNum . '</span></button>';
+                            $extra_str = '<button class="btn btn-info btn-like text-white" type="button" data-cid="' . $this->cid . '"><i class="fa fa-fw fa-thumbs-o-up"></i> 仅点赞 <span class="like-num-show">' . $this->likesNum . '</span></button>';
                         }
                         ?>
                         <?php Reward_Plugin::show_reward($extra_str); ?>

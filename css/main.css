@@ -10,6 +10,7 @@ hr{margin:0.875rem auto;border: 1px dashed #E7E7E7;}
 img{border:0;vertical-align:middle;max-width: 100%;}
 p{display:block;margin-top: 0.5rem;margin-bottom: 0.5rem;}
 a{color:#515151;text-decoration:none;}
+a:hover{text-decoration:underline;}
 sup{color:#299982;}
 blockquote {
 	overflow:hidden;
@@ -399,7 +400,7 @@ img.avatar {
 .about{color:#fff;padding:0 0 15px;font-size:0.875rem;opacity:.8;filter:alpha(opacity=80);zoom:1;}
 
 .nav{margin-left:0;list-style:none}
-.nav > li > a{display:block}
+.nav > li > a{display:block; color: #515151;}
 .nav > li > a:hover,.nav > li > a:focus{text-decoration:none;background-color:#eeeeee}
 .m-nav{height:52px;background-color:#4a4a4a;position:relative;}
 .m-nav:after{clear:both}
