@@ -29,16 +29,18 @@ $this->need('header.php');
                                 </div>
                             </div>
                             <hr>
-                            <div class="pull-left">
-                                <a class="btn btn-skin" href="<?php $this->permalink() ?>">阅读全文</a>
-                            </div>
-                            <div class="pull-right post-info">
-                                <span><i class="fa fa-calendar"></i> <?php $this->date('Y-m-d'); ?></span>
-                                <span><i class="fa fa-user"></i> <a href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></span>
-                                <span><i class="fa fa-comment"></i> <a href="<?php $this->permalink() ?>"><?php $this->commentsNum('%d 条评论'); ?></a></span>
-                                <?php if (class_exists('TeStat_Plugin') && isset($this->options->plugins['activated']['TeStat'])): ?>
-                                    <span><i class="fa fa-fw fa-eye"></i> <?php $this->viewsNum(); ?> 次浏览</span>
-                                <?php endif; ?>
+                            <div class="d-md-flex justify-content-between">
+                                <div>
+                                    <a class="btn btn-skin" href="<?php $this->permalink() ?>">阅读全文</a>
+                                </div>
+                                <div>
+                                    <span><i class="fa fa-fw fa-calendar"></i> <?php $this->date('Y-m-d'); ?></span>
+                                    <span><i class="fa fa-fw fa-user"></i> <a href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></span>
+                                    <span><i class="fa fa-fw fa-comment"></i> <a href="<?php $this->permalink() ?>#comments"><?php $this->commentsNum('%d 条评论'); ?></a></span>
+                                    <?php if (class_exists('TeStat_Plugin') && isset($this->options->plugins['activated']['TeStat'])): ?>
+                                        <span><i class="fa fa-fw fa-eye"></i> <?php $this->viewsNum(); ?> 次浏览</span>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                         </section>
                     </article>
