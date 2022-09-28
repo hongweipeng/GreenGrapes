@@ -3,8 +3,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit(0);
 $this->need('header.php');
 ?>
 <div id="m-container" class="container">
-    <div class="row ml-0 mr-0">
-        <div class="col-md-8 pl-0 pr-0">
+    <div class="row">
+        <div class="col-md-8">
             <div id="article-list">
                 <article class="post-article clearfix">
                     <div class="article-header">

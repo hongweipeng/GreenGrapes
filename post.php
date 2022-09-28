@@ -6,8 +6,8 @@ $this->need('header.php');
 $hidden_sidebar =  !empty($this->options->ShowBlock) && in_array('HiddenSidebarInDetail', $this->options->ShowBlock, true);
 ?>
 <div id="m-container" class="container">
-    <div class="row ml-0 mr-0">
-        <div class="pl-0 pr-0 col-md-<?php echo $hidden_sidebar? '12' : '8' ?>">
+    <div class="row">
+        <div class="col-md-<?php echo $hidden_sidebar? '12' : '8' ?>">
             <div id="article-list">
                 <article class="post-article clearfix">
                     <div class="article-header">

@@ -4,8 +4,8 @@ $this->need('header.php');
 ?>
 
 <div id="m-container" class="container">
-    <div class="row ml-0 mr-0">
-        <div class="col-md-8 pl-0 pr-0">
+    <div class="row">
+        <div class="col-md-8">
             <div class="alert alert-info">
             <?php $this->archiveTitle(array(
                     'category'  =>  _t('分类 %s 下的文章'),
