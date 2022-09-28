@@ -47,7 +47,7 @@
 </header>
 <?php endif; ?>
 <div id="m-nav" class="m-nav">
-    <div class="m-nav-all">
+    <div class="container m-nav-all">
         <div class="m-logo-url">
             <img src="<?php $this->options->headerIcon(); ?>" alt="头像">
             <h3><?php $this->options->sideName(); ?></h3>

@@ -91,7 +91,6 @@ h6 tt, h6 code {
 #m-container{
 	padding-left: 0;
 	padding-right: 0;
-	max-width:1200px;
 	min-width:320px;
 	margin:10px auto;
 	position:relative;
@@ -402,7 +401,7 @@ img.avatar {
 .nav > li > a:hover,.nav > li > a:focus{text-decoration:none;background-color:#eeeeee}
 .m-nav{height:52px;background-color:#4a4a4a;position:relative;}
 .m-nav:after{clear:both}
-.m-nav .nav{position:relative;max-width: 1200px;float: left;display:block;margin: 0 auto;font-size:0.937rem}
+.m-nav .nav{position:relative;float: left;display:block;margin: 0 auto;font-size:0.937rem}
 .m-nav .nav.pull-right{float:right;margin-right:0}
 .m-nav .nav > li{position:relative;float:left;margin-right:1px}
 .m-nav .nav li a{padding:15px 20px;color:#eeeeee}
@@ -535,7 +534,7 @@ footer {padding: 20px;margin: 20px 0 0;text-align:center;background-color:#fffff
 .m-header-search{position:absolute;top:17px;right:17px;width:20px;height:20px;background-image:url(../img/content-header.png);background-position:-20px 0;background-size:40px;background-repeat:no-repeat;cursor:pointer;}
 .m-header h1{margin:0;text-align:center;font-weight:bold;font-size:0.875rem;}
 .m-header h1 a{margin:0;padding:12px 25px;height:48px;color:#fff;font-size:0.875rem;line-height:53px;}
-.m-nav-all{display:block;margin:0 auto;max-width:1200px;}
+.m-nav-all{display:block;margin:0 auto;padding-left: 0;padding-right: 0;}
 .m-logo-url{float:left;display:none;height:52px;}
 .m-logo-url img{width:50%;border-radius:100%;}
 .m-logo-url h3{margin:10px 0;color:#fff;font-weight:normal;}
@@ -566,7 +565,7 @@ footer {padding: 20px;margin: 20px 0 0;text-align:center;background-color:#fffff
 	.m-nav .nav li:hover > ul {background:#404040!important;}
 	.m-nav .nav > li > ul a{margin-left:40px;}
 	.m-nav-open{left:0 !important;opacity:1 !important;}
-	.container{left:0;margin:0;background:#fff;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;transition:all .3s ease;}
+	.container{left:0;margin:0;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;transition:all .3s ease;}
 	.m-container-open,.m-footer-open{left:30% !important;}
 	#content,#pagination{margin:0;}
 	#pagination a{margin:auto;width:50%;}
