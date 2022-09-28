@@ -22,13 +22,11 @@ $this->need('header.php');
                             <div class="title">
                                 <h2><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
                             </div>
-                            <hr>
-                            <div class="row">
+                            <div class="row raw-border-dashed">
                                 <div class="col-md-12 article-content">
                                     <?php $this->content(); ?>
                                 </div>
                             </div>
-                            <hr>
                             <div class="d-md-flex justify-content-between">
                                 <div>
                                     <a class="btn btn-skin" href="<?php $this->permalink() ?>">阅读全文</a>
