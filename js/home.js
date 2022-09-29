@@ -125,19 +125,19 @@ $(document).ready(function () {
 		});
 	}
 
-	// 归档页弹出框 hover 触发
+	// 提示框、弹出框 hover 自动触发
 	(function () {
+		// 初始化提示框
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		tooltipTriggerList.map(function (tooltipTriggerEl) {
+			return new bootstrap.Tooltip(tooltipTriggerEl)
+		});
+
 		// 初始化弹出框
-		var popoverTriggerList = [].slice.call(document.querySelectorAll('.archive-timeline [data-bs-toggle="popover"]'))
+		var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
 		popoverTriggerList.map(function (popoverTriggerEl) {
 			return new bootstrap.Popover(popoverTriggerEl)
 		});
-
-		// 初始化提示框
-		var tooltipTriggerList = [].slice.call(document.querySelectorAll('.archive-timeline [data-bs-toggle="tooltip"]'))
-		tooltipTriggerList.map(function (tooltipTriggerEl) {
-			return new bootstrap.Tooltip(tooltipTriggerEl)
-		})
 	})();
 	
 	// 切换主题
