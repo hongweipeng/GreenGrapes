@@ -28,6 +28,7 @@
 </footer>
 <script src="<?php $this->options->themeUrl('js/jquery.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/popper.min.js'); ?>"></script>
+<script src="//cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
 <script src="<?php $this->options->themeUrl('js/bootstrap.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/jquery.cookie.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/functionall.js'); ?>"></script>

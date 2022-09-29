@@ -124,6 +124,14 @@ $(document).ready(function () {
 			}
 		});
 	}
+
+	// 归档页弹出框 hover 触发
+	(function () {
+		// 初始化弹出框
+		$('[data-toggle="popover"]').popover();
+		// 初始化提示框
+		$('[data-toggle="tooltip"]').tooltip();
+	})();
 	
 	// 切换主题
 	$('#switch_color .flex-fill').click(function(e) {
