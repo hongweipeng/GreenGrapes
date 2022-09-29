@@ -387,7 +387,66 @@ img.avatar {
 
 }
 
-
+/* 文章归档页时间轴 */
+.archive-timeline .archive-content {
+	margin-left: 2rem;
+	position: relative;
+}
+.archive-timeline .archive-content::before {
+	background: #dddddd;
+	content: ' ';
+	margin-left: -2px;
+	position: absolute;
+	top: 1.25rem;
+	bottom: 1.25rem;
+	width: 4px;
+}
+.archive-timeline .timeline-big-dot {
+	position: relative;
+}
+.archive-timeline .timeline-big-dot::before {
+	background: #bbbbbb;
+	margin-left: -5px;
+	margin-top: -5px;
+	height: 10px;
+	width: 10px;
+	position: absolute;
+	top: 50%;
+	border-radius: 50%;
+	content: ' ';
+}
+.archive-timeline  .timeline-big-dot .timeline-year {
+	display: block;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.archive-timeline .line {
+	font-size: 1rem;
+}
+.archive-timeline .line .line-item {
+	border-bottom: 1px dashed #cccccc;
+	margin: 1rem 2px 1rem;
+	padding-left: 1rem;
+	position: relative;
+	transition: border 0.2s ease-in-out;
+}
+.archive-timeline .line .line-item:before {
+	background: #bbbbbb;
+	left: -5px;
+	position: absolute;
+	top: 0.6rem;
+	transition: background 0.2s ease-in-out;
+	border-radius: 50%;
+	content: ' ';
+	height: 6px;
+	width: 6px;
+}
+.archive-timeline .line .line-item:hover {
+	border-bottom-color: #222222;
+}
+.archive-timeline .line .line-item:hover::before {
+	background: #222222;
+}
 
 .l-header{-webkit-background-size:100% 100%;-moz-background-size:100% 100%;-o-background-size:100% 100%;z-index:10;position:relative;zoom:1;}
 .hdbg,.hdbg2{position:absolute;bottom:0;left:0;width:100%;height:100%;background:-webkit-linear-gradient(top,#000,rgba(0,0,0,0) 85%);}
