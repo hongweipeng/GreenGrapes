@@ -22,7 +22,7 @@ $this->need('header.php');
                             <div class="title">
                                 <h2><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
                             </div>
-                            <div class="row raw-border-dashed">
+                            <div class="row row-border-dashed">
                                 <div class="col-md-12 article-content">
                                     <?php $this->content(); ?>
                                 </div>
