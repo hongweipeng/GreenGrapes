@@ -77,18 +77,14 @@ var closeEnable = false;
 	});
 }
 
-$(document).ready(function () {
-	// 分页
-	$('.pagination a, .pagination span').addClass('page-link');
-	$('form.protected').find('.text').addClass('form-control').end().find('.submit').addClass('btn btn-skin');
-
-    if(!document.getElementById("sidebar")) {
-    	return;
-    }
+function sidebar_init() {
+	if(!document.getElementById("sidebar")) {
+		return;
+	}
 
 	fssilde();
 
-    // 若有显示标签云，设置动画
+	// 若有显示标签云，设置动画
 	if ( $("#mycanvas").length>0 ) {
 		TagCanvas.Start('mycanvas', '', {
 			textColour: '#000',
@@ -124,6 +120,14 @@ $(document).ready(function () {
 			}
 		});
 	}
+}
+
+$(document).ready(function () {
+	// 分页
+	$('.pagination a, .pagination span').addClass('page-link');
+	$('form.protected').find('.text').addClass('form-control').end().find('.submit').addClass('btn btn-skin');
+
+	sidebar_init();
 
 	// 归档页弹出框 hover 触发
 	(function () {
