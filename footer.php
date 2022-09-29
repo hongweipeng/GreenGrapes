@@ -28,7 +28,7 @@
 </footer>
 <script src="<?php $this->options->themeUrl('js/jquery.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/popper.min.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('js/bootstrap.min.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('js/bootstrap.bundle.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/jquery.cookie.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/functionall.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/tagcanvas.min.js'); ?>"></script>
