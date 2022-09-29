@@ -76,7 +76,7 @@
         <div class="card card-skin hidden-xs">
             <div class="card-header"><i class="fa fa-tags fa-fw"></i> 标签云</div>
             <div id="meta-cloud">
-            <canvas height="300" id="mycanvas" style="width: 100%">
+            <canvas height="300" id="tag-cloud-tags" style="width: 100%">
                 <p>标签云</p>
                 <?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=widget-list'); ?>
                 <?php $this->widget('Widget_Metas_Tag_Cloud')->parse('<a href="{permalink}" class="tag">{name}</a>'); ?>

@@ -85,8 +85,8 @@ function sidebar_init() {
 	fssilde();
 
 	// 若有显示标签云，设置动画
-	if ( $("#mycanvas").length>0 ) {
-		TagCanvas.Start('mycanvas', '', {
+	if ( $("#tag-cloud-tags").length>0 ) {
+		TagCanvas.Start('tag-cloud-tags', '', {
 			textColour: '#000',
 			//outlineColour: '#16a085',
 			outlineColour: $('.skin-bg').css('background-color'),
@@ -101,10 +101,10 @@ function sidebar_init() {
 	var $sidebar = $("#sidebar");
 	// 最后一个 <aside> 添加固定，及前面添加 <div id="fixed"></div> 用于确定偏移
 	var $fixside = $sidebar.find('aside').eq(-1);
-	$fixside.addClass('fixsidebar').before('<div id="fixed"></div>');;
-	var	$containner = $('#m-container'),
-		$window = $(window),
-		offset = $("#fixed").offset();
+	$fixside.addClass('fixsidebar').before('<div id="fixed"></div>');
+	var	$containner = $('#m-container');
+	var	$window = $(window);
+	var	offset = $("#fixed").offset();
 	if($window.width() > 768){
 		$window.scroll(function() {
 			if ($containner.height() - $sidebar.height() <= 40) {
