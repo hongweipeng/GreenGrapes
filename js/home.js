@@ -77,38 +77,35 @@ var closeEnable = false;
 	});
 }
 
-$(document).ready(function () {
-	// 分页
-	$('.pagination a, .pagination span').addClass('page-link');
-	$('form.protected').find('.text').addClass('form-control').end().find('.submit').addClass('btn btn-skin');
+// 提示框、弹出框 hover 自动触发
+function bootstrap_auto_hover_popper() {
+	// 初始化提示框
+	var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+	tooltipTriggerList.map(function (tooltipTriggerEl) {
+		return new bootstrap.Tooltip(tooltipTriggerEl)
+	});
 
-    if(!document.getElementById("sidebar")) {
-    	return;
-    }
+	// 初始化弹出框
+	var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+	popoverTriggerList.map(function (popoverTriggerEl) {
+		return new bootstrap.Popover(popoverTriggerEl)
+	});
+}
 
-	fssilde();
-
-    // 若有显示标签云，设置动画
-	if ( $("#mycanvas").length>0 ) {
-		TagCanvas.Start('mycanvas', '', {
-			textColour: '#000',
-			//outlineColour: '#16a085',
-			outlineColour: $('.skin-bg').css('background-color'),
-			outlineThickness: 1,
-			maxSpeed: 0.03,
-			depth: 0.75,
-			wheelZoom: false
-		});
+// 侧边栏初始化
+function sidebar_init() {
+	if(!document.getElementById("sidebar")) {
+		return;
 	}
-
+	fssilde();
 	//边栏固定
 	var $sidebar = $("#sidebar");
 	// 最后一个 <aside> 添加固定，及前面添加 <div id="fixed"></div> 用于确定偏移
 	var $fixside = $sidebar.find('aside').eq(-1);
-	$fixside.addClass('fixsidebar').before('<div id="fixed"></div>');;
-	var	$containner = $('#m-container'),
-		$window = $(window),
-		offset = $("#fixed").offset();
+	$fixside.addClass('fixsidebar').before('<div id="fixed"></div>');
+	var	$containner = $('#m-container');
+	var	$window = $(window);
+	var	offset = $("#fixed").offset();
 	if($window.width() > 768){
 		$window.scroll(function() {
 			if ($containner.height() - $sidebar.height() <= 40) {
@@ -124,21 +121,26 @@ $(document).ready(function () {
 			}
 		});
 	}
+}
 
-	// 提示框、弹出框 hover 自动触发
-	(function () {
-		// 初始化提示框
-		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-		tooltipTriggerList.map(function (tooltipTriggerEl) {
-			return new bootstrap.Tooltip(tooltipTriggerEl)
-		});
+$(document).ready(function () {
+	// 分页
+	$('.pagination a, .pagination span').addClass('page-link');
+	$('form.protected').find('.text').addClass('form-control').end().find('.submit').addClass('btn btn-skin');
 
-		// 初始化弹出框
-		var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-		popoverTriggerList.map(function (popoverTriggerEl) {
-			return new bootstrap.Popover(popoverTriggerEl)
+	bootstrap_auto_hover_popper();
+	sidebar_init();
+
+	if ($('#tag-cloud-tags').length) {
+		TagCanvas.Start('tag-cloud-tags', '', {
+			textColour: '#000000',
+			outlineColour: $('.skin-bg').css('background-color'),
+			outlineThickness: 1,
+			maxSpeed: 0.03,
+			depth: 0.75,
+			wheelZoom: false,
 		});
-	})();
+	}
 	
 	// 切换主题
 	$('#switch_color .flex-fill').click(function(e) {

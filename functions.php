@@ -91,7 +91,6 @@ function themeConfig($form) {
         'HiddenHeaderInDetail' => _t('隐藏文章页顶部头像'),
         'HiddenCategory' => _t('隐藏侧边栏分类'),
         'HiddenArchive' => _t('隐藏侧边栏归档'),
-        'HiddenTagCloud' => _t('隐藏侧边栏标签云'),
         'HiddenParticle' => _t('隐藏粒子背景动画'),
         ),
         array('HiddenCategory', 'HiddenArchive'),

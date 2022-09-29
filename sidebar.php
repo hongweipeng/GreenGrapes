@@ -84,19 +84,5 @@
         </div>
     </aside>
     <?php endif; ?>
-    <?php if (empty($this->options->ShowBlock) || !in_array('HiddenTagCloud', $this->options->ShowBlock)): ?>
-    <aside>
-        <div class="card card-skin hidden-xs">
-            <div class="card-header"><i class="fa fa-tags fa-fw"></i> 标签云</div>
-            <div id="meta-cloud">
-            <canvas height="300" id="mycanvas" style="width: 100%">
-                <p>标签云</p>
-                <?php $this->widget('\Widget\Metas\Category\Rows')->listCategories('wrapClass=widget-list'); ?>
-                <?php $this->widget('\Widget\Metas\Tag\Cloud')->parse('<a href="{permalink}" class="tag">{name}</a>'); ?>
-            </canvas>
-            </div>
-        </div>
-    </aside>
-    <?php endif; ?>
 
 </aside>
