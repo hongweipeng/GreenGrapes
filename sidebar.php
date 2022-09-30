@@ -78,7 +78,7 @@
             <div class="card-header"><i class="fa fa-book fa-fw"></i> <?php _e('归档'); ?></div>
             <div class="list-group category">
                 <ul class="widget-list">
-                    <?php $this->widget('\Widget\Contents\Post\Date', 'type=month&format=Y 年 m 月')->parse('<li><a href="{permalink}">{date}<span class="badge badge-secondary float-right">{count}</span></a></li>'); ?>
+                    <?php $this->widget('\Widget\Contents\Post\Date', 'type=month&format=Y 年 m 月')->parse('<li><a href="{permalink}">{date}<span class="badge bg-secondary float-end">{count}</span></a></li>'); ?>
                 </ul>
             </div>
         </div>
