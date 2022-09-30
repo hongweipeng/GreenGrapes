@@ -17,14 +17,14 @@
     <aside>
         <div class="card widget-sets hidden-xs">
             <ul class="nav nav-pills">
-                <li class="nav-item"><a class="nav-link active" href="#sidebar-new" data-bs-toggle="tab">最新文章</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#sidebar-recent-article" data-bs-toggle="tab">最新文章</a></li>
                 <li class="nav-item"><a class="nav-link" href="#sidebar-comment" data-bs-toggle="tab">最新评论</a></li>
                 <?php if (empty($this->options->ShowBlock) || !in_array('HiddenSidebarRandomArticle', $this->options->ShowBlock)): ?>
-                <li class="nav-item"><a class="nav-link" href="#sidebar-rand" data-bs-toggle="tab">随机文章</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sidebar-random-article" data-bs-toggle="tab">随机文章</a></li>
                 <?php endif; ?>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane nav bs-sidenav active in" id="sidebar-new">
+                <div class="tab-pane nav bs-sidenav active in" id="sidebar-recent-article">
                     <?php $recent_posts = $this->widget('\Widget\Contents\Post\Recent')->on(true); ?>
                     <ul class="list-group">
                         <?php while ($recent_posts->next()): ?>
@@ -43,7 +43,7 @@
                     </ul>
                 </div>
                 <?php if (empty($this->options->ShowBlock) || !in_array('HiddenSidebarRandomArticle', $this->options->ShowBlock)): ?>
-                <div class="tab-pane nav bs-sidenav fade" id="sidebar-rand">
+                <div class="tab-pane nav bs-sidenav fade" id="sidebar-random-article">
                     <?php theme_random_posts();?>
                 </div>
                 <?php endif; ?>
