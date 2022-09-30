@@ -66,7 +66,7 @@
             <div class="card-header"><i class="fa fa-book fa-fw"></i> 文章分类</div>
             <div class="list-group category">
                 <ul class="widget-list">
-                    <?php $this->widget('\Widget\Metas\Category\Rows')->parse('<li><a href="{permalink}">{name} <span class="badge badge-secondary float-right">{count}</span></a></li>'); ?>
+                    <?php $this->widget('\Widget\Metas\Category\Rows')->parse('<li><a href="{permalink}">{name} <span class="badge bg-secondary float-end">{count}</span></a></li>'); ?>
                 </ul>
             </div>
         </div>
