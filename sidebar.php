@@ -1,20 +1,6 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit(0); ?>
 <aside id="sidebar">
     <aside>
-        <form id="searchform" class="form-inline clearfix" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
-            <div class="row">
-                <div class="col-8">
-                    <label for="s" class="w-100">
-                        <input class="form-control" name="s" id="s" placeholder="搜索关键词..." type="text" />
-                    </label>
-                </div>
-                <div class="col-4">
-                    <button class="btn btn-skin"><i class="fa fa-search"></i> 查找</button>
-                </div>
-            </div>
-        </form>
-    </aside>
-    <aside>
         <div class="card widget-sets hidden-xs">
             <ul class="nav nav-pills">
                 <li class="nav-item"><a class="nav-link active" href="#sidebar-recent-article" data-bs-toggle="tab">最新文章</a></li>

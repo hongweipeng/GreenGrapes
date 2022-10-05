@@ -53,16 +53,25 @@
             <h3><?php $this->options->sideName(); ?></h3>
         </div>
         <?php $pages = $this->widget('\Widget\Contents\Page\Rows')->on(true); ?>
-        <ul class="nav">
-            <li <?php if($this->is('index')): ?> class="active"<?php endif; ?>>
-                <a href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>
-            </li>
-            <?php while($pages->next()): ?>
-                <li <?php if($this->is('page', $pages->slug)): ?> class="active"<?php endif; ?>>
-                    <a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
+        <div class="d-flex justify-content-between align-items-center">
+            <ul class="nav">
+                <li <?php if($this->is('index')): ?> class="active"<?php endif; ?>>
+                    <a href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>
                 </li>
-            <?php endwhile; ?>
-        </ul>
+                <?php while($pages->next()): ?>
+                    <li <?php if($this->is('page', $pages->slug)): ?> class="active"<?php endif; ?>>
+                        <a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
+                    </li>
+                <?php endwhile; ?>
+            </ul>
+            <!-- 使用 .d-none .d-xl-block，在小于 lg 尺寸(1100px)的屏幕上隐藏 -->
+            <form class="d-flex d-none d-xl-flex" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
+                <label for="s" class="me-2">
+                    <input class="form-control" name="s" placeholder="搜索关键词..." type="text" />
+                </label>
+                <button class="btn btn-secondary"><i class="fa fa-search"></i> 查找</button>
+            </form>
+        </div>
     </div>
 </div>
 <form id="search-form" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
