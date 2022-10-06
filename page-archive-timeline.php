@@ -12,7 +12,7 @@ $this->need('header.php');
         <div class="row">
             <?php
             $page = (int) $this->request->get('page', 1);
-            $pageSize = 20;
+            $pageSize = empty($this->options->ArchivePageSize) ? 20 : (int) $this->options->ArchivePageSize;
             $recent = RecentSplitPage::alloc(['pageSize' => $pageSize, 'currentPage' => $page]);
             $total = $recent->getTotal();
             ?>
