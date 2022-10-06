@@ -1,6 +1,10 @@
 <?php
 
 use Utils\Helper;
+
+require_once 'lib/RecentSplitPage.php';
+require_once 'lib/ArticleCatalog.php';
+
 /**
  * 随机文章
  * @throws \Typecho\Db\Exception
@@ -77,6 +81,10 @@ function themeConfig($form) {
     $siteIcon = new \Typecho\Widget\Helper\Form\Element\Text('sideName', null, null, _t('侧栏用户名'), _t('在这里填入一个左侧显示的用户名, 默认不显示'));
     $form->addInput($siteIcon);
 
+    $archivePageSize = new \Typecho\Widget\Helper\Form\Element\Text('ArchivePageSize', null, 20, _t('归档页列表数量'), _t('此数目用于指定显示显示归档模板列表数目'));
+    $archivePageSize->input->setAttribute('class', 'w-20');
+    $form->addInput($archivePageSize);
+
     $themeColor = new \Typecho\Widget\Helper\Form\Element\Select('themeColor', get_theme_color_array(), 'green', _t('主题颜色'), _t('包括标签的颜色和每篇文章中的颜色'));
     $form->addInput($themeColor);
 
@@ -85,14 +93,15 @@ function themeConfig($form) {
     $form->addInput($allow_user_change_color);
 
     $showBlock = new \Typecho\Widget\Helper\Form\Element\Checkbox('ShowBlock', array(
+        'HiddenHeaderGlobal' => _t('隐藏顶部头像'),
         'HiddenPostBottomBar' => _t('隐藏文章页上一篇和下一篇'),
         'HiddenSidebarRandomArticle' => _t('隐藏侧边栏随机文章'),
         'HiddenSidebarInDetail' => _t('隐藏文章页侧边栏'),
         'HiddenHeaderInDetail' => _t('隐藏文章页顶部头像'),
         'HiddenCategory' => _t('隐藏侧边栏分类'),
         'HiddenArchive' => _t('隐藏侧边栏归档'),
-        'HiddenTagCloud' => _t('隐藏侧边栏标签云'),
         'HiddenParticle' => _t('隐藏粒子背景动画'),
+        'ShowSidebarBlogInfo' => _t('显示侧边栏博客信息'),
         ),
         array('HiddenCategory', 'HiddenArchive'),
         _t('显示设置')

@@ -1,29 +1,52 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit(0); ?>
 <aside id="sidebar">
+    <?php if (!empty($this->options->ShowBlock) && in_array('ShowSidebarBlogInfo', $this->options->ShowBlock)): ?>
     <aside>
-        <form id="searchform" class="form-inline clearfix" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
-            <div class="row">
-                <div class="col-8">
-                    <label for="s" class="w-100">
-                        <input class="form-control" name="s" id="s" placeholder="搜索关键词..." type="text" />
-                    </label>
-                </div>
-                <div class="col-4">
-                    <button class="btn btn-skin"><i class="fa fa-search"></i> 查找</button>
+        <div class="card widget-sets hidden-xs">
+            <div class="card-body" style="background-image:url(<?php $this->options->bgImg(); ?>);-moz-background-size:100% 100%; background-size:100% 100%;">
+                <div class="hdbg skin-bg"></div>
+                <div class="sidebar-user">
+                    <div class="user-avatar">
+                        <a href="<?php $this->options->siteUrl(); ?>"><img src="<?php $this->options->headerIcon(); ?>" alt=""></a>
+                    </div>
+                    <div class="user-info">
+                        <h1><a class="text-white" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a></h1>
+                        <div class="mb-2"><?php $this->options->description(); ?></div>
+                        <?php $stat = Typecho\Widget::widget('Widget\Stat')->on(true); ?>
+                        <div class="count d-flex justify-content-around">
+                            <div class="item flex-fill d-flex flex-column">
+                                <span class="h4"><?php $stat->publishedPostsNum() ?></span>
+                                <span>文章</span>
+                            </div>
+                            <div class="item flex-fill d-flex flex-column">
+                                <span class="h4"><?php $stat->categoriesNum() ?></span>
+                                <span>分类</span>
+                            </div>
+                            <div class="item flex-fill d-flex flex-column">
+                                <span class="h4"><?php $stat->publishedCommentsNum() ?></span>
+                                <span>评论</span>
+                            </div>
+                            <div class="item flex-fill d-flex flex-column">
+                                <span class="h4"><?php echo $stat->publishedPagesNum + $stat->publishedPostsNum; ?></span>
+                                <span>页面</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </form>
+        </div>
     </aside>
+    <?php endif ?>
     <aside>
         <div class="card widget-sets hidden-xs">
             <ul class="nav nav-pills">
-                <li class="nav-item"><a class="nav-link active" href="#sidebar-new" data-bs-toggle="tab">最新文章</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#sidebar-recent-article" data-bs-toggle="tab">最新文章</a></li>
                 <?php if (empty($this->options->ShowBlock) || !in_array('HiddenSidebarRandomArticle', $this->options->ShowBlock)): ?>
-                <li class="nav-item"><a class="nav-link" href="#sidebar-rand" data-bs-toggle="tab">随机文章</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sidebar-random-article" data-bs-toggle="tab">随机文章</a></li>
                 <?php endif; ?>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane nav bs-sidenav active in" id="sidebar-new">
+                <div class="tab-pane nav bs-sidenav active in" id="sidebar-recent-article">
                     <?php $recent_posts = $this->widget('\Widget\Contents\Post\Recent')->on(true); ?>
                     <ul class="list-group">
                         <?php while ($recent_posts->next()): ?>
@@ -34,7 +57,7 @@
                     </ul>
                 </div>
                 <?php if (empty($this->options->ShowBlock) || !in_array('HiddenSidebarRandomArticle', $this->options->ShowBlock)): ?>
-                <div class="tab-pane nav bs-sidenav fade" id="sidebar-rand">
+                <div class="tab-pane nav bs-sidenav fade" id="sidebar-random-article">
                     <?php theme_random_posts();?>
                 </div>
                 <?php endif; ?>
@@ -57,7 +80,7 @@
             <div class="card-header"><i class="fa fa-book fa-fw"></i> 文章分类</div>
             <div class="list-group category">
                 <ul class="widget-list">
-                    <?php $this->widget('\Widget\Metas\Category\Rows')->parse('<li><a href="{permalink}">{name} <span class="badge badge-secondary float-right">{count}</span></a></li>'); ?>
+                    <?php $this->widget('\Widget\Metas\Category\Rows')->parse('<li><a href="{permalink}">{name} <span class="badge bg-secondary float-end">{count}</span></a></li>'); ?>
                 </ul>
             </div>
         </div>
@@ -69,22 +92,8 @@
             <div class="card-header"><i class="fa fa-book fa-fw"></i> <?php _e('归档'); ?></div>
             <div class="list-group category">
                 <ul class="widget-list">
-                    <?php $this->widget('\Widget\Contents\Post\Date', 'type=month&format=Y 年 m 月')->parse('<li><a href="{permalink}">{date}<span class="badge badge-secondary float-right">{count}</span></a></li>'); ?>
+                    <?php $this->widget('\Widget\Contents\Post\Date', 'type=month&format=Y 年 m 月')->parse('<li><a href="{permalink}">{date}<span class="badge bg-secondary float-end">{count}</span></a></li>'); ?>
                 </ul>
-            </div>
-        </div>
-    </aside>
-    <?php endif; ?>
-    <?php if (empty($this->options->ShowBlock) || !in_array('HiddenTagCloud', $this->options->ShowBlock)): ?>
-    <aside>
-        <div class="card card-skin hidden-xs">
-            <div class="card-header"><i class="fa fa-tags fa-fw"></i> 标签云</div>
-            <div id="meta-cloud">
-            <canvas height="300" id="mycanvas" style="width: 100%">
-                <p>标签云</p>
-                <?php $this->widget('\Widget\Metas\Category\Rows')->listCategories('wrapClass=widget-list'); ?>
-                <?php $this->widget('\Widget\Metas\Tag\Cloud')->parse('<a href="{permalink}" class="tag">{name}</a>'); ?>
-            </canvas>
             </div>
         </div>
     </aside>
