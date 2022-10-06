@@ -1,4 +1,22 @@
 (function ($) {
+
+// 节流，防抖
+function throttle(fn,delay){
+	let valid = true
+	return function() {
+		if(!valid){
+			//休息时间 暂不接客
+			return false
+		}
+		// 工作时间，执行函数并且在间隔期内把状态位设为无效
+		valid = false
+		setTimeout(() => {
+			fn()
+			valid = true;
+		}, delay)
+	}
+}
+
 // 滚屏
 $(document).ready(function($) {
     // 利用 data-scroll 属性，滚动到任意 dom 元素
@@ -93,7 +111,7 @@ function bootstrap_auto_hover_popper() {
 }
 
 // 侧边栏初始化
-function sidebar_init() {
+function sidebar_last_aside_fixed() {
 	if(!document.getElementById("sidebar")) {
 		return;
 	}
@@ -107,7 +125,7 @@ function sidebar_init() {
 	var	$window = $(window);
 	var	offset = $("#fixed").offset();
 	if($window.width() > 768){
-		$window.scroll(function() {
+		function sidebar_fixed() {
 			if ($containner.height() - $sidebar.height() <= 40) {
 				return;
 			}
@@ -119,8 +137,39 @@ function sidebar_init() {
 				$fixside.stop().animate({top:'1px'});
 				$fixside.removeClass('fix');
 			}
-		});
+		}
+		sidebar_fixed();
+		$window.scroll(throttle(sidebar_fixed, 50));
 	}
+}
+
+// 侧边目录自动 active
+function sidebar_catalog_auto_active() {
+	var $anchor = $('.article-content .title-anchor');
+	if ($anchor.length === 0) {
+		// 没有锚点，无需设置
+		return;
+	}
+
+	var $window = $(window);
+	var $sidebar_a = $('.sidebar-catalog a');
+	function choose_anchor_and_active() {
+		var window_top = $window.scrollTop();
+		var active_index = 0;
+		for (let i = 0; i < $anchor.length; i++) {
+			var current_anchor_top = $anchor.eq(i).offset().top;
+			if (window_top >= current_anchor_top) {
+				active_index = i;
+			} else if (current_anchor_top - window_top <= 5 ) {
+				active_index = i;
+				break;
+			}
+		}
+		$sidebar_a.removeClass('active');
+		$sidebar_a.eq(active_index).addClass('active');
+	}
+	choose_anchor_and_active();
+	$window.scroll(throttle(choose_anchor_and_active, 100));
 }
 
 $(document).ready(function () {
@@ -129,7 +178,8 @@ $(document).ready(function () {
 	$('form.protected').find('.text').addClass('form-control').end().find('.submit').addClass('btn btn-skin');
 
 	bootstrap_auto_hover_popper();
-	sidebar_init();
+	sidebar_last_aside_fixed();
+	sidebar_catalog_auto_active();
 
 	if ($('#tag-cloud-tags').length) {
 		TagCanvas.Start('tag-cloud-tags', '', {

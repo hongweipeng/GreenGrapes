@@ -530,6 +530,23 @@ img.avatar {
 	border-right: 0;
 }
 
+/*侧边栏文章目录*/
+.sidebar-catalog {
+	max-height: 550px;
+	overflow-y: auto;
+	font-size: 1.1rem;
+}
+.sidebar-catalog a.active {
+	font-weight: bold;
+	color: #08c;
+}
+.sidebar-catalog a {
+	/*color: #08c;*/
+}
+.sidebar-catalog a:hover {
+	color: #005580;
+}
+
 /*密码保护的表单*/
 form.protected .text {
 	padding: 0;

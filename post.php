@@ -23,7 +23,7 @@ $hidden_sidebar =  !empty($this->options->ShowBlock) && in_array('HiddenSidebarI
                         </p>
                     </div>
                     <div class="article-content clearfix">
-                        <?php $this->content(); ?>
+                        <?php echo ArticleCatalog::instance()->renderHtml($this->content); ?>
                     </div>
                     <?php if($this->allow('ping')): ?>
                         <div class="article-copyright">
@@ -68,7 +68,7 @@ $hidden_sidebar =  !empty($this->options->ShowBlock) && in_array('HiddenSidebarI
 
     <?php if (!$hidden_sidebar): ?>
         <div class="col-md-4">
-            <?php $this->need('sidebar.php'); ?>
+            <?php $this->need('sidebar-post-catalog.php'); ?>
         </div>
     <?php endif; ?>
     </div>
