@@ -529,9 +529,6 @@ img.avatar {
 .sidebar-user .count .item:last-child{
 	border-right: 0;
 }
-.sidebar-user .count .item .num {
-	font-size: 1.5rem;
-}
 
 /*密码保护的表单*/
 form.protected .text {

@@ -15,19 +15,19 @@
                         <?php $stat = Typecho\Widget::widget('Widget\Stat')->on(true); ?>
                         <div class="count d-flex justify-content-around">
                             <div class="item flex-fill d-flex flex-column">
-                                <span class="num"><?php $stat->publishedPostsNum() ?></span>
+                                <span class="h4"><?php $stat->publishedPostsNum() ?></span>
                                 <span>文章</span>
                             </div>
                             <div class="item flex-fill d-flex flex-column">
-                                <span class="num"><?php $stat->categoriesNum() ?></span>
+                                <span class="h4"><?php $stat->categoriesNum() ?></span>
                                 <span>分类</span>
                             </div>
                             <div class="item flex-fill d-flex flex-column">
-                                <span class="num"><?php $stat->publishedCommentsNum() ?></span>
+                                <span class="h4"><?php $stat->publishedCommentsNum() ?></span>
                                 <span>评论</span>
                             </div>
                             <div class="item flex-fill d-flex flex-column">
-                                <span class="num"><?php echo $stat->publishedPagesNum + $stat->publishedPostsNum; ?></span>
+                                <span class="h4"><?php echo $stat->publishedPagesNum + $stat->publishedPostsNum; ?></span>
                                 <span>页面</span>
                             </div>
                         </div>
