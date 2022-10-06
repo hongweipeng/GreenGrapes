@@ -444,8 +444,7 @@ img.avatar {
 }
 
 .l-header{-webkit-background-size:100% 100%;-moz-background-size:100% 100%;-o-background-size:100% 100%;z-index:10;position:relative;zoom:1;}
-.hdbg,.hdbg2{position:absolute;bottom:0;left:0;width:100%;height:100%;background:-webkit-linear-gradient(top,#000,rgba(0,0,0,0) 85%);}
-.hdbg2{opacity:.8;filter:alpha(opacity=80);}
+.hdbg{position:absolute;bottom:0;left:0;width:100%;height:100%;background:-webkit-linear-gradient(top,#000,rgba(0,0,0,0) 85%);opacity:.8;filter:alpha(opacity=80);}
 .m-about{width:365px;margin:0 auto;padding:70px 0 0;text-align:center;position:relative;zoom:1;z-index: 1;}
 
 #logo{width:180px;height:180px;margin:0 auto 15px;}
@@ -506,6 +505,33 @@ img.avatar {
 .post .single-paging span{display: inline-block;padding: 4px 12px;background-color: #ddd;border: 1px solid #ddd;border-radius: 2px;color: #515151;}
 .post .single-paging a span{background-color: #fff;color: #515151;}
 .post .single-paging a:hover span{border-color: #bbb;}
+
+/*侧边栏用户样式*/
+.sidebar-user {
+	margin: 0 auto;
+	padding-top: 1rem;
+	position: relative;
+	text-align: center;
+}
+.sidebar-user .user-avatar img {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+}
+.sidebar-user .user-info {
+	color: white;
+	opacity: .9;
+}
+.sidebar-user .count .item{
+	border-right: 1px solid #ebeef5;
+	font-size: 0.875rem;
+}
+.sidebar-user .count .item:last-child{
+	border-right: 0;
+}
+.sidebar-user .count .item .num {
+	font-size: 1.5rem;
+}
 
 /*密码保护的表单*/
 form.protected .text {

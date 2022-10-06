@@ -33,9 +33,8 @@
 </head>
 <body>
 <?php if(!($this->is('post') || $this->is('page')) || empty($this->options->ShowBlock) || !in_array('HiddenHeaderInDetail', $this->options->ShowBlock)): ?>
-<header id="l-header" class="l-header" style="background-image:url(<?php $this->options->bgImg(); ?>)">
-    <div class="hdbg"></div>
-    <div class="hdbg2 skin-bg"></div>
+<header id="l-header" class="l-header" style="background-image:url(<?php $this->options->bgImg(); ?>);-moz-background-size:100% 100%; background-size:100% 100%;">
+    <div class="hdbg skin-bg"></div>
     <div class="m-about">
         <div id="logo">
             <a href="<?php $this->options->siteUrl(); ?>"><img src="<?php $this->options->headerIcon(); ?>" alt=""></a>

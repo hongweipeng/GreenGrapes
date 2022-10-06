@@ -2,6 +2,41 @@
 <aside id="sidebar">
     <aside>
         <div class="card widget-sets hidden-xs">
+            <div class="card-body" style="background-image:url(<?php $this->options->bgImg(); ?>);-moz-background-size:100% 100%; background-size:100% 100%;">
+                <div class="hdbg skin-bg"></div>
+                <div class="sidebar-user">
+                    <div class="user-avatar">
+                        <a href="<?php $this->options->siteUrl(); ?>"><img src="<?php $this->options->headerIcon(); ?>" alt=""></a>
+                    </div>
+                    <div class="user-info">
+                        <h1><a class="text-white" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a></h1>
+                        <div class="about"><?php $this->options->description(); ?></div>
+                        <?php $stat = Typecho\Widget::widget('Widget\Stat')->on(true); ?>
+                        <div class="count d-flex justify-content-around">
+                            <div class="item flex-fill d-flex flex-column">
+                                <span class="num"><?php $stat->publishedPostsNum() ?></span>
+                                <span>文章</span>
+                            </div>
+                            <div class="item flex-fill d-flex flex-column">
+                                <span class="num"><?php $stat->categoriesNum() ?></span>
+                                <span>分类</span>
+                            </div>
+                            <div class="item flex-fill d-flex flex-column">
+                                <span class="num"><?php $stat->publishedCommentsNum() ?></span>
+                                <span>评论</span>
+                            </div>
+                            <div class="item flex-fill d-flex flex-column">
+                                <span class="num"><?php echo $stat->publishedPagesNum + $stat->publishedPostsNum; ?></span>
+                                <span>页面</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <aside>
+        <div class="card widget-sets hidden-xs">
             <ul class="nav nav-pills">
                 <li class="nav-item"><a class="nav-link active" href="#sidebar-recent-article" data-bs-toggle="tab">最新文章</a></li>
                 <li class="nav-item"><a class="nav-link" href="#sidebar-comment" data-bs-toggle="tab">最新评论</a></li>
