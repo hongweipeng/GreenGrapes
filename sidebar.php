@@ -1,5 +1,6 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit(0); ?>
 <aside id="sidebar">
+    <?php if (!empty($this->options->ShowBlock) && in_array('ShowSidebarBlogInfo', $this->options->ShowBlock)): ?>
     <aside>
         <div class="card widget-sets hidden-xs">
             <div class="card-body" style="background-image:url(<?php $this->options->bgImg(); ?>);-moz-background-size:100% 100%; background-size:100% 100%;">
@@ -10,7 +11,7 @@
                     </div>
                     <div class="user-info">
                         <h1><a class="text-white" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a></h1>
-                        <div class="about"><?php $this->options->description(); ?></div>
+                        <div class="mb-2"><?php $this->options->description(); ?></div>
                         <?php $stat = Typecho\Widget::widget('Widget\Stat')->on(true); ?>
                         <div class="count d-flex justify-content-around">
                             <div class="item flex-fill d-flex flex-column">
@@ -35,6 +36,7 @@
             </div>
         </div>
     </aside>
+    <?php endif ?>
     <aside>
         <div class="card widget-sets hidden-xs">
             <ul class="nav nav-pills">

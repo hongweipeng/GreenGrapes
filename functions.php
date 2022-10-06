@@ -111,6 +111,7 @@ function themeConfig($form) {
     $form->addInput($allow_user_change_color);
 
     $showBlock = new \Typecho\Widget\Helper\Form\Element\Checkbox('ShowBlock', array(
+        'HiddenHeaderGlobal' => _t('隐藏顶部头像'),
         'HiddenPostBottomBar' => _t('隐藏文章页上一篇和下一篇'),
         'HiddenSidebarRandomArticle' => _t('隐藏侧边栏随机文章'),
         'HiddenSidebarInDetail' => _t('隐藏文章页侧边栏'),
@@ -118,6 +119,7 @@ function themeConfig($form) {
         'HiddenCategory' => _t('隐藏侧边栏分类'),
         'HiddenArchive' => _t('隐藏侧边栏归档'),
         'HiddenParticle' => _t('隐藏粒子背景动画'),
+        'ShowSidebarBlogInfo' => _t('显示侧边栏博客信息'),
         ),
         array('HiddenCategory', 'HiddenArchive'),
         _t('显示设置')

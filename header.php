@@ -32,6 +32,7 @@
     <?php $this->header(); ?>
 </head>
 <body>
+<?php if (empty($this->options->ShowBlock) || !in_array('HiddenHeaderGlobal', $this->options->ShowBlock)): ?>
 <?php if(!($this->is('post') || $this->is('page')) || empty($this->options->ShowBlock) || !in_array('HiddenHeaderInDetail', $this->options->ShowBlock)): ?>
 <header id="l-header" class="l-header" style="background-image:url(<?php $this->options->bgImg(); ?>);-moz-background-size:100% 100%; background-size:100% 100%;">
     <div class="hdbg skin-bg"></div>
@@ -44,6 +45,7 @@
     </div>
     <div id="header-canvas" style="width: 100%;height: 100%"></div>
 </header>
+<?php endif; ?>
 <?php endif; ?>
 <div id="m-nav" class="m-nav">
     <div class="container m-nav-all">
