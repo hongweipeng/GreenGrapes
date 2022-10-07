@@ -536,6 +536,11 @@ img.avatar {
     overflow-y: auto;
     font-size: 1.1rem;
 }
+.sidebar-catalog li {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+}
 .sidebar-catalog a.active {
     font-weight: bold;
     color: #08c;
