@@ -24,7 +24,7 @@ $this->need('header.php');
             </div>
             <?php $this->need('comments.php'); ?>
         </div>
-        <div class="col-md-4">
+        <div id="sidebar" class="col-md-4">
             <?php $this->need('sidebar.php'); ?>
         </div>
     </div>

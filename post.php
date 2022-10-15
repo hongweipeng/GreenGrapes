@@ -67,7 +67,7 @@ $hidden_sidebar =  !empty($this->options->ShowBlock) && in_array('HiddenSidebarI
         </div>
 
     <?php if (!$hidden_sidebar): ?>
-        <div class="col-md-4">
+        <div id="sidebar" class="col-md-4">
             <?php $this->need('sidebar-post-catalog.php'); ?>
         </div>
     <?php endif; ?>
