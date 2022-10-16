@@ -40,7 +40,6 @@
     <div class="card widget-sets hidden-xs">
         <ul class="nav nav-pills">
             <li class="nav-item"><a class="nav-link active" href="#sidebar-recent-article" data-bs-toggle="tab">最新文章</a></li>
-            <li class="nav-item"><a class="nav-link" href="#sidebar-comment" data-bs-toggle="tab">最新评论</a></li>
             <?php if (empty($this->options->ShowBlock) || !in_array('HiddenSidebarRandomArticle', $this->options->ShowBlock)): ?>
             <li class="nav-item"><a class="nav-link" href="#sidebar-random-article" data-bs-toggle="tab">随机文章</a></li>
             <?php endif; ?>
@@ -54,14 +53,6 @@
                             <a href="<?php $recent_posts->permalink(); ?>"><?php echo $recent_posts->title; ?></a>
                         </li>
                     <?php endwhile; ?>
-                </ul>
-            </div>
-            <div class="tab-pane fade" id="sidebar-comment">
-                <?php $comments = $this->widget('\Widget\Comments\Recent')->on(true); ?>
-                <ul class="list-group">
-                <?php while($comments->next()): ?>
-                    <li class="list-group-item clearfix"><?php $comments->author(false); ?>：<a href="<?php $comments->permalink(); ?>" target="_blank"><?php $comments->excerpt(35, '...'); ?></a></li>
-                <?php endwhile; ?>
                 </ul>
             </div>
             <?php if (empty($this->options->ShowBlock) || !in_array('HiddenSidebarRandomArticle', $this->options->ShowBlock)): ?>
