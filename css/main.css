@@ -201,6 +201,9 @@ aside .card {
 .article-content table th {
     background:#f3f3f3;
 }
+.article-content svg, .article-content img {
+    max-width: 100%;
+}
 
 /* 评论 */
 .ui.form.fluid {
