@@ -22,10 +22,6 @@
                             <span>分类</span>
                         </div>
                         <div class="item flex-fill d-flex flex-column">
-                            <span class="h4"><?php $stat->publishedCommentsNum() ?></span>
-                            <span>评论</span>
-                        </div>
-                        <div class="item flex-fill d-flex flex-column">
                             <span class="h4"><?php echo $stat->publishedPagesNum + $stat->publishedPostsNum; ?></span>
                             <span>页面</span>
                         </div>
