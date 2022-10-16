@@ -160,17 +160,6 @@ aside .card {
     transition:all .3s ease;
 }
 
-/*固定侧边栏*/
-.fixsidebar {
-    top: 0;
-}
-#fixed {
-    position: static;
-}
-.fixsidebar.fix {
-    position: fixed;
-}
-
 /* 文章页 */
 .badge-skin {
     border-radius: 0 !important;
@@ -211,6 +200,9 @@ aside .card {
 }
 .article-content table th {
     background:#f3f3f3;
+}
+.article-content svg, .article-content img {
+    max-width: 100%;
 }
 
 /* 评论 */
@@ -536,6 +528,11 @@ img.avatar {
     overflow-y: auto;
     font-size: 1.1rem;
 }
+.sidebar-catalog li {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+}
 .sidebar-catalog a.active {
     font-weight: bold;
     color: #08c;
@@ -553,13 +550,6 @@ form.protected .text {
     display: inline-block;
     width: auto;
 }
-
-aside{position:relative;}
-aside section{display:block;overflow:hidden;}
-aside section h2{background:#299982;color:#FFF;padding-left:30px;height:30px;line-height:30px;font-size:0.875rem;}
-
-
-
 
 footer {padding: 20px;margin: 20px 0 0;text-align:center;background-color:#ffffff;clear: both;}
 .Copyright{color:#515151;}

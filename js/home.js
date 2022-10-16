@@ -110,39 +110,6 @@ function bootstrap_auto_hover_popper() {
     });
 }
 
-// 侧边栏初始化
-function sidebar_last_aside_fixed() {
-    if(!document.getElementById("sidebar")) {
-        return;
-    }
-    fssilde();
-    //边栏固定
-    var $sidebar = $("#sidebar");
-    // 最后一个 <aside> 添加固定，及前面添加 <div id="fixed"></div> 用于确定偏移
-    var $fixside = $sidebar.find('aside').eq(-1);
-    $fixside.addClass('fixsidebar').before('<div id="fixed"></div>');
-    var    $containner = $('#m-container');
-    var    $window = $(window);
-    var    offset = $("#fixed").offset();
-    if($window.width() > 768){
-        function sidebar_fixed() {
-            if ($containner.height() - $sidebar.height() <= 40) {
-                return;
-            }
-            if ($window.scrollTop() > offset.top) {
-                var widths=$sidebar.width();
-                $fixside.stop().animate({top:'20px'});
-                $fixside.addClass('fix').css("width",widths);
-            } else {
-                $fixside.stop().animate({top:'1px'});
-                $fixside.removeClass('fix');
-            }
-        }
-        sidebar_fixed();
-        $window.scroll(throttle(sidebar_fixed, 50));
-    }
-}
-
 // 侧边目录自动 active
 function sidebar_catalog_auto_active() {
     var $anchor = $('.article-content .title-anchor');
@@ -172,14 +139,23 @@ function sidebar_catalog_auto_active() {
     $window.scroll(throttle(choose_anchor_and_active, 100));
 }
 
+function sidebar_last_sticky() {
+    var $asides = $('#sidebar > aside');
+    if ($asides.length) {
+        $asides.eq(-1).addClass('position-sticky').css({
+            top: '2rem',
+        });
+    }
+}
+
 $(document).ready(function () {
     // 分页
     $('.pagination a, .pagination span').addClass('page-link');
     $('form.protected').find('.text').addClass('form-control').end().find('.submit').addClass('btn btn-skin');
 
     bootstrap_auto_hover_popper();
-    sidebar_last_aside_fixed();
     sidebar_catalog_auto_active();
+    sidebar_last_sticky();
 
     if ($('#tag-cloud-tags').length) {
         TagCanvas.Start('tag-cloud-tags', '', {

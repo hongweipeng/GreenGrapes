@@ -64,7 +64,7 @@ $this->need('header.php');
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div id="sidebar" class="col-md-4">
                 <?php $this->need('sidebar.php'); ?>
             </div>
         </div>
