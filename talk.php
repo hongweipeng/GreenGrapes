@@ -8,12 +8,23 @@ $this->need('header.php');
 ?>
     <div id="m-container" class="container">
         <div class="row ml-0 mr-0">
+            <?php
+                $kw = $this->request->get('search', '');
+            ?>
+            <div class="col-md-8 pl-1 pr-1">
+                <form class="d-flex d-none d-xl-flex float-end" method="get" action="" role="search">
+                    <label for="search" class="me-2">
+                        <input class="form-control" name="search" value="<?php _e($kw); ?>" placeholder="搜索关键词..." type="text" />
+                    </label>
+                    <button class="btn btn-secondary"><i class="fa fa-search"></i> 筛选</button>
+                </form>
+            </div>
             <div class="col-md-8 pl-1 pr-1">
                 <?php
                     $page = (int) $this->request->get('page', 1);
                     $page_size = 20;
-                    $total = MicroTalk_Plugin::totalShowCount();
-                    $talks = MicroTalk_Plugin::talkPosts($page, $page_size);
+                    $total = MicroTalk_Plugin::totalShowCount($kw);
+                    $talks = MicroTalk_Plugin::talkPosts($kw, $page, $page_size);
                 ?>
                 <ul class="tk-timeline">
                     <?php $year = ''; ?>
