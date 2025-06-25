@@ -26,3 +26,6 @@ typecho 绿色主题
 - [Links](http://www.imhan.com/archives/typecho_links_20141214/) ：友情链接；
 - [TeStat](https://github.com/hongweipeng/TeStat)：浏览数、点赞统计插件；
 
+## 鸣谢
+[![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")
+
