@@ -17,11 +17,11 @@ $this->need('header.php');
             <?php if ($this->is('search') || $this->is('date') || $this->is('category') || $this->is('author') || $this->is('tag')): ?>
             <div class="alert alert-info">
                 <?php $this->archiveTitle(array(
-                    'search'    => _t('包含关键字 %s 的文章'),
-                    'date'      => _t('日期 %s 下的文章'),
-                    'category'  => _t('分类 %s 下的文章'),
-                    'author'    => _t('作者 %s 发布的文章'),
-                    'tag'       => _t('标签 %s 下的文章'),
+                    'search'    => _t('包含关键字 %s 的文章（共 ' . $this->getTotal() . ' 篇）'),
+                    'date'      => _t('日期 %s 下的文章（共 ' . $this->getTotal() . ' 篇）'),
+                    'category'  => _t('分类 %s 下的文章（共 ' . $this->getTotal() . ' 篇）'),
+                    'author'    => _t('作者 %s 发布的文章（共 ' . $this->getTotal() . ' 篇）'),
+                    'tag'       => _t('标签 %s 下的文章（共 ' . $this->getTotal() . ' 篇）'),
                 ), '', ''); ?>
             </div>
             <?php endif; ?>

@@ -15,7 +15,7 @@ $this->need('header.php');
                     <canvas height="700" width="700" id="tag-cloud-tags">
                         <p>标签云</p>
                         <?php $this->widget('\Widget\Metas\Category\Rows')->listCategories('wrapClass=widget-list'); ?>
-                        <?php $this->widget('\Widget\Metas\Tag\Cloud')->parse('<a href="{permalink}" class="tag">{name}</a>'); ?>
+                        <?php $this->widget('\Widget\Metas\Tag\Cloud', 'ignoreZeroCount=1&limit=300')->parse('<a href="{permalink}" class="tag">{name}</a>'); ?>
                     </canvas>
                 </div>
             </div>
