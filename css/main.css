@@ -333,6 +333,7 @@ img.avatar {
 /* 评论列表样式 */
 .comment-list {
     padding-left: 0;
+    margin-bottom: 0;
     list-style: none;
 }
 .comment-list .comment-li {
