@@ -116,6 +116,11 @@ h6 tt, h6 code {
 .widget-sets .list-group {
     margin-bottom: 0;
 }
+
+.widget-list li ul {
+    margin-left: 20px;
+}
+
 /* 右侧栏卡片样式 */
 aside .card {
     margin-bottom: 20px;

@@ -109,6 +109,67 @@ function themeConfig($form) {
     $form->addInput($showBlock->multiMode());
 }
 
+
+/**
+ * 重写分类显示函数
+ * @param $cate
+ * @param $categoryOptions
+ * @return void
+ */
+function treeViewCategories($cate, $categoryOptions) {
+    $classes = [];
+    if ($categoryOptions->itemClass) {
+        $classes[] = $categoryOptions->itemClass;
+    }
+
+    $classes[] = 'category-level-' . $cate->levels;
+
+    echo '<' . $categoryOptions->itemTag . ' class="'
+        . implode(' ', $classes);
+
+    if ($cate->levels > 0) {
+        echo ' category-child';
+        $cate->levelsAlt(' category-level-odd', ' category-level-even');
+    } else {
+        echo ' category-parent';
+    }
+
+    if ($cate->mid == $cate->parameter->current) {
+        echo ' category-active';
+    } elseif (
+        isset($cate->childNodes[$cate->mid]) && in_array($cate->parameter->current, $cate->childNodes[$cate->mid])
+    ) {
+        echo ' category-parent-active';
+    }
+
+    if ($categoryOptions->nameTemplate) {
+        $name = preg_replace_callback(
+            "/\{([_a-z0-9]+)\}/i",
+            function (array $matches) use ($cate) {
+                return $cate->{$matches[1]};
+            },
+            $categoryOptions->nameTemplate
+        );
+        echo '"><a href="' . $cate->permalink . '">' . $name . '</a>';
+    } else {
+        echo '"><a href="' . $cate->permalink . '">' . $cate->name . '</a>';
+    }
+
+    if ($categoryOptions->showCount) {
+        printf($categoryOptions->countTemplate, intval($cate->count));
+    }
+
+    if ($categoryOptions->showFeed) {
+        printf($categoryOptions->feedTemplate, $cate->feedUrl);
+    }
+
+    if ($cate->children) {
+        $cate->treeViewCategories();
+    }
+
+    echo '</' . $categoryOptions->itemTag . '>';
+}
+
 /**
  * 重写评论显示函数
  */
