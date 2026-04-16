@@ -156,6 +156,7 @@ $(document).ready(function () {
     bootstrap_auto_hover_popper();
     sidebar_catalog_auto_active();
     sidebar_last_sticky();
+    fssilde();
 
     if ($('#tag-cloud-tags').length) {
         TagCanvas.Start('tag-cloud-tags', '', {
