@@ -160,7 +160,7 @@ $(document).ready(function () {
 
     if ($('#tag-cloud-tags').length) {
         TagCanvas.Start('tag-cloud-tags', '', {
-            textColour: '#000000',
+            textColour: '#777777',
             outlineColour: $('.skin-bg').css('background-color'),
             outlineThickness: 1,
             maxSpeed: 0.03,
@@ -170,10 +170,53 @@ $(document).ready(function () {
     }
     
     // 切换主题
+    var $switchColor = $('#switch_color');
+    var $colorPanel = $switchColor.find('.d-flex');
+    var hideTimer = null;
+    
+    $switchColor.add($colorPanel).on('mouseenter', function() {
+        clearTimeout(hideTimer);
+        $switchColor.addClass('show');
+    });
+    
+    $switchColor.add($colorPanel).on('mouseleave', function() {
+        hideTimer = setTimeout(function() {
+            $switchColor.removeClass('show');
+        }, 200);
+    });
+    
     $('#switch_color .flex-fill').click(function(e) {
         var obj = $(this);
         $.cookie('green_grapes_color', obj.data('color'));
         location.reload();
+    });
+
+    // 深色模式切换
+    function updateDarkModeIcon() {
+        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        var icon = $('#dark-mode-toggle i');
+        if (isDark) {
+            icon.removeClass('fa-moon-o').addClass('fa-lightbulb-o');
+        } else {
+            icon.removeClass('fa-lightbulb-o').addClass('fa-moon-o');
+        }
+    }
+
+    updateDarkModeIcon();
+
+    $('#dark-mode-toggle').click(function() {
+        var currentTheme = document.documentElement.getAttribute('data-theme');
+        var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        if (newTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('green_grapes_theme', 'dark');
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('green_grapes_theme', 'light');
+        }
+        
+        updateDarkModeIcon();
     });
 });
 })(jQuery);

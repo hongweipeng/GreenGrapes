@@ -1,4 +1,9 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit(0); ?>
+<?php if ($this->options->allow_dark_mode !== '0') : ?>
+<div id="dark-mode-toggle" title="切换深色模式">
+    <i class="fa fa-moon-o"></i>
+</div>
+<?php endif; ?>
 <?php if ($this->options->allow_user_change_color) : ?>
 <div id="switch_color">
     <div class="colorful"></div>
