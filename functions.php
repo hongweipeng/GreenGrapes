@@ -92,6 +92,10 @@ function themeConfig($form) {
         array(0=>_t('拒绝'),1=>_t('允许'),), '1', _t('是否允许用户切换主题色'),_t('浏览者可在右侧切换主题色（仅在该访者上生效）'));
     $form->addInput($allow_user_change_color);
 
+    $allow_dark_mode = new \Typecho\Widget\Helper\Form\Element\Radio('allow_dark_mode',
+        array(0=>_t('隐藏'),1=>_t('显示'),), '1', _t('是否显示深色模式切换按钮'),_t('浏览者可在右侧切换深色模式（仅在该访者上生效）'));
+    $form->addInput($allow_dark_mode);
+
     $showBlock = new \Typecho\Widget\Helper\Form\Element\Checkbox('ShowBlock', array(
         'HiddenHeaderGlobal' => _t('隐藏顶部头像'),
         'HiddenPostBottomBar' => _t('隐藏文章页上一篇和下一篇'),

@@ -21,12 +21,12 @@ blockquote {
 
 .article-copyright a, .article-content a,
 .article-copyright a:hover, .article-content a:hover {
-    color: #CDCD00;
+    color: #CDCD00 !important;
 }
 
 .btn-skin {
     border: 1px solid #CDCD00 !important;
-    color: #CDCD00;
+    color: #CDCD00 !important;
 }
 .btn-skin:hover {
     color: #fff !important;

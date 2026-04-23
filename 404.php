@@ -9,8 +9,8 @@ $this->need('header.php');
             <p><?php _e('访问的页面已被转移或删除了, 要不要搜索看看: '); ?></p>
             <form method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
                 <p>
-                    <label>
-                        <input type="text" name="s" class="text" autofocus />
+                    <label for="search-input-s3">
+                        <input id="search-input-s3" type="text" name="s" class="text" autofocus />
                     </label>
                 </p>
                 <p><button type="submit" class="submit btn btn-skin"><?php _e('搜索'); ?></button></p>

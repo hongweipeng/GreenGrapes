@@ -95,7 +95,7 @@ h6 tt, h6 code {
     width:auto;
 }
 
-#article-list .row-border-dashed {
+.row-border-dashed {
     margin-bottom: 0.875rem;
     border-top: 2px dashed #E7E7E7;
     border-bottom: 2px dashed #E7E7E7;
@@ -381,6 +381,9 @@ img.avatar {
 }
 
 /* 文章归档页时间轴 */
+.archive-block .archive-block{
+    background-color: #fff;
+}
 .archive-timeline .archive-content {
     margin-left: 2rem;
     position: relative;
@@ -469,7 +472,7 @@ img.avatar {
 .m-nav .nav > li > ul{text-align:left;position:absolute;top:52px;left:0;min-width:140px;z-index:10;display:none;}
 .m-nav .nav > li > ul > li > ul{text-align:left;position:absolute;top:0;left:100%;min-width:140px;z-index:10;display:none;}
 .m-nav .nav > li > ul > li{float:none;margin:0;position:relative}
-.m-nav .nav ul a{float:none;display:block;*min-width:100px;padding:5px 20px 4px;color:#eeeeee}
+.m-nav .nav ul a{float:none;display:block;min-width:100px;padding:5px 20px 4px;color:#eeeeee}
 .m-nav .nav ul a:hover,.m-nav .nav li li.current-menu-item a{color:#ffffff}
 .m-nav .nav li li a:hover,.m-nav .nav li li.current-menu-item a{background-color:#299982}
 .m-nav .nav li:hover a,.m-nav .nav li.current-menu-item a,.m-nav .nav li.current-menu-parent a,.m-nav .nav li.current_page_item a,.m-nav .nav li.current-post-ancestor a{background-color:#404040;}
