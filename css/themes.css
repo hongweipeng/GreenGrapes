@@ -1,0 +1,71 @@
+:root {
+    --skin-primary: #16a085;
+    --skin-bg: #299982;
+    --skin-header: #299982;
+    --skin-blockquote: #7AD03A;
+    --skin-link: #009a61;
+}
+
+[data-skin="green"] {
+    --skin-primary: #16a085;
+    --skin-bg: #299982;
+    --skin-header: #299982;
+    --skin-blockquote: #7AD03A;
+    --skin-link: #009a61;
+}
+
+[data-skin="blue"] {
+    --skin-primary: #00BFFF;
+    --skin-bg: #1E90FF;
+    --skin-header: #00BFFF;
+    --skin-blockquote: #00BFFF;
+    --skin-link: #00BFFF;
+}
+
+[data-skin="red"] {
+    --skin-primary: #FF5555;
+    --skin-bg: #FF3333;
+    --skin-header: #FF5555;
+    --skin-blockquote: #FF5555;
+    --skin-link: #FF5555;
+}
+
+[data-skin="yellow"] {
+    --skin-primary: #CDCD00;
+    --skin-bg: #FFFF00;
+    --skin-header: #CDCD00;
+    --skin-blockquote: #CDCD00;
+    --skin-link: #CDCD00;
+}
+
+[data-skin="purple"] {
+    --skin-primary: #7D26CD;
+    --skin-bg: #7D26CD;
+    --skin-header: #7D26CD;
+    --skin-blockquote: #7D26CD;
+    --skin-link: #7D26CD;
+}
+
+[data-skin="orange"] {
+    --skin-primary: #FF8C00;
+    --skin-bg: #FF8C00;
+    --skin-header: #FF8C00;
+    --skin-blockquote: #FF8C00;
+    --skin-link: #FF8C00;
+}
+
+[data-skin="cyan"] {
+    --skin-primary: #00CDCD;
+    --skin-bg: #00FFFF;
+    --skin-header: #00CDCD;
+    --skin-blockquote: #00CDCD;
+    --skin-link: #00CDCD;
+}
+
+[data-skin="gray"] {
+    --skin-primary: #BEBEBE;
+    --skin-bg: #778899;
+    --skin-header: #BEBEBE;
+    --skin-blockquote: #BEBEBE;
+    --skin-link: #BEBEBE;
+}
