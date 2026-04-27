@@ -168,23 +168,7 @@ $(document).ready(function () {
             wheelZoom: false,
         });
     }
-    
-    // 切换主题
-    var $switchColor = $('#switch_color');
-    var $colorPanel = $switchColor.find('.d-flex');
-    var hideTimer = null;
-    
-    $switchColor.add($colorPanel).on('mouseenter', function() {
-        clearTimeout(hideTimer);
-        $switchColor.addClass('show');
-    });
-    
-    $switchColor.add($colorPanel).on('mouseleave', function() {
-        hideTimer = setTimeout(function() {
-            $switchColor.removeClass('show');
-        }, 200);
-    });
-    
+
     $('#switch_color .flex-fill').click(function(e) {
         var obj = $(this);
         $.cookie('green_grapes_color', obj.data('color'));

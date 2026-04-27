@@ -600,7 +600,7 @@ footer {padding: 20px;margin: 20px 0 0;text-align:center;background-color:#fffff
     bottom: 0;
     background-color: white;
     visibility: hidden;
-
+    transition-delay: 0.3s;
 }
 #switch_color .d-flex .m-1 {
     width: 35px;
@@ -610,6 +610,7 @@ footer {padding: 20px;margin: 20px 0 0;text-align:center;background-color:#fffff
 }
 #switch_color:hover .d-flex {
     visibility: visible;
+    transition-delay: 0s;
 }
 
 #switch_color .m-1.active, #switch_color .d-flex .m-1:hover {
