@@ -15,7 +15,7 @@
     color-scheme: dark;
 }
 
-/* 设置灰度 */
+/* 设置全局灰度 */
 [data-theme="dark"] {
 	-webkit-filter: grayscale(30%);
 	-moz-filter: grayscale(30%);

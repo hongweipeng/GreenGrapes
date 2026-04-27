@@ -31,14 +31,15 @@ $(document).ready(function($) {
         });
     };
     // 判断位置控制 返回顶部的显隐
+    var backToTop = $("#back-to-top");
     $(window).scroll(function() {
         if ($(window).scrollTop() > 500) {
-            $("#back-to-top").fadeIn(600);
+            backToTop.fadeIn(600);
         } else {
-            $("#back-to-top").fadeOut(600);
+            backToTop.fadeOut(600);
         }
     });
-    $.scrollto("#back-to-top", 600);
+    $.scrollto(backToTop, 600);
 });
 
 
