@@ -172,8 +172,11 @@ $(document).ready(function () {
 
     $('#switch_color .flex-fill').click(function(e) {
         var obj = $(this);
-        $.cookie('green_grapes_color', obj.data('color'));
-        location.reload();
+        var color = obj.data('color');
+        $.cookie('green_grapes_color', color);
+        document.documentElement.setAttribute('data-skin', color);
+        $('#switch_color .flex-fill').removeClass('active').html('');
+        obj.addClass('active').html('<i class="fa fa-fw fa-check"></i>');
     });
 
     // 深色模式切换
