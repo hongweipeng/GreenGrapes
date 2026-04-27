@@ -18,6 +18,8 @@
             if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 document.documentElement.setAttribute('data-theme', 'dark');
             }
+            var skin = localStorage.getItem('green_grapes_color') || '<?php echo get_theme_color(); ?>';
+            document.documentElement.setAttribute('data-skin', skin);
         })();
     </script>
     <link href="<?php $this->options->themeUrl('favicon.ico'); ?>" rel="shortcut icon"  type="image/x-icon">
@@ -25,7 +27,7 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/bootstrap.min.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/font-awesome.min.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/main.css'); ?>">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/skin-'. get_theme_color() .'.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/themes.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/dark-mode.css'); ?>">
     <!-- 通过自有函数输出HTML头部信息 -->
     <?php if(class_exists('Snow_Plugin') && isset($this->options->plugins['activated']['Snow'])): ?>
