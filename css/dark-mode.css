@@ -154,6 +154,17 @@ background-color: var(--darkmode-post-article-background);
 [data-theme="dark"] #back-to-top {
     background-color: var(--darkmode-post-article-background);
 }
+/* popover 样式 */
+[data-theme="dark"] .popover {
+    background-color: var(--darkmode-post-article-background);
+    border-color: var(--darkmode-border-color);
+}
+[data-theme="dark"] .popover-body {
+    color: var(--darkmode-text);
+}
+[data-theme="dark"] .bs-popover-end > .popover-arrow::after {
+    border-right-color: #313435;
+}
 
 /* 切换按钮 */
 #dark-mode-toggle {
