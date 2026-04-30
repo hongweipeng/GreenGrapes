@@ -120,3 +120,19 @@
     .tk-timeline .line .tk-time{display: none}
     .tk-timeline > .line .tk-icon, .tk-timeline:before{left: 10%;}
 }
+
+/** 深色模式 */
+[data-theme="dark"] .tk-timeline > .line .tk-label {
+    background-color: #181a1b;
+    border-color: #363a3b;
+}
+[data-theme="dark"] .tk-timeline > .line .tk-label::after {
+    border-right-color: #313435;
+}
+[data-theme="dark"] .tk-timeline::before {
+    background-color: #2c2f30;
+}
+[data-theme="dark"] .tk-timeline > .line .tk-icon {
+    background-color: #3f4445;
+    box-shadow: #2c2f30 0px 0px 0px 8px
+}
