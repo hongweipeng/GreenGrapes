@@ -1,4 +1,9 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit(0); ?>
+<?php if ($this->options->allow_dark_mode !== '0') : ?>
+<div id="dark-mode-toggle" title="切换深色模式">
+    <i class="fa fa-moon-o"></i>
+</div>
+<?php endif; ?>
 <?php if ($this->options->allow_user_change_color) : ?>
 <div id="switch_color">
     <div class="colorful"></div>
@@ -21,9 +26,8 @@
 </div>
 <footer id="m-footer">
     <div class="Copyright">
-        <p>&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
-        <?php _e('All Rights Reserved. 版权所有.'); ?>
-        </p>
+        <p>&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>. <?php _e('All Rights Reserved. 版权所有.'); ?></p>
+        <p><a href="https://github.com/hongweipeng" target="_blank" rel="noopener"><?php _e('Theme by HongWeipeng'); ?></a></p>
     </div>
 </footer>
 <script src="<?php $this->options->themeUrl('js/jquery.min.js'); ?>"></script>

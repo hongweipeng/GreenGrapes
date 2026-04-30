@@ -11,12 +11,24 @@
             'tag'       =>  _t('标签 %s 下的文章'),
             'author'    =>  _t('%s 发布的文章')
         ), '', ' - '); ?><?php $this->options->title(); ?></title>
+    <script>
+        // 在载入 css 文件之前设置主题, 确保在 DOM 渲染之前就设置好 data-theme="dark" 属性, 避免闪烁
+        (function() {
+            var theme = localStorage.getItem('green_grapes_theme');
+            if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+            var skin = localStorage.getItem('green_grapes_color') || '<?php echo get_theme_color(); ?>';
+            document.documentElement.setAttribute('data-skin', skin);
+        })();
+    </script>
     <link href="<?php $this->options->themeUrl('favicon.ico'); ?>" rel="shortcut icon"  type="image/x-icon">
     <!-- css -->
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/bootstrap.min.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/font-awesome.min.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/main.css'); ?>">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/skin-'. get_theme_color() .'.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/themes.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/dark-mode.css'); ?>">
     <?php if ($this->is('page', 'talk')) : ?>
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/micro-talk.css'); ?>">
     <?php endif; ?>
@@ -70,8 +82,8 @@
             </ul>
             <!-- 使用 .d-none .d-xl-block，在小于 lg 尺寸(1100px)的屏幕上隐藏 -->
             <form class="d-flex d-none d-xl-flex" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
-                <label for="s" class="me-2">
-                    <input class="form-control" name="s" placeholder="搜索关键词..." type="text" />
+                <label for="search-input-s2" class="me-2">
+                    <input id="search-input-s2" class="form-control" name="s" placeholder="搜索关键词..." type="text" />
                 </label>
                 <button class="btn btn-secondary"><i class="fa fa-search"></i> 查找</button>
             </form>

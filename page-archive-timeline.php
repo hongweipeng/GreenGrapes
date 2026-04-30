@@ -18,7 +18,7 @@ $this->need('header.php');
             ?>
             <div class="col-md-8 archive-timeline">
                 <div class="alert alert-info">共有 <?php _e($total); ?> 篇文章</div>
-                <div class="bg-white pt-1 pb-1">
+                <div class="post-article pt-1 pb-1">
                     <div class="archive-content">
                         <?php $groupYear = ''; ?>
                         <?php while ($recent->next()): ?>

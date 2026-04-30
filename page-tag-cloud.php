@@ -11,7 +11,7 @@ $this->need('header.php');
     <div id="m-container" class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="bg-white text-center">
+                <div class="post-article text-center">
                     <canvas height="700" width="700" id="tag-cloud-tags">
                         <p>标签云</p>
                         <?php $this->widget('\Widget\Metas\Category\Rows')->listCategories('wrapClass=widget-list'); ?>
