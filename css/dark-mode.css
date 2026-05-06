@@ -5,7 +5,7 @@
     --darkmode-text: #a4a09b;
     --darkmode-post-article-background: #242626;
     --darkmode-dashed-color: #393b3c;
-    --darkmode-border-color: rgba(136, 131, 123, 0.13);
+    --darkmode-border-color: rgba(136, 131, 123, 0.3);
     --darkmode-toggle-border-color: rgba(80, 80, 80, 1);
     --darkmode-nav-active-backgroud-color: #303436;
 }
@@ -67,6 +67,15 @@
     background-color: #1f2020;
     border-color: var(--darkmode-border-color);
 }
+
+[data-theme="dark"] .article-content table th {
+    background-color: var(--darkmode-background);
+}
+
+[data-theme="dark"] .article-content table td, .article-content table th {
+    border-color: var(--darkmode-border-color);
+}
+
 
 [data-theme="dark"] .card {
 background-color: var(--darkmode-post-article-background);
