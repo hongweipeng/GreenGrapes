@@ -30,6 +30,10 @@
     color: var(--darkmode-text);
 }
 
+[data-theme="dark"] blockquote {
+    background-color: #212324;
+}
+
 [data-theme="dark"] a {
     color: var(--darkmode-text);
 }
