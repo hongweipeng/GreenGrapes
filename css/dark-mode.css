@@ -32,6 +32,8 @@
 
 [data-theme="dark"] blockquote {
     background-color: #212324;
+    border-top: 1px solid var(--darkmode-border-color);
+    border-bottom: 1px solid var(--darkmode-border-color);
 }
 
 [data-theme="dark"] a {
