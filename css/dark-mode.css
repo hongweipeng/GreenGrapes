@@ -37,6 +37,11 @@
 [data-theme="dark"] a {
     color: var(--darkmode-text);
 }
+
+[data-theme="dark"] :focus-visible {
+    outline: var(--darkmode-border-color);
+}
+
 [data-theme="dark"] .tit a {
     color: #e8e6e3;
 }
