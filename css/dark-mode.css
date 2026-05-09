@@ -32,11 +32,25 @@
 
 [data-theme="dark"] blockquote {
     background-color: #212324;
+    border-top: 1px solid var(--darkmode-border-color);
+    border-bottom: 1px solid var(--darkmode-border-color);
+}
+
+[data-theme="dark"] input {
+    border-color: var(--darkmode-border-color);
+    background-color: var(--darkmode-post-article-background);
 }
 
 [data-theme="dark"] a {
     color: var(--darkmode-text);
 }
+
+[data-theme="dark"] :focus-visible {
+    outline: var(--darkmode-border-color);
+    background-color: var(--darkmode-post-article-background);
+    color: var(--darkmode-text);
+}
+
 [data-theme="dark"] .tit a {
     color: #e8e6e3;
 }
