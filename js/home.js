@@ -149,6 +149,21 @@ function sidebar_last_sticky() {
     }
 }
 
+// 阅读进度条: 仅在文章页(存在 #reading-progress-bar)时启用
+function reading_process_bar() {
+    var $progressBar = $('#reading-progress-bar');
+    if ($progressBar.length) {
+        var updateProgress = function () {
+            var doc = document.documentElement;
+            var total = doc.scrollHeight - window.innerHeight;
+            var percent = total > 0 ? (doc.scrollTop / total) * 100 : 0;
+            $progressBar.css('width', Math.min(100, Math.max(0, percent)) + '%');
+        };
+        $(window).on('scroll', throttle(updateProgress, 50));
+        updateProgress();
+    }
+}
+
 $(document).ready(function () {
     // 分页
     $('.pagination a, .pagination span').addClass('page-link');
@@ -158,8 +173,9 @@ $(document).ready(function () {
     sidebar_catalog_auto_active();
     sidebar_last_sticky();
     fssilde();
+    reading_process_bar();
 
-    if ($('#tag-cloud-tags').length) {
+    if ($('#tag-cloud-tags').length && typeof TagCanvas !== 'undefined') {
         TagCanvas.Start('tag-cloud-tags', '', {
             textColour: '#777777',
             outlineColour: $('.skin-bg').css('background-color'),

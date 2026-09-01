@@ -4,6 +4,10 @@ $this->need('header.php');
 ?>
 <?php
 $hidden_sidebar =  !empty($this->options->ShowBlock) && in_array('HiddenSidebarInDetail', $this->options->ShowBlock, true);
+// 内容只渲染一次: ArticleCatalog 处理标题锚点的同时统计字数, 供徽章展示
+$content_html = ArticleCatalog::instance()->renderHtml($this->content);
+$word_count = function_exists('mb_strlen') ? mb_strlen(strip_tags($content_html), 'UTF-8') : strlen(strip_tags($content_html)); // 中文按字符数统计
+$reading_minutes = max(1, (int) ceil($word_count / 400)); // 按每分钟约 400 字估算
 ?>
 <div id="m-container" class="container">
     <div class="row">
@@ -16,6 +20,8 @@ $hidden_sidebar =  !empty($this->options->ShowBlock) && in_array('HiddenSidebarI
                             <span class="badge badge-skin"><i class="fa fa-fw fa-user"></i> <a href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a></span>
                             <span class="badge badge-skin"><i class="fa fa-fw fa-tags"></i> <?php $this->category(','); ?></span>
                             <span class="badge badge-skin"><i class="fa fa-fw fa-calendar"></i> <?php $this->date('Y-m-d'); ?></span>
+                            <span class="badge badge-skin"><i class="fa fa-fw fa-file-text-o"></i> <?php _e(number_format($word_count)); ?> 字</span>
+                            <span class="badge badge-skin"><i class="fa fa-fw fa-hourglass-2"></i> 约 <?php _e($reading_minutes); ?> 分钟</span>
                             <?php if (class_exists('TeStat_Plugin') && isset($this->options->plugins['activated']['TeStat'])): ?>
                             <span class="badge badge-skin"><i class="fa fa-fw fa-eye"></i> <?php $this->viewsNum(); ?> 次浏览</span>
                             <span class="badge badge-skin"><i class="fa fa-fw fa-thumbs-o-up"></i> <span class="like-num-show"><?php $this->likesNum(); ?></span> 次点赞</span>
@@ -23,7 +29,7 @@ $hidden_sidebar =  !empty($this->options->ShowBlock) && in_array('HiddenSidebarI
                         </p>
                     </div>
                     <div class="article-content clearfix">
-                        <?php echo ArticleCatalog::instance()->renderHtml($this->content); ?>
+                        <?php echo $content_html; ?>
                     </div>
                     <?php if($this->allow('ping')): ?>
                         <div class="article-copyright">
