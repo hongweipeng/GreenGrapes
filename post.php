@@ -34,9 +34,9 @@ $reading_minutes = max(1, (int) ceil($word_count / 400)); // 按每分钟约 400
                     <?php if($this->allow('ping')): ?>
                         <div class="article-copyright">
                             <div class="article-license">
-                                <img height="24" src="<?php $this->options->themeUrl('img/creative-commons-cc.svg'); ?>" class="mb5" alt="知识共享署名声明"><br>
-                                <div class="license-item text-muted">
-                                    本文由 <a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a> 创作，采用 <a class="alert-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh">署名-非商业性使用-相同方式共享 3.0</a>，可自由转载、引用，但需署名作者且注明文章出处。
+                                <img height="24" src="<?php $this->options->themeUrl('img/creative-commons-cc.png'); ?>" class="mb5" alt="知识共享署名声明"><br>
+                                <div class="license-item">
+                                    本文由 <a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a> 创作，采用 <a class="alert-link" target="_blank" href="https://creativecommons.org/licenses/by/3.0/cn">知识共享署名 3.0</a>，可自由转载、引用，但需署名作者且注明文章出处。
                                 </div>
                             </div>
                         </div>
