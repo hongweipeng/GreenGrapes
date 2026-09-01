@@ -41,6 +41,10 @@
     background-color: var(--darkmode-post-article-background);
 }
 
+[data-theme="dark"] .form-control {
+    color: var(--darkmode-text);
+}
+
 [data-theme="dark"] a {
     color: var(--darkmode-text);
 }
