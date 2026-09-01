@@ -59,6 +59,8 @@
 </header>
 <?php endif; ?>
 <?php endif; ?>
+<!-- 阅读进度条: 跟随滚动显示当前阅读位置 -->
+<div id="reading-progress" aria-hidden="true"><div id="reading-progress-bar"></div></div>
 <div id="m-nav" class="m-nav">
     <div class="container m-nav-all">
         <div class="m-logo-url">
