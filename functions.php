@@ -32,8 +32,11 @@ function theme_random_posts(){
     $result = $db->fetchAll($sql);
     echo $defaults['before'];
     foreach($result as $val){
-        $val = \Typecho\Widget::widget('\Widget\Base\Contents')->filter($val);
-        echo str_replace(array('{permalink}', '{title}'),array($val['permalink'], $val['title']), $defaults['xformat']);
+        // Typecho 1.3.0 起 Contents::filter() 不再把 permalink 写入返回数组,
+        // permalink 变为组件动态属性(___permalink), 必须先把行数据 push() 进 widget 再读取属性
+        $contents = \Typecho\Widget::widget('\Widget\Base\Contents');
+        $contents->push($val);
+        echo str_replace(array('{permalink}', '{title}'),array($contents->permalink, $contents->title), $defaults['xformat']);
     }
     echo $defaults['after'];
 }
